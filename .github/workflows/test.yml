@@ -1,0 +1,36 @@
+# This workflow will do a clean install of the dependencies and run tests across different versions
+#
+# Replace <track> with the track name
+# Replace <image-name> with an image to run the jobs on
+# Replace <action to setup tooling> with a github action to setup tooling on the image
+# Replace <install dependencies> with a cli command to install the dependencies
+#
+# Find Github Actions to setup tooling here:
+# - https://github.com/actions/?q=setup&type=&language=
+# - https://github.com/actions/starter-workflows/tree/main/ci
+# - https://github.com/marketplace?type=actions&query=setup
+#
+# Requires scripts:
+# - bin/test
+
+name: COBOL / Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  ci:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup COBOL
+        uses: fabasoad/setup-cobol-action@0e90d7d30a6c2dc4e4992c713c7c9a7d8ea677a9
+
+      - name: Run tests for all exercises
+        run: bin/test

@@ -1,0 +1,55 @@
+{
+  "language": "COBOL",
+  "slug": "cobol",
+  "active": false,
+  "status": {
+    "concept_exercises": false,
+    "test_runner": false,
+    "representer": false,
+    "analyzer": false
+  },
+  "blurb": "COBOL is a statically typed, imperative, procedural programming language with support for object oriented programming. First released in 1959, it's still used today in many banking and financial companies due to it's decimal floating-point arithmetic, making it well suited for financial calculations.",
+  "version": 3,
+  "online_editor": {
+    "indent_style": "space",
+    "indent_size": 4,
+    "highlightjs_language": "cobol"
+  },
+  "files": {
+    "solution": [],
+    "test": [],
+    "example": [],
+    "exemplar": []
+  },
+  "exercises": {
+    "concept": [],
+    "practice": [
+      {
+        "slug": "hello-world",
+        "name": "Hello, World!",
+        "uuid": "0b38919c-b959-459c-89b8-c02b2012493e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      }
+    ]
+  },
+  "concepts": [
+    {
+      "uuid": "192f5a7d-c20c-4b9c-9f07-e857e3664b02",
+      "slug": "basics",
+      "name": "Basics"
+    }
+  ],
+  "key_features": [],
+  "tags": [
+    "paradigm/procedural",
+    "paradigm/imperative",
+    "paradigm/object_oriented",
+    "typing/static",
+    "typing/strong",
+    "execution_mode/compiled",
+    "used_for/backends",
+    "used_for/financial_systems"
+  ]
+}
