@@ -23,9 +23,27 @@
   },
   "exercises": {
     "concept": [],
-    "practice": []
+    "practice": [
+      {
+        "slug": "hello-world",
+        "name": "Hello, World!",
+        "uuid": "0b38919c-b959-459c-89b8-c02b2012493e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      }
+    ]
   },
   "concepts": [],
   "key_features": [],
-  "tags": []
+  "tags": [
+    "paradigm/procedural",
+    "paradigm/imperative",
+    "paradigm/object_oriented",
+    "typing/static",
+    "typing/strong",
+    "execution_mode/compiled",
+    "used_for/backends",
+    "used_for/financial_systems"
+  ]
 }
