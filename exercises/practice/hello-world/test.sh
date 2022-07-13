@@ -1,9 +1,10 @@
-#!/bin/sh
-if [ ! -f ../../../bin/cobolcheck ]; then
+#!/usr/bin/env bash
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )/
+
+if [ ! -f $SCRIPT_DIR/bin/cobolcheck ]; then
     echo "Cobolcheck not found, try to fetch it."
-    DIR=$(pwd)
-    cd ../../../bin/
+    cd $SCRIPT_DIR/bin/
     ./fetch-cobolcheck
-    cd $DIR
 fi
-../../../bin/cobolcheck -c ../../../etc/config.properties -p hello-world
+cd $SCRIPT_DIR
+./bin/cobolcheck -p hello-world
