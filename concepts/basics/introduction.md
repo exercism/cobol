@@ -23,7 +23,7 @@ COBOL was created so that normal businessmen and managers could read and discuss
        SaySomething.
           DISPLAY "This is a statement".
 ```
- However, later versions of COBOL introduced the **Free Format** where line column requirements are less strict. 
+ However, later versions of COBOL introduced the **Free Format** where line column requirements are less strict. Comments are instead denoted by *>, and lines can be up to 255 columns.
 
  COBOL differs from later programming languages as the overall structure of any program is determined by a specific hierarchy of components, where the program is split into _divisions_, which are split into _sections_, and so on into _paragraphs_ and _sentences_. There are many divisions and sections a program could have, but the most important ones are the **Identification Division**, the **Data Division**, and the **Procedure Division**.
 
