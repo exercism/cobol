@@ -5,4 +5,11 @@ rem  Assumptions:
 rem
 rem GnuCOBOL 3.+ is installed and on the path. Its executable or alias or symlink is named "cobc".
 
-cobc -x %1 && %~dpn1
+Set filename=%1
+For %%A in ("%filename%") do (
+    Set Folder=%%~dpA
+    Set Name=%%~nxA
+)
+cd %Folder%
+cobc -x %Name%
+%~dpn1
