@@ -1,7 +1,18 @@
-# Introduction
+# About
 
-**_COBOL_** is a statically typed, imperative, and procedural programming language with support for object oriented programming. Despite its age, it's still used today in many banking and financial companies due to its default support for fixed-decimal arithmetic and file-processing ability, making it well suited for financial calculations and other business applications. 
+**_COBOL_** is a statically typed, imperative, and procedural programming language with support for object oriented programming. Despite its age, it's still used today in many banking and financial companies due to its default support for fixed-decimal arithmetic and file-processing ability, making it well suited for financial calculations and other business applications. If you want to skip the exposition and get to the actual language, just go to [COBOL Formatting][start learning].
 
+First released in 1959, it was developed by the **Committee on Data Systems Languages**(CODASYL) based on the FLOW-MATIC language developed by Remington Rand under the leadership of Real Admiral Grace Hopper. As part of an effort by the United States Department of Defense to create a portable language for processing data, it was adopted by computer manufacturers and then standardized in 1968, with the current standard being ISO 2014. 
+
+COBOL was created so that normal businessmen and managers could read and discuss code with programmers, leading to a syntax very close to the english language that prioritizes readability and maintainability. While this mean programs can have a lot of filler words with no semantic meaning and that there are many keywords, properly-written COBOL programs are easily understood, even decades after being written.
+
+**Heads Up:** COBOL is known to be a little intimidating due to its unique syntax and its multitude of keywords. Don't be surprised if something doesn't make sense immediately, and feel free to take breaks. There are also a variety of available resources. Keep in mind there may be some dialect differences between sources:
+
+[IBM COBOL for z/OS][IBM Docs]  
+[TutorialsPoint][Tutorials Point Docs]
+
+
+## COBOL Formatting
  The building blocks of COBOL programs are **sentences**, which are sections of code that do a certain action. The scope of a statement usually begins with a keyword and ends with an associated keyword or a period(.). 
 
 ```
@@ -16,7 +27,7 @@
       *This is a comment!
        PROCEDURE DIVISION.
        SaySomething.
-          DISPLAY "Hello There".
+          DISPLAY "This is a statement".
 ```
  However, later versions of COBOL introduced the **Free Format** where line/column requirements are less strict. Comments are instead denoted by *>, and lines can be up to 256 characters long. Unless stated otherwise, assume programs are to be written in the Free Format. 
 
