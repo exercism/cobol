@@ -54,7 +54,12 @@
      {
        "title": "Precise Calculations",
        "content": "COBOL's decimal arithmetic allows for precise financial calculations without rounding errors.",
-       "icon": "stable"
+       "icon": "scientific"
+     },
+         {
+       "title": "Fast and Efficient",
+       "content": "COBOL was designed to compile to fast and efficient binaries.",
+       "icon": "fast"
      },
      {
        "title": "Still Evolving",
