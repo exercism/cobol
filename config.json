@@ -58,12 +58,12 @@
      },
          {
        "title": "Fast and Efficient",
-       "content": "COBOL was designed to compile to fast and efficient binaries.",
+       "content": "COBOL is fast and efficient, and is used to process millions of bank transactions a day.",
        "icon": "fast"
      },
      {
        "title": "Still Evolving",
-       "content": "With a new standard revision releasing soon, it's still evolving and being updated for 60 years.",
+       "content": "It's still evolving and being updated after 60 years, with a new standard revision releasing soon.",
        "icon": "evolving"
      }
    ],
