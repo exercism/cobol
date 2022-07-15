@@ -34,7 +34,13 @@
       }
     ]
   },
-  "concepts": ["basics"],
+  "concepts": [
+    {
+      "uuid":"0b38919c-b959-459c-89b8-c02b2012493e",
+      "slug": "basics",
+      "name": "Basics"
+    }
+  ],
   "key_features": [],
   "tags": [
     "paradigm/procedural",
