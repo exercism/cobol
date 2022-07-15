@@ -34,7 +34,7 @@
       }
     ]
   },
-  "concepts": [],
+  "concepts": ["basics"],
   "key_features": [],
   "tags": [
     "paradigm/procedural",
