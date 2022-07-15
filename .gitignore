@@ -7,5 +7,7 @@ bin/cobolcheck.exe
 ALLTESTS
 TEST.CBL
 TEST
+TEST.EXE
 output
 *Log.txt
+cobolcheck.exe
