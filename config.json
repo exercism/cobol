@@ -35,7 +35,38 @@
     ]
   },
   "concepts": [],
-  "key_features": [],
+  "key_features": [
+     {
+       "title": "Statically Typed",
+       "content": "COBOL's type system allows for defining not only the type of a variable but also it's exact size.",
+       "icon": "statically-typed"
+     },
+     {
+       "title": "English Syntax",
+       "content": "COBOL's syntax was designed to look just like English, making it easy to read and understand.",
+       "icon": "easy"
+     },
+     {
+       "title": "Stable and Reliable",
+       "content": "First released in 1959, it's been exhaustively tested and proven to be extremely reliable.",
+       "icon": "stable"
+     },
+     {
+       "title": "Precise Calculations",
+       "content": "COBOL's decimal arithmetic allows for precise financial calculations without rounding errors.",
+       "icon": "scientific"
+     },
+         {
+       "title": "Fast and Efficient",
+       "content": "COBOL is fast and efficient, and it's used for processing millions of bank transactions a day.",
+       "icon": "fast"
+     },
+     {
+       "title": "Still Evolving",
+       "content": "It's still evolving and being updated after 60 years, with a new standard revision releasing soon.",
+       "icon": "evolving"
+     }
+   ],
   "tags": [
     "paradigm/procedural",
     "paradigm/imperative",
