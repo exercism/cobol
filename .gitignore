@@ -2,8 +2,8 @@
 .DS_Store
 bin/configlet
 bin/configlet.exe
-bin/cobolcheck
-bin/cobolcheck.exe
+cobolcheck
+cobolcheck.exe
 ALLTESTS
 TEST.CBL
 TEST
