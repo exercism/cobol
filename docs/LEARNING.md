@@ -9,7 +9,7 @@ This book by Michael Coughlan covers the basics of writing COBOL all the way up 
 
 [Free COBOL Ebooks][Free Books]
 
-## Documetation
+## Documentation
 
 [GnuCOBOL's Programmer's Guide][Gnu Guide]  
 This resource covers the elements of the GnuCOBOL compiler, and is updated regularly as the compiler itself changes.
