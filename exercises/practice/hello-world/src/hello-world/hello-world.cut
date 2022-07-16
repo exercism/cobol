@@ -1,5 +1,0 @@
-TestCase "Hello World"
-	MOVE SPACES TO WS-RESULT
-	PERFORM HELLO-WORLD
-	EXPECT WS-RESULT = "Hello, World!"
-
