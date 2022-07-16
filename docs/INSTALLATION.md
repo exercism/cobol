@@ -15,20 +15,7 @@ As a mainframe vendor, IBM maintains its own dialect of COBOL that works on its 
 [Open Mainframe]: https://www.openmainframeproject.org/all-projects/cobolprogrammingcourse
 
 <!--
-I was considering adding Micro Focus's Visual COBOL, but because I don't know the terms of the license I'm not comforatble adding it here.
+I was considering adding Micro Focus's Visual COBOL, but because I don't know the terms of the license I'm not comfortable adding it here.
 -Triattack238
 -->
 
-<!-- TODO: write document
-
-  This document should describe what the student needs to install
-  to allow working on the track on their local system using the CLI.
-
-  You can include the installation instructions in this document, but
-  usually it is better to link to a resource with the official installation
-  instructions, to prevent the instructions from becoming outdated.
-
-  The contents of this document are displayed on the track's documentation
-  page at `https://exercism.org/docs/tracks/<track>/installation`.
-
-  See https://exercism.org/docs/building/tracks/docs for more information. -->
