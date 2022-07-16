@@ -47,7 +47,7 @@ This division is where you give the program a name. It used to be required to al
 
 ### Data Division
 
-The data division contains declarations for all information the program as a whole will be working with, like data from a file. An especially important part is the **Working-Storage Section**, where you declare all global variables. Variables are declared using a data hierarchy number(just stick with `01` to start with), a picture of the variable's size and type, and optionally and initial value.
+The data division contains declarations for all information the program or function will be working with, like data from a file. An especially important part is the **Working-Storage Section**, where you declare all global variables. Variables are declared using a data hierarchy number(just stick with `01` to start with), a picture of the variable's size and type, and optionally and initial value.
 
 ```COBOL
        DATA DIVISION.

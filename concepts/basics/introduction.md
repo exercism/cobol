@@ -1,8 +1,8 @@
 # Introduction
 
-**_COBOL_** is a statically typed, imperative, and procedural programming language with support for object oriented programming. Despite its age, it's still used today in many banking and financial companies due to its default support for fixed-decimal arithmetic and file-processing ability, making it well suited for financial calculations and other business applications. 
+**_COBOL_** is a statically typed, imperative, and procedural programming language with support for object oriented programming. Despite its age, it's still used today in many banking and financial companies due to its default support for fixed-decimal arithmetic and file-processing ability, making it well suited for financial calculations and other business applications.
 
- The building blocks of COBOL programs are **sentences**, which are sections of code that do a certain action. The scope of a statement usually begins with a keyword and ends with an associated keyword or a period(.). 
+ The building blocks of COBOL programs are **sentences**, which are sections of code that do a certain action. The scope of a statement usually begins with a keyword and ends with an associated keyword or a period(.).
 
 ```
          MOVE "Obi-Wan" TO Utapau.
@@ -22,7 +22,7 @@
 
  COBOL differs from later programming languages as the overall structure of any program is determined by a specific hierarchy of components, where the program is split into _divisions_, which are split into _sections_, and so on into _paragraphs_ and _sentences_. There are many divisions and sections a program could have, but the most important ones are the **Identification Division**, the **Data Division**, and the **Procedure Division**.
 
-### Identification Division
+## Identification Division
 
 This division is where you give the program a name. It used to be required to also add an author and date, but not that's optional.
 
@@ -34,9 +34,9 @@ This division is where you give the program a name. It used to be required to al
         DATE-WRITTEN. 19th May 2005.
 ```
 
-### Data Division
+## Data Division
 
-The data division contains declarations for all information the program as a whole will be working with, like data from a file. An especially important part is the **Working-Storage Section**, where you declare all global variables. Variables are declared using a data hierarchy number(just stick with `01` to start with), a picture of the variable's size and type, and optionally and initial value.
+The data division contains declarations for all information the program or function will be working with, like data from a file. An especially important part is the **Working-Storage Section**, where you declare all global variables. Variables are declared using a data hierarchy number(just stick with `01` to start with), a picture of the variable's size and type, and optionally and initial value.
 
 ```COBOL
        DATA DIVISION.
@@ -44,7 +44,7 @@ The data division contains declarations for all information the program as a who
        01 Name PIC A(14) VALUE "General Kenobi".
 ```
 
-### Procedure Division
+## Procedure Division
 
 Lastly, the procedure division is where the program starts performing actions, and where all of those paragraphs and sentences are. COBOL has many keywords and built-in functions, but this course will try to teach the basics.
 
