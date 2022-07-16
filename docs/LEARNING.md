@@ -7,7 +7,7 @@ COBOL has a variety of resources to help both experiences programmers and beginn
 - [Beginning COBOL for Programmers][Coughlan Book]  
 This book by Michael Coughlan covers the basics of writing COBOL all the way up to the 2002 standard. It also includes exercises to practice programming, which have been finished and gathered at this [Github Repository][Book Exercises].
 
-[Free COBOL Ebooks][Free Books]
+- [Free COBOL Ebooks][Free Books]
 
 ## Documentation
 
