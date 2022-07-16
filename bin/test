@@ -18,18 +18,40 @@
 # Example:
 # ./bin/test
 
+function verify_exercise() {
+    local dir=$(realpath $1)
+    local slug=$(basename "${dir}")
+    local implementation_file="${dir}/.meta/proof.ci.CBL"
+    local stub_file="${dir}/src/${slug}.CBL"
+    local stub_backup_file="${stub_file}.bak"
+
+    cp "${stub_file}" "${stub_backup_file}"
+    cp "${implementation_file}" "${stub_file}"
+
+    "${dir}/test.sh"
+
+    if [ $? -ne 0 ]; then
+        echo "${slug}: proof solution did not pass the tests"
+        exit_code=1
+    fi
+
+    mv "${stub_backup_file}" "${stub_file}"
+}
+
 # Verify the Concept Exercises
 for concept_exercise_dir in ./exercises/concept/*/; do
     if [ -d $concept_exercise_dir ]; then
-        echo "Checking $(basename "${concept_exercise_dir}") exercise..."
-        # TODO: run command to verify that the exemplar solution passes the tests
+        echo "Checking $(basename "${concept_exercise_dir}") concept exercise..."
+        verify_exercise "${concept_exercise_dir}"
     fi
 done
 
 # Verify the Practice Exercises
 for practice_exercise_dir in ./exercises/practice/*/; do
     if [ -d $practice_exercise_dir ]; then
-        echo "Checking $(basename "${practice_exercise_dir}") exercise..."
-        # TODO: run command to verify that the example solution passes the tests
+        echo "Checking $(basename "${practice_exercise_dir}") practice exercise..."
+        verify_exercise "${practice_exercise_dir}"
     fi
 done
+
+exit ${exit_code}

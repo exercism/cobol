@@ -13,7 +13,7 @@
 # Requires scripts:
 # - bin/test
 
-name: <track> / Test
+name: COBOL / Test
 
 on:
   push:
@@ -23,17 +23,14 @@ on:
 
 jobs:
   ci:
-    runs-on: <image-name>
+    runs-on: ubuntu-20.04
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Use <setup tooling>
-        uses: <action to setup tooling>
-
-      - name: Install project dependencies
-        run: <install dependencies>
+      - name: Setup COBOL
+        uses: fabasoad/setup-cobol-action@0e90d7d30a6c2dc4e4992c713c7c9a7d8ea677a9
 
       - name: Run tests for all exercises
         run: bin/test
