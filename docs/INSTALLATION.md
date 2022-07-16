@@ -1,4 +1,4 @@
-# Installating COBOL Locally
+# Installation
 
 Unlike newer languages, COBOL has multiple well-maintained compilers, though each has their own benefits. 
 
