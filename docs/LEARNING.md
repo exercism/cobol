@@ -16,7 +16,7 @@ This resource covers the elements of the GnuCOBOL compiler, and is updated regul
 
 ## Courses
 
-[Open Mainframe Project COBOL Course][Open Mainframe]  
+- [Open Mainframe Project COBOL Course][Open Mainframe]  
 This course covers the IBM dialect in the provided VSCode environment.
 
 [Coughlan Book]: https://books.google.com/books/about/Beginning_COBOL_for_Programmers.html?id=MJmJAwAAQBAJ
