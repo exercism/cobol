@@ -8,12 +8,12 @@
     "representer": false,
     "analyzer": false
   },
-  "blurb": "TODO: add blurb",
+  "blurb": "COBOL is a statically typed, imperative, procedural programming language with support for object oriented programming. First released in 1959, it's still used today in many banking and financial companies due to it's decimal floating-point arithmetic, making it well suited for financial calculations.",
   "version": 3,
   "online_editor": {
     "indent_style": "space",
     "indent_size": 4,
-    "highlightjs_language": "TODO: specify highlightjs language"
+    "highlightjs_language": "cobol"
   },
   "files": {
     "solution": [],
@@ -34,14 +34,39 @@
       }
     ]
   },
-  "concepts": [
-    {
-      "uuid": "192f5a7d-c20c-4b9c-9f07-e857e3664b02",
-      "slug": "basics",
-      "name": "Basics"
-    }
-  ],
-  "key_features": [],
+  "concepts": [],
+  "key_features": [
+     {
+       "title": "Statically Typed",
+       "content": "COBOL's type system allows for defining not only the type of a variable but also it's exact size.",
+       "icon": "statically-typed"
+     },
+     {
+       "title": "English Syntax",
+       "content": "COBOL's syntax was designed to look just like English, making it easy to read and understand.",
+       "icon": "easy"
+     },
+     {
+       "title": "Stable and Reliable",
+       "content": "First released in 1959, it's been exhaustively tested and proven to be extremely reliable.",
+       "icon": "stable"
+     },
+     {
+       "title": "Precise Calculations",
+       "content": "COBOL's decimal arithmetic allows for precise financial calculations without rounding errors.",
+       "icon": "scientific"
+     },
+         {
+       "title": "Fast and Efficient",
+       "content": "COBOL is fast and efficient, and it's used for processing millions of bank transactions a day.",
+       "icon": "fast"
+     },
+     {
+       "title": "Still Evolving",
+       "content": "It's still evolving and being updated after 60 years, with a new standard revision releasing soon.",
+       "icon": "evolving"
+     }
+   ],
   "tags": [
     "paradigm/procedural",
     "paradigm/imperative",
