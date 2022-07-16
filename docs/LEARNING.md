@@ -19,11 +19,11 @@ This resource covers the elements of the GnuCOBOL compiler, and is updated regul
 - [Open Mainframe Project COBOL Course][Open Mainframe]  
 This course covers the IBM dialect in the provided VSCode environment.
 
-[Coughlan Book]: https://books.google.com/books/about/Beginning_COBOL_for_Programmers.html?id=MJmJAwAAQBAJ
-[Book Exercises]: https://github.com/Apress/beg-cobol-for-programmers
-[Gnu Guide]: https://gnucobol.sourceforge.io/HTML/gnucobpg.html
-[Free Books]: https://freebookcentre.net/Language/Free-Cobol-Books-Download.html
-[Open Mainframe]: https://www.openmainframeproject.org/all-projects/cobolprogrammingcourse
+- [Coughlan Book]: https://books.google.com/books/about/Beginning_COBOL_for_Programmers.html?id=MJmJAwAAQBAJ
+- [Book Exercises]: https://github.com/Apress/beg-cobol-for-programmers
+- [Gnu Guide]: https://gnucobol.sourceforge.io/HTML/gnucobpg.html
+- [Free Books]: https://freebookcentre.net/Language/Free-Cobol-Books-Download.html
+- [Open Mainframe]: https://www.openmainframeproject.org/all-projects/cobolprogrammingcourse
 
 <!-- TODO: write document
 
