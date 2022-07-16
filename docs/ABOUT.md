@@ -12,6 +12,9 @@ COBOL was created so that normal businessmen and managers could read and discuss
 
 [IBM COBOL for z/OS][IBM Docs]  
 [TutorialsPoint][Tutorials Point Docs]
+
+[IBM Docs]: https://www.ibm.com/docs/en/cobol-zos/6.4
+[Tutorials Point Docs]: https://www.tutorialspoint.com/cobol/index.htm
 <!-- TODO: write document
 
   This document contains a short introduction to the language.
