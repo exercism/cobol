@@ -1,5 +1,9 @@
 # Resources
 
+- [COBOl 2014 ISO Standard][ISO 2014]
+
+[ISO 2014]: https://www.iso.org/standard/51416.html
+
 <!-- TODO: write document
 
   This document should link to useful resources.
