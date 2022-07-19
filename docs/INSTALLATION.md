@@ -4,7 +4,7 @@ Unlike newer languages, COBOL has multiple well-maintained compilers, though eac
 
 ## GnuCobol
 
-GnuCOBOL is the Free Software Foundation's Free and Open Source COBOL Compiler. It transpiles COBOL into a C program before using Gcc to compile that into an executable. Instructions for installation can be found [here][GnuCOBOL].
+GnuCOBOL is the Free Software Foundation's Free and Open Source COBOL Compiler. It transpiles COBOL into a C program before using GCC to compile that into an executable. Instructions for installation can be found [here][GnuCOBOL].
 
 ## IBM Cobol
 
