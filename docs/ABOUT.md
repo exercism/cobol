@@ -1,6 +1,6 @@
 # About
 
-**_COBOL_** is a statically typed, imperative, and procedural programming language with support for object oriented programming. Despite its age, it's still used today in many banking and financial companies due to its default support for fixed-decimal arithmetic and file-processing ability, making it well suited for financial calculations and other business applications. 
+**_COBOL_** is a statically typed, imperative, and procedural programming language with support for object oriented programming. Despite its age, it's still used today in many banking and financial companies due to its default support for decimal floating-point arithmetic and file-processing ability, making it well suited for financial calculations and other business applications. 
 
 First released in 1959, it was developed by the **Committee on Data Systems Languages**(CODASYL) based on the FLOW-MATIC language developed by Remington Rand under the leadership of Real Admiral Grace Hopper. As part of an effort by the United States Department of Defense to create a portable language for processing data, it was adopted by computer manufacturers and then standardized in 1968, with the current standard being ISO 2014. 
 
