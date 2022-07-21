@@ -21,8 +21,8 @@
 function verify_exercise() {
     local dir=$(realpath $1)
     local slug=$(basename "${dir}")
-    local implementation_file="${dir}/.meta/proof.ci.CBL"
-    local stub_file="${dir}/src/${slug}.CBL"
+    local implementation_file="${dir}/.meta/proof.ci.cob"
+    local stub_file="${dir}/src/${slug}.cob"
     local stub_backup_file="${stub_file}.bak"
 
     cp "${stub_file}" "${stub_backup_file}"
