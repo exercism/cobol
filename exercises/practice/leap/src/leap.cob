@@ -5,7 +5,7 @@
        WORKING-STORAGE SECTION.
        PROCEDURE DIVISION.
        LEAP.
-	  * Enter solution here
-		 CONTINUE.
+      * Enter solution here
+         CONTINUE.
        LEAP-EXIT.
          EXIT.
