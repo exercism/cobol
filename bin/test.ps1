@@ -1,8 +1,8 @@
 function verify_exercise ($practiceExerciseDir) {
     $dir=[System.IO.Path]::GetFullPath($practiceExerciseDir)
     $slug=Split-Path $dir -Leaf
-    $implementationFile="$dir/.meta/proof.ci.CBL"
-    $stubFile="$dir/src/$slug.CBL"
+    $implementationFile="$dir/.meta/proof.ci.cob"
+    $stubFile="$dir/src/$slug.cob"
     $stubBackupFile="$stubFile.bak"
     Copy-Item $stubFile -Destination $stubBackupFile
     Copy-Item $implementationFile -Destination $stubFile
