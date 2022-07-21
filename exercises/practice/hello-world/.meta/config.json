@@ -5,13 +5,13 @@
     ],
     "files": {
       "solution": [
-        "src/hello-world.CBL"
+        "src/hello-world.cob"
       ],
       "test": [
         "test.sh"
       ],
       "example": [
-        ".meta/proof.ci.CBL"
+        ".meta/proof.ci.cob"
       ]
     },
     "blurb": "The classical introductory exercise. Just say \"Hello, World!\".",
