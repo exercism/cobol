@@ -4,14 +4,14 @@
     ],
     "files": {
         "solution": [
-            "src/leap.CBL"
+            "src/leap.cob"
         ],
         "test": [
             "test.sh",
             "test.ps1"
         ],
         "example": [
-            ".meta/proof.ci.CBL"
+            ".meta/proof.ci.cob"
         ]
     },
     "blurb": "Given a year, report if it is a leap year.",
