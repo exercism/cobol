@@ -1,0 +1,173 @@
+TestCase "Yacht"
+	MOVE 55555 TO WS-DICE
+	MOVE 'yacht' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 50
+
+TestCase "Not Yacht"
+	MOVE 13325 TO WS-DICE
+	MOVE 'yacht' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 0
+
+TestCase "Ones"
+	MOVE 11135 TO WS-DICE
+	MOVE 'ones' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 3
+
+TestCase "Ones, out of order"
+	MOVE 31151 TO WS-DICE
+	MOVE 'ones' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 3
+
+TestCase "No ones"
+	MOVE 43655 TO WS-DICE
+	MOVE 'ones' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 0
+
+TestCase "Twos"
+	MOVE 23456 TO WS-DICE
+	MOVE 'twos' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 2
+
+TestCase "Fours"
+	MOVE 14141 TO WS-DICE
+	MOVE 'fours' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 8
+
+TestCase "Yacht counted as threes"
+	MOVE 33333 TO WS-DICE
+	MOVE 'threes' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 15
+
+TestCase "Yacht of 3s counted as fives"
+	MOVE 33333 TO WS-DICE
+	MOVE 'fives' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 0
+
+TestCase "Fives"
+	MOVE 15353 TO WS-DICE
+	MOVE 'fives' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 10
+
+TestCase "Sixes"
+	MOVE 23456 TO WS-DICE
+	MOVE 'sixes' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 6
+
+TestCase "Full house two small, three big"
+	MOVE 22444 TO WS-DICE
+	MOVE 'full house' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 16
+
+TestCase "Full house three small, two big"
+	MOVE 53353 TO WS-DICE
+	MOVE 'full house' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 19
+
+TestCase "Two pair is not a full house"
+	MOVE 22445 TO WS-DICE
+	MOVE 'full house' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 0
+
+TestCase "Four of a kind is not a full house"
+	MOVE 14444 TO WS-DICE
+	MOVE 'full house' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 0
+
+TestCase "Yacht is not a full house"
+	MOVE 22222 TO WS-DICE
+	MOVE 'full house' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 0
+
+TestCase "Four of a Kind"
+	MOVE 66466 TO WS-DICE
+	MOVE 'four of a kind' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 24
+
+TestCase "Yacht can be scored as Four of a Kind"
+	MOVE 33333 TO WS-DICE
+	MOVE 'four of a kind' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 12
+
+TestCase "Full house is not Four of a Kind"
+	MOVE 33355 TO WS-DICE
+	MOVE 'four of a kind' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 0
+
+TestCase "Little Straight"
+	MOVE 35412 TO WS-DICE
+	MOVE 'little straight' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 30
+
+TestCase "Little Straight as Big Straight"
+	MOVE 12345 TO WS-DICE
+	MOVE 'big straight' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 0
+
+TestCase "Four in order but not a little straight"
+	MOVE 11234 TO WS-DICE
+	MOVE 'little straight' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 0
+
+TestCase "No pairs but not a little straight"
+	MOVE 12346 TO WS-DICE
+	MOVE 'little straight' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 0
+
+TestCase "Minimum is 1, maximum is 5, but not a little straight"
+	MOVE 11345 TO WS-DICE
+	MOVE 'little straight' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 0
+
+TestCase "Big Straight"
+	MOVE 46253 TO WS-DICE
+	MOVE 'big straight' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 30
+
+TestCase "Big Straight as little straight"
+	MOVE 65432 TO WS-DICE
+	MOVE 'little straight' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 0
+
+TestCase "No pairs but not a big straight"
+	MOVE 65431 TO WS-DICE
+	MOVE 'big straight' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 0
+
+TestCase "Choice"
+	MOVE 33566 TO WS-DICE
+	MOVE 'choice' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 23
+
+TestCase "Yacht as choice"
+	MOVE 22222 TO WS-DICE
+	MOVE 'choice' TO WS-CATEGORY
+	PERFORM YACHT
+	EXPECT WS-RESULT = 10
