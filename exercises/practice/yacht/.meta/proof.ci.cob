@@ -24,7 +24,6 @@
        
        YACHT.
          PERFORM BUBBLE-SORT.
-         DISPLAY "SORTED DICE: " WS-DICE.
          EVALUATE WS-CATEGORY
            WHEN 'ones'
             PERFORM SCORE-ONES-ROLL 
