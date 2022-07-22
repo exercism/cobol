@@ -21,7 +21,6 @@
         03 WS-FH-FIRST-COUNTER PIC 9 VALUE 0.
         03 WS-FH-LAST-COUNTER PIC 9 VALUE 0.
        PROCEDURE DIVISION.
-       
        YACHT.
          PERFORM BUBBLE-SORT.
          EVALUATE WS-CATEGORY
@@ -66,6 +65,7 @@
          EXIT.
         
        SCORE-ONES-ROLL.
+         MOVE ZEROES TO WS-COUNTER.
          MOVE ZEROES TO WS-RESULT.
          MOVE 1 TO WS-DOTS.
          INSPECT WS-DICE 
@@ -75,6 +75,7 @@
          EXIT.
        
        SCORE-TWOS-ROLL.
+         MOVE ZEROES TO WS-COUNTER.
          MOVE ZEROES TO WS-RESULT.
          MOVE 2 TO WS-DOTS.
          INSPECT WS-DICE 
@@ -84,6 +85,7 @@
          EXIT.
        
        SCORE-THREES-ROLL.
+         MOVE ZEROES TO WS-COUNTER.
          MOVE ZEROES TO WS-RESULT.
          MOVE 3 TO WS-DOTS.
          INSPECT WS-DICE 
@@ -93,6 +95,7 @@
          EXIT.
        
        SCORE-FOURS-ROLL.
+         MOVE ZEROES TO WS-COUNTER.
          MOVE ZEROES TO WS-RESULT.
          MOVE 4 TO WS-DOTS.
          INSPECT WS-DICE 
@@ -102,6 +105,7 @@
          EXIT.
        
        SCORE-FIVES-ROLL.
+         MOVE ZEROES TO WS-COUNTER.
          MOVE ZEROES TO WS-RESULT.
          MOVE 5 TO WS-DOTS.
          INSPECT WS-DICE 
@@ -111,6 +115,7 @@
          EXIT.
        
        SCORE-SIXES-ROLL.
+         MOVE ZEROES TO WS-COUNTER.
          MOVE ZEROES TO WS-RESULT.
          MOVE 6 TO WS-DOTS.
          INSPECT WS-DICE 
@@ -136,6 +141,7 @@
          EXIT.
        
        SCORE-FOUR-OF-A-KIND.
+         MOVE ZEROES TO WS-COUNTER.
          MOVE ZEROES TO WS-RESULT.
          MOVE WS-DICE-DIE(1) TO WS-DOTS.
          INSPECT WS-DICE 
@@ -155,6 +161,7 @@
          EXIT.
        
        SCORE-FULL-HOUSE.
+         MOVE ZEROES TO WS-FULL-HOUSE-COUNTERS.
          MOVE ZEROES TO WS-RESULT.
          MOVE WS-DICE-DIE(1) TO WS-DOTS.
          INSPECT WS-DICE
@@ -183,6 +190,7 @@
          EXIT.
 
        SCORE-YACHT-ROLL.
+         MOVE ZEROES TO WS-COUNTER.
          MOVE ZEROES TO WS-RESULT.
          PERFORM VARYING WS-DOTS  
           FROM 1
