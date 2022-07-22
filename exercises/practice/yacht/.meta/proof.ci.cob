@@ -66,6 +66,7 @@
          EXIT.
         
        SCORE-ONES-ROLL.
+         MOVE ZEROES TO WS-RESULT.
          MOVE 1 TO WS-DOTS.
          INSPECT WS-DICE 
            TALLYING WS-COUNTER FOR ALL WS-DOTS.
@@ -74,6 +75,7 @@
          EXIT.
        
        SCORE-TWOS-ROLL.
+         MOVE ZEROES TO WS-RESULT.
          MOVE 2 TO WS-DOTS.
          INSPECT WS-DICE 
            TALLYING WS-COUNTER FOR ALL WS-DOTS.
@@ -82,6 +84,7 @@
          EXIT.
        
        SCORE-THREES-ROLL.
+         MOVE ZEROES TO WS-RESULT.
          MOVE 3 TO WS-DOTS.
          INSPECT WS-DICE 
            TALLYING WS-COUNTER FOR ALL WS-DOTS.
@@ -90,6 +93,7 @@
          EXIT.
        
        SCORE-FOURS-ROLL.
+         MOVE ZEROES TO WS-RESULT.
          MOVE 4 TO WS-DOTS.
          INSPECT WS-DICE 
            TALLYING WS-COUNTER FOR ALL WS-DOTS.
@@ -98,6 +102,7 @@
          EXIT.
        
        SCORE-FIVES-ROLL.
+         MOVE ZEROES TO WS-RESULT.
          MOVE 5 TO WS-DOTS.
          INSPECT WS-DICE 
            TALLYING WS-COUNTER FOR ALL WS-DOTS.
@@ -106,6 +111,7 @@
          EXIT.
        
        SCORE-SIXES-ROLL.
+         MOVE ZEROES TO WS-RESULT.
          MOVE 6 TO WS-DOTS.
          INSPECT WS-DICE 
            TALLYING WS-COUNTER FOR ALL WS-DOTS.
@@ -114,6 +120,7 @@
          EXIT.
        
        SCORE-LITTLE-STRAIGHT.
+         MOVE ZEROES TO WS-RESULT.
          IF LITTLE-STRAIGHT
             MOVE 30 TO WS-RESULT
          END-IF.
@@ -121,6 +128,7 @@
          EXIT.
        
        SCORE-BIG-STRAIGHT.
+         MOVE ZEROES TO WS-RESULT.
          IF BIG-STRAIGHT
            MOVE 30 TO WS-RESULT
          END-IF.
@@ -128,6 +136,7 @@
          EXIT.
        
        SCORE-FOUR-OF-A-KIND.
+         MOVE ZEROES TO WS-RESULT.
          MOVE WS-DICE-DIE(1) TO WS-DOTS.
          INSPECT WS-DICE 
            TALLYING WS-COUNTER FOR ALL WS-DOTS.
@@ -146,6 +155,7 @@
          EXIT.
        
        SCORE-FULL-HOUSE.
+         MOVE ZEROES TO WS-RESULT.
          MOVE WS-DICE-DIE(1) TO WS-DOTS.
          INSPECT WS-DICE
            TALLYING WS-FH-FIRST-COUNTER FOR ALL WS-DOTS.
@@ -162,16 +172,18 @@
          EXIT.
        
        SCORE-CHOICE-ROLL.
-         PERFORM VARYING WS-DOTS
+         MOVE ZEROES TO WS-RESULT.
+         PERFORM VARYING WS-TEMP
             FROM 1
             BY 1
-            UNTIL WS-DOTS > 6
-                ADD WS-DOTS TO WS-RESULT
+            UNTIL WS-TEMP = 6
+              ADD WS-DICE-DIE (WS-TEMP) TO WS-RESULT
          END-PERFORM.
        SCORE-CHOICE-ROLL-EXIT.
          EXIT.
 
        SCORE-YACHT-ROLL.
+         MOVE ZEROES TO WS-RESULT.
          PERFORM VARYING WS-DOTS  
           FROM 1
           BY 1
