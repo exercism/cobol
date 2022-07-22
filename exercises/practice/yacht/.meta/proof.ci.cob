@@ -146,7 +146,7 @@
          MOVE WS-DICE-DIE(1) TO WS-DOTS.
          INSPECT WS-DICE 
            TALLYING WS-COUNTER FOR ALL WS-DOTS.
-         IF WS-COUNTER = 4
+         IF WS-COUNTER >= 4
            MULTIPLY WS-DOTS BY 4 GIVING WS-RESULT
          ELSE 
            MOVE 0 TO WS-COUNTER
