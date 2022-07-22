@@ -8,7 +8,7 @@ Set-Location $PSScriptRoot
 
 
 Invoke-Expression "bin/cobolcheck.exe -p leap"
-Invoke-Expression "cobc -xj TEST.COB"
+Invoke-Expression "cobc -xj test.cob"
 
 if ($Lastexitcode -ne 0) {
   exit $Lastexitcode

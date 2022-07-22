@@ -9,4 +9,4 @@ fi
 cd $SCRIPT_DIR
 ./bin/cobolcheck -p leap
 # compile and run
-cobc -xj TEST.COB
+cobc -xj test.cob
