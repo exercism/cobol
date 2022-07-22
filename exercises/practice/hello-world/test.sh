@@ -8,5 +8,6 @@ if [ ! -f $SCRIPT_DIR/bin/cobolcheck ]; then
 fi
 cd $SCRIPT_DIR
 ./bin/cobolcheck -p hello-world
-cobc -x TEST.CBL
-./TEST
+
+# compile and run
+cobc -xj test.cob

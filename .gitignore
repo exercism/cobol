@@ -5,9 +5,10 @@ bin/configlet.exe
 cobolcheck
 cobolcheck.exe
 ALLTESTS
-TEST.CBL
-TEST
-TEST.EXE
+test.cob
+test
+test.exe
 output
 *Log.txt
 cobolcheck.exe
+*.cbl.bak
