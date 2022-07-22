@@ -7,7 +7,7 @@ if [ ! -f $SCRIPT_DIR/bin/cobolcheck ]; then
     ./fetch-cobolcheck
 fi
 cd $SCRIPT_DIR
-./bin/cobolcheck -p hello-world
+./bin/cobolcheck -p yacht
 
 # compile and run
 cobc -xj test.cob

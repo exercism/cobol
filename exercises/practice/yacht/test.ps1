@@ -6,7 +6,7 @@ if (![System.IO.File]::Exists("$PSScriptRoot/bin/cobolcheck.exe")){
 Write-Output "Run cobolcheck."
 Set-Location $PSScriptRoot
 
-Invoke-Expression "bin/cobolcheck.exe -p hello-world"
+Invoke-Expression "bin/cobolcheck.exe -p yacht"
 Invoke-Expression "cobc -xj test.cob"
 
 if ($Lastexitcode -ne 0) {
