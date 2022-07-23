@@ -1,0 +1,11 @@
+{
+    "authors": ["axtens"],
+    "files": {
+        "solution": ["src/yacht.cob"],
+        "test": ["test.sh", "test.ps1"],
+        "example": [".meta/proof.ci.cob"]
+    },
+  "blurb": "Score a single throw of dice in the game Yacht",
+  "source": "James Kilfiger, using wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Yacht_(dice_game)"
+}
