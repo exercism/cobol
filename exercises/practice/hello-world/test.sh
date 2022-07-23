@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )/
+SLUG=$(basename "${SCRIPT_DIR}")
 
 if [ ! -f $SCRIPT_DIR/bin/cobolcheck ]; then
     echo "Cobolcheck not found, try to fetch it."
@@ -7,7 +8,7 @@ if [ ! -f $SCRIPT_DIR/bin/cobolcheck ]; then
     ./fetch-cobolcheck
 fi
 cd $SCRIPT_DIR
-./bin/cobolcheck -p hello-world
+./bin/cobolcheck -p $SLUG
 
 # compile and run
 cobc -xj test.cob
