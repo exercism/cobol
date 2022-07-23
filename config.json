@@ -48,16 +48,23 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
-    },
-    {
-      "slug": "pangram",
-      "name": "Pangram",
-      "uuid": "d5b3d82d-9cc7-47bd-b4ab-33c4383ab942",
-      "practices": [],
-      "prerequisites": [],
-      "difficulty": 3
-  }
-
+      },
+      {
+        "slug": "pangram",
+        "name": "Pangram",
+        "uuid": "d5b3d82d-9cc7-47bd-b4ab-33c4383ab942",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "isogram",
+        "name": "Isogram",
+        "uuid": "67890c1a-4922-478b-b89d-f99f6a1578a4",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      }
     ]
   },
   "concepts": [],
