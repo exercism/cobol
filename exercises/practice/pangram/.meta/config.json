@@ -1,0 +1,20 @@
+{
+    "authors": [
+        "axtens"
+    ],
+    "files": {
+        "solution": [
+            "src/pangram.cob"
+        ],
+        "test": [
+            "test.sh",
+            "test.ps1"
+        ],
+        "example": [
+            ".meta/proof.ci.cob"
+        ]
+    },
+    "blurb": "Determine if a sentence is a pangram.",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Pangram"
+}
