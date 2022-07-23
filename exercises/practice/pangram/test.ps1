@@ -7,7 +7,7 @@ Write-Output "Run cobolcheck."
 Set-Location $PSScriptRoot
 
 
-Invoke-Expression "bin\cobolcheck.exe -p leap"
+Invoke-Expression "bin\cobolcheck.exe -p pangram"
 Invoke-Expression "cobc -xj test.cob"
 
 if ($Lastexitcode -ne 0) {
