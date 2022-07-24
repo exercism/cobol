@@ -11,4 +11,4 @@ test.exe
 output
 *Log.txt
 cobolcheck.exe
-*.cbl.bak
+*.cob.bak

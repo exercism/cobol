@@ -1,7 +1,6 @@
-# This file is a copy of the
-# https://github.com/exercism/configlet/blob/main/scripts/fetch-configlet.ps1 file.
-# Please submit bugfixes/improvements to the above file to ensure that all tracks
-# benefit from the changes.
+# This file is inspired by https://github.com/exercism/configlet/blob/main/scripts/fetch-configlet.ps1.
+# It is only used in the cobol track, and a copy of it is placed in every exercise folder.
+# If you change something, make sure to upgrade all scripts in all exercises!
 
 $ErrorActionPreference = "Stop"
 $ProgressPreference = "SilentlyContinue"
