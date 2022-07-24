@@ -1,0 +1,38 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. rotational-cipher.
+       ENVIRONMENT DIVISION.
+       CONFIGURATION SECTION.
+       REPOSITORY. FUNCTION ALL INTRINSIC.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-KEY PIC 9(2).
+       01 WS-TEXT PIC X(128).
+       01 WS-CIPHER PIC X(128).
+       01 WS-UPPER PIC X(26) VALUE 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.
+       01 WS-LOWER PIC X(26) VALUE 'abcdefghijklmnopqrstuvwxyz'.
+       01 WS-CHAR-INDEX PIC 9(5).
+
+       PROCEDURE DIVISION.
+       ROTATIONAL-CIPHER.
+
+      * Uppercase the plaintext message
+       INSPECT WS-TEXT CONVERTING WS-LOWER to WS-UPPER.
+       MOVE WS-TEXT TO WS-CIPHER.
+
+       PERFORM VARYING WS-CHAR-INDEX FROM 1 BY 1 
+           UNTIL WS-CHAR-INDEX > LENGTH(WS-TEXT)
+
+      * Ignore spaces and "."
+       IF WS-CIPHER (WS-CHAR-INDEX:1) IS NOT ALPHABETIC
+           OR WS-CIPHER (WS-CHAR-INDEX:1) EQUAL SPACE
+           EXIT PERFORM CYCLE
+       END-IF
+
+       MOVE CHAR(MOD(ORD(WS-CIPHER (WS-CHAR-INDEX:1))
+           - ORD("A") + WS-KEY, 26) + ORD("A"))
+           TO WS-CIPHER (WS-CHAR-INDEX:1)
+       END-PERFORM.
+
+       DISPLAY "Plain: " WS-TEXT.
+       DISPLAY "Cipher: " WS-CIPHER.
+       GOBACK.
