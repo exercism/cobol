@@ -1,8 +1,7 @@
-      *COBOL source code snippet
+HELLO * COBOL source code snippet
        IDENTIFICATION DIVISION.
        PROGRAM-ID. Hello.
        DATA DIVISION.
        PROCEDURE DIVISION.
-         DISPLAY "Hello World!"
-         STOP RUN.
-       
+       DISPLAY "Hello World!"
+       STOP RUN.
