@@ -35,4 +35,3 @@
 
        DISPLAY "Plain: " WS-TEXT.
        DISPLAY "Cipher: " WS-CIPHER.
-       GOBACK.

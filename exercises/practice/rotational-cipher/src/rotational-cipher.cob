@@ -8,6 +8,3 @@
 
        PROCEDURE DIVISION.
        ROTATIONAL-CIPHER.
-
-       GOBACK.
-       
