@@ -1,3 +1,9 @@
+TESTSUITE 'Tests for collatz-conjecture'
+
+BEFORE-EACH
+	MOVE 0 TO WS-STEPS
+END-BEFORE
+
 TestCase "zero steps for one"
 	MOVE 1 TO WS-NUMBER
 	PERFORM COLLATZ-CONJECTURE
