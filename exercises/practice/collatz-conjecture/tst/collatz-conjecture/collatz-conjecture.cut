@@ -28,3 +28,8 @@ TestCase "zero is an error"
 	MOVE 0 TO WS-NUMBER
 	PERFORM COLLATZ-CONJECTURE
 	EXPECT WS-ERROR = "Only positive integers are allowed"
+
+TestCase "negative value is an error"
+	MOVE -15 TO WS-NUMBER
+	PERFORM COLLATZ-CONJECTURE
+	EXPECT WS-ERROR = "Only positive integers are allowed"
