@@ -88,6 +88,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
+      },
+      {
+        "slug": "hamming",
+        "name": "Hamming Distance",
+        "uuid": "24415bd5-fbb7-485f-a879-09dc344e022d",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
       }
     ]
   },
