@@ -20,11 +20,12 @@
            IF FUNCTION MOD(WS-NUMBER, 2) EQUAL 1
               COMPUTE WS-NUMBER =
               WS-NUMBER * 3 + 1
+              ADD 1 TO WS-STEPS
            ELSE
               COMPUTE WS-NUMBER =
               WS-NUMBER / 2
+              ADD 1 TO WS-STEPS
            END-IF
-           ADD 1 TO WS-STEPS
        END-PERFORM.
        
        DISPLAY WS-STEPS.
