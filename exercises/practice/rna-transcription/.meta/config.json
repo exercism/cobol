@@ -1,0 +1,11 @@
+{
+    "authors": ["KTSnowy"],
+    "files": {
+      "solution": ["src/rna-transcription.cob"],
+      "test": ["test.sh", "test.ps1"],
+      "example": [".meta/proof.ci.cob"]
+    },
+  "blurb": "Given a DNA strand, return its RNA Complement Transcription.",
+  "source": "Hyperphysics",
+  "source_url": "http://hyperphysics.phy-astr.gsu.edu/hbase/Organic/transcription.html"
+}
