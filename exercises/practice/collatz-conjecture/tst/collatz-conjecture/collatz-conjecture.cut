@@ -1,0 +1,35 @@
+TESTSUITE 'Tests for collatz-conjecture'
+
+BEFORE-EACH
+	MOVE 0 TO WS-STEPS
+END-BEFORE
+
+TestCase "zero steps for one"
+	MOVE 1 TO WS-NUMBER
+	PERFORM COLLATZ-CONJECTURE
+	EXPECT WS-STEPS = 0000
+
+TestCase "divide if even"
+	MOVE 16 TO WS-NUMBER
+	PERFORM COLLATZ-CONJECTURE
+	EXPECT WS-STEPS = 0004
+
+TestCase "even and odd steps"
+	MOVE 12 TO WS-NUMBER
+	PERFORM COLLATZ-CONJECTURE
+	EXPECT WS-STEPS = 0009
+
+TestCase "large number of even and odd steps"
+	MOVE 1000000 TO WS-NUMBER
+	PERFORM COLLATZ-CONJECTURE
+	EXPECT WS-STEPS = 0152
+
+TestCase "zero is an error"
+	MOVE 0 TO WS-NUMBER
+	PERFORM COLLATZ-CONJECTURE
+	EXPECT WS-ERROR = "Only positive integers are allowed"
+
+TestCase "negative value is an error"
+	MOVE -15 TO WS-NUMBER
+	PERFORM COLLATZ-CONJECTURE
+	EXPECT WS-ERROR = "Only positive integers are allowed"
