@@ -22,7 +22,7 @@ TestCase "A simple valid SIN that remains valid if reversed"
 TestCase "A simple valid SIN that becomes invalid if reversed"
 	MOVE "59" TO WS-CARD-NUMBER
 	PERFORM LUHN
-	EXPECT WS-RESULT = "VALID"
+	EXPECT WS-VALID = "VALID"
 
 TestCase "A valid Canadian SIN"
 	MOVE "055 444 285" TO WS-CARD-NUMBER
