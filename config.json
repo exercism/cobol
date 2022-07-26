@@ -136,6 +136,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
+      },
+      {
+        "slug": "luhn",
+        "name": "Luhn Algorithm",
+        "uuid": "98a24420-3424-4d66-9090-d31e8a5a7c7d",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
       }
     ]
   },
