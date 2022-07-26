@@ -27,7 +27,7 @@
            END-IF
        END-PERFORM.
        
-       MOVE 1 TO CADENCE.
+       MOVE 1 TO WS-CADENCE.
        IF LENGTH(WS-CARD-DIGITS) > 1
            MOVE MOD(LENGTH(TRIM(WS-CARD-DIGITS)), 2)
            TO WS-CADENCE
