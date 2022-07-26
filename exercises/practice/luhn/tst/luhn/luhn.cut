@@ -2,6 +2,10 @@ TESTSUITE 'Tests for Luhn'
 
 BEFORE-EACH
 	MOVE 0 TO WS-CHECKSUM
+	MOVE "0" TO WS-CARD-NUMBER
+	MOVE 0 TO WS-CARD-DIGITS
+	MOVE 0 TO WS-DIGIT
+	MOVE 0 TO WS-INDEX
 END-BEFORE
 
 TestCase "Single digit strings can not be valid"

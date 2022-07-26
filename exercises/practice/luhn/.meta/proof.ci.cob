@@ -12,6 +12,7 @@
        01 WS-DIGIT PIC 9(2).
        01 WS-INDEX PIC 9(2).
        01 WS-VALID PIC X(5).
+       
        PROCEDURE DIVISION.
        LUHN.
        
