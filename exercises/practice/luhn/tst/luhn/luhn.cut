@@ -81,6 +81,11 @@ TestCase "Single zero with space is invalid"
 	PERFORM LUHN
 	EXPECT WS-VALID = "FALSE"
 
+TestCase "More than a single zero is valid"
+	MOVE "0000 0" TO WS-CARD-NUMBER
+	PERFORM LUHN
+	EXPECT WS-VALID = "FALSE"
+
 TestCase "Input digit 9 is correctly converted to output digit 9"
 	MOVE "091" TO WS-CARD-NUMBER
 	PERFORM LUHN
