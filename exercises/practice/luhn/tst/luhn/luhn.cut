@@ -65,7 +65,7 @@ TestCase "Valid strings with a non-digit added at the end should remove non-digi
 	EXPECT WS-VALID = "VALID"
 
 TestCase "Valid strings with non-digits added should remove non-digits"
-	MOVE "055-444-28" TO WS-CARD-NUMBER
+	MOVE "055-444-285" TO WS-CARD-NUMBER
 	PERFORM LUHN
 	EXPECT WS-VALID = "VALID"
 
