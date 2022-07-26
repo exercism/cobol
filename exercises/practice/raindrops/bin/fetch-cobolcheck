@@ -2,7 +2,7 @@
 
 # This file is inspired by https://github.com/exercism/configlet/blob/main/scripts/fetch-configlet.
 # It is only used in the cobol track, and a copy of it is placed in every exercise folder.
-# If you change something, make sure to upgrade all scripts in all exercises!
+# If you change something, make sure to upgrade all scripts in all exercises! 
 
 set -eo pipefail
 
