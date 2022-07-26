@@ -28,8 +28,10 @@
            END-IF
        END-PERFORM.
        
-       MOVE 1 TO WS-CADENCE.
+       MOVE 1 TO WS-CHECKSUM.
+
        IF LENGTH(WS-CARD-DIGITS) > 1
+           MOVE 0 TO WS-CHECKSUM
            MOVE MOD(LENGTH(TRIM(WS-CARD-DIGITS)), 2)
            TO WS-CADENCE
 
