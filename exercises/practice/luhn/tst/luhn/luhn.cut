@@ -4,8 +4,6 @@ BEFORE-EACH
 	MOVE 0 TO WS-CHECKSUM
 	MOVE "0" TO WS-CARD-NUMBER
 	MOVE 0 TO WS-CARD-DIGITS
-	MOVE 0 TO WS-DIGIT
-	MOVE 0 TO WS-INDEX
 END-BEFORE
 
 TestCase "Single digit strings can not be valid"
@@ -63,20 +61,20 @@ TestCase "Valid number with an odd number of spaces"
 	PERFORM LUHN
 	EXPECT WS-VALID = "VALID"
 
-TestCase "Valid strings with a non-digit added at the end should remove non-digit"
+TestCase "Valid strings with a non-digit added at the end become invalid"
 	MOVE "059a" TO WS-CARD-NUMBER
 	PERFORM LUHN
-	EXPECT WS-VALID = "VALID"
+	EXPECT WS-VALID = "FALSE"
 
-TestCase "Valid strings with non-digits added should remove non-digits"
+TestCase "Valid strings with punctuation included become invalid"
 	MOVE "055-444-285" TO WS-CARD-NUMBER
 	PERFORM LUHN
-	EXPECT WS-VALID = "VALID"
+	EXPECT WS-VALID = "FALSE"
 
-TestCase "Valid strings with symbols included should remove symbols"
+TestCase "Valid strings with symbols included become invalid"
 	MOVE "055# 444$ 285" TO WS-CARD-NUMBER
 	PERFORM LUHN
-	EXPECT WS-VALID = "VALID"
+	EXPECT WS-VALID = "FALSE"
 
 TestCase "Single zero with space is invalid"
 	MOVE " 0" TO WS-CARD-NUMBER

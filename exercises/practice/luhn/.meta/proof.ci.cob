@@ -19,9 +19,11 @@
        PERFORM VARYING WS-INDEX FROM 1 BY 1 
            UNTIL WS-INDEX > LENGTH(TRIM(WS-CARD-NUMBER))
 
-           IF WS-CARD-NUMBER (WS-INDEX:1) IS NOT NUMERIC
-               OR WS-CARD-NUMBER (WS-INDEX:1) EQUAL SPACE
+           IF WS-CARD-NUMBER (WS-INDEX:1) EQUAL SPACE
                EXIT PERFORM CYCLE
+           ELSE IF WS-CARD-NUMBER (WS-INDEX:1) IS NOT NUMERIC
+               MOVE 0 TO WS-CARD-DIGITS
+               EXIT PERFORM
            ELSE
                MOVE CONCAT(WS-CARD-DIGITS, WS-CARD-NUMBER(WS-INDEX:1)) 
                TO WS-CARD-DIGITS
@@ -29,7 +31,7 @@
        END-PERFORM.
        
        MOVE 1 TO WS-CHECKSUM.
-
+       
        IF WS-CARD-DIGITS > 1
            MOVE 0 TO WS-CHECKSUM
            MOVE MOD(LENGTH(TRIM(WS-CARD-DIGITS)), 2)
@@ -55,3 +57,5 @@
        ELSE
            MOVE "FALSE" TO WS-VALID
        END-IF.
+
+       DISPLAY WS-VALID.
