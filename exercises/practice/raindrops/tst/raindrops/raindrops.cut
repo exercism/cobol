@@ -1,5 +1,9 @@
 TESTSUITE 'Tests for Raindrops'
 
+BEFORE-EACH
+	MOVE " " TO WS-RESULT
+END-BEFORE
+
 TestCase "The sound for 1 is 1"
 	MOVE 1 TO WS-NUMBER
 	PERFORM RAINDROPS
