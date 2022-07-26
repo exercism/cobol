@@ -13,6 +13,6 @@
        ELSE
            STRING "One for "
            FUNCTION TRIM(WS-NAME TRAILING) 
-           ", one for me.")
+           ", one for me."
            INTO WS-RESULT
        END-IF.
