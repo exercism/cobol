@@ -1,0 +1,51 @@
+TESTSUITE 'Tests for Raindrops'
+
+TestCase "The sound for 1 is 1"
+	MOVE 1 TO WS-NUMBER
+	PERFORM RAINDROPS
+	EXPECT WS-RESULT = "0001"
+
+TestCase "The sound for 3 is Pling"
+	MOVE 3 TO WS-NUMBER
+	PERFORM RAINDROPS
+	EXPECT WS-RESULT = "Pling"
+
+TestCase "The sound for 5 is Plang"
+	MOVE 5 TO WS-NUMBER
+	PERFORM RAINDROPS
+	EXPECT WS-RESULT = "Plang"
+
+TestCase "The sound for 7 is Plong"
+	MOVE 7 TO WS-NUMBER
+	PERFORM RAINDROPS
+	EXPECT WS-RESULT = "Plong"
+
+TestCase "The sound for 8 is 8"
+	MOVE 8 TO WS-NUMBER
+	PERFORM RAINDROPS
+	EXPECT WS-RESULT = "0008"
+
+TestCase "The sound for 9 is Pling"
+	MOVE 9 TO WS-NUMBER
+	PERFORM RAINDROPS
+	EXPECT WS-RESULT = "Pling"
+
+TestCase "The sound for 10 is Plang"
+	MOVE 10 TO WS-NUMBER
+	PERFORM RAINDROPS
+	EXPECT WS-RESULT = "Plang"
+
+TestCase "The sound for 14 is Plong"
+	MOVE 14 TO WS-NUMBER
+	PERFORM RAINDROPS
+	EXPECT WS-RESULT = "Plong"
+
+TestCase "The sound for 15 is PlingPlang"
+	MOVE 15 TO WS-NUMBER
+	PERFORM RAINDROPS
+	EXPECT WS-RESULT = "PlingPlang"
+
+TestCase "The sound for 105 is PlingPlangPlong"
+	MOVE 105 TO WS-NUMBER
+	PERFORM RAINDROPS
+	EXPECT WS-RESULT = "PlingPlangPlong"
