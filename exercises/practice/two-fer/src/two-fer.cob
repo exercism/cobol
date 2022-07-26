@@ -1,0 +1,9 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. two-fer.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-NAME PIC X(16).
+       01 WS-RESULT PIC X(16).
+       
+       PROCEDURE DIVISION.
+       TWO-FER.
