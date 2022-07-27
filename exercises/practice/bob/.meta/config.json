@@ -11,6 +11,10 @@
         ],
         "example": [
             ".meta/proof.ci.cob"
+        ],
+        "invalidator": [
+          "test.sh",
+          "test.ps1"
         ]
     },
     "blurb": "Bob is a lackadaisical teenager. In conversation, his responses are very limited.",

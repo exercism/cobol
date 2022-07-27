@@ -12,6 +12,10 @@
     ],
     "example": [
       ".meta/proof.ci.cob"
+    ],
+    "invalidator": [
+      "test.sh",
+      "test.ps1"
     ]
   },
   "blurb": "The classical introductory exercise. Just say \"Hello, World!\".",
