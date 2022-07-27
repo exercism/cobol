@@ -1,0 +1,1 @@
+{"authors": ["axtens"], "files": {"solution": ["src/darts.cob"], "test": ["test.sh", "test.ps1"], "example": [".meta/proof.ci.cob"]}, "blurb": "Write a function that returns the earned points in a single toss of a Darts game", "source": "Inspired by an exercise created by a professor Della Paolera in Argentina", "source_url": null}
