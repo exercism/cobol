@@ -1,0 +1,24 @@
+TestCase "Zero is an Armstrong number"
+	MOVE "0" TO WS-NUMBER
+	PERFORM ARMSTRONG-NUMBERS
+	EXPECT WS-ARMSTRONG = 0
+
+TestCase "Single-digit numbers are Armstrong numbers"
+	MOVE "5" TO WS-NUMBER
+	PERFORM ARMSTRONG-NUMBERS
+	EXPECT WS-ARMSTRONG = 5
+
+TestCase "Three-digit number that is an Armstrong number"
+	MOVE "153" TO WS-NUMBER
+	PERFORM ARMSTRONG-NUMBERS
+	EXPECT WS-ARMSTRONG = 153
+
+TestCase "Four-digit number that is an Armstrong number"
+	MOVE "9474" TO WS-NUMBER
+	PERFORM ARMSTRONG-NUMBERS
+	EXPECT WS-ARMSTRONG = 9474
+
+TestCase "Seven-digit number that is an Armstrong number"
+	MOVE "9926315" TO WS-NUMBER
+	PERFORM ARMSTRONG-NUMBERS
+	EXPECT WS-ARMSTRONG = 9926315
