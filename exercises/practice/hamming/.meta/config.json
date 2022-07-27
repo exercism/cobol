@@ -1,10 +1,18 @@
 {
-    "authors": ["KTSnowy"],
-    "files": {
-      "solution": ["src/hamming.cob"],
-      "test": ["test.sh", "test.ps1"],
-      "example": [".meta/proof.ci.cob"]
-    },
+  "authors": [
+    "KTSnowy"
+  ],
+  "files": {
+    "solution": [
+      "src/hamming.cob"
+    ],
+    "test": [
+      "tst/hamming/hamming.cut"
+    ],
+    "example": [
+      ".meta/proof.ci.cob"
+    ]
+  },
   "blurb": "Calculate the Hamming Distance between two DNA strands.",
   "source": "The Calculating Point Mutations problem at Rosalind",
   "source_url": "http://rosalind.info/problems/hamm/"
