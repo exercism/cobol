@@ -11,6 +11,10 @@
     ],
     "example": [
       ".meta/proof.ci.cob"
+    ],
+    "invalidator": [
+      "test.sh",
+      "test.ps1"
     ]
   },
   "blurb": "Calculate the Hamming Distance between two DNA strands.",

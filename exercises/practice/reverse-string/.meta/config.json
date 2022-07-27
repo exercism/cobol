@@ -11,6 +11,10 @@
     ],
     "example": [
       ".meta/proof.ci.cob"
+    ],
+    "invalidator": [
+      "test.sh",
+      "test.ps1"
     ]
   },
   "blurb": "Reverse a string.",

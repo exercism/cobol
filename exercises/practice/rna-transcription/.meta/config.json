@@ -11,6 +11,10 @@
     ],
     "example": [
       ".meta/proof.ci.cob"
+    ],
+    "invalidator": [
+      "test.sh",
+      "test.ps1"
     ]
   },
   "blurb": "Given a DNA strand, return its RNA Complement Transcription.",

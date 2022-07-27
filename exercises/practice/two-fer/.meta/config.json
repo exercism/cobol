@@ -11,6 +11,10 @@
     ],
     "example": [
       ".meta/proof.ci.cob"
+    ],
+    "invalidator": [
+      "test.sh",
+      "test.ps1"
     ]
   },
   "blurb": "Create a sentence of the form \"One for X, one for me.\".",
