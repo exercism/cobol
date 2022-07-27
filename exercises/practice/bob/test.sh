@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )/
-SLUG=$(basename "${SCRIPT_DIR}")
+SLUG=${1:-$(basename "${SCRIPT_DIR}")}
 COBOLCHECK=./bin/cobolcheck
 
 WHICH_COBOLCHECK=$(which cobolcheck)
@@ -10,7 +10,7 @@ if [[ $? -eq 0 ]] ; then
 elif [ ! -f $SCRIPT_DIR/bin/cobolcheck ]; then
     echo "Cobolcheck not found, try to fetch it."
     cd $SCRIPT_DIR/bin/
-    ./fetch-cobolcheck
+    bash fetch-cobolcheck
 fi
 cd $SCRIPT_DIR
 $COBOLCHECK -p $SLUG

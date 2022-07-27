@@ -28,7 +28,7 @@ function verify_exercise() {
     cp "${stub_file}" "${stub_backup_file}"
     cp "${implementation_file}" "${stub_file}"
 
-    "${dir}/test.sh"
+    bash "${dir}/test.sh"
 
     if [ $? -ne 0 ]; then
         echo "${slug}: proof solution did not pass the tests"
