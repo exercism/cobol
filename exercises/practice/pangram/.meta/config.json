@@ -7,8 +7,7 @@
             "src/pangram.cob"
         ],
         "test": [
-            "test.sh",
-            "test.ps1"
+            "tst/pangram/pangram.cut"
         ],
         "example": [
             ".meta/proof.ci.cob"

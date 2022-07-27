@@ -1,10 +1,18 @@
 {
-    "authors": ["KTSnowy"],
-    "files": {
-      "solution": ["src/difference-of-squares.cob"],
-      "test": ["test.sh", "test.ps1"],
-      "example": [".meta/proof.ci.cob"]
-    },
+  "authors": [
+    "KTSnowy"
+  ],
+  "files": {
+    "solution": [
+      "src/difference-of-squares.cob"
+    ],
+    "test": [
+      "tst/difference-of-squares/difference-of-squares.cut"
+    ],
+    "example": [
+      ".meta/proof.ci.cob"
+    ]
+  },
   "blurb": "Find the difference between the square of the sum and the sum of the squares of the first N natural numbers.",
   "source": "Problem 6 at Project Euler",
   "source_url": "http://projecteuler.net/problem=6"

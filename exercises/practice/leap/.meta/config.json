@@ -7,8 +7,7 @@
             "src/leap.cob"
         ],
         "test": [
-            "test.sh",
-            "test.ps1"
+            "tst/leap/leap.cut"
         ],
         "example": [
             ".meta/proof.ci.cob"

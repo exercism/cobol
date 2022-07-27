@@ -1,10 +1,18 @@
 {
-    "authors": ["KTSnowy"],
-    "files": {
-      "solution": ["src/two-fer.cob"],
-      "test": ["test.sh", "test.ps1"],
-      "example": [".meta/proof.ci.cob"]
-    },
+  "authors": [
+    "KTSnowy"
+  ],
+  "files": {
+    "solution": [
+      "src/two-fer.cob"
+    ],
+    "test": [
+      "tst/two-fer/two-fer.cut"
+    ],
+    "example": [
+      ".meta/proof.ci.cob"
+    ]
+  },
   "blurb": "Create a sentence of the form \"One for X, one for me.\".",
   "source": "Exercism",
   "source_url": "https://github.com/exercism/problem-specifications/issues/757"

@@ -7,8 +7,7 @@
             "src/isogram.cob"
         ],
         "test": [
-            "test.sh",
-            "test.ps1"
+            "tst/isogram/isogram.cut"
         ],
         "example": [
             ".meta/proof.ci.cob"
