@@ -1,3 +1,9 @@
+TESTSUITE 'Tests for Armstrong Numbers'
+
+BEFORE-EACH
+	MOVE 0 TO WS-ARMSTRONG
+END-BEFORE
+
 TestCase "Zero is an Armstrong number"
 	MOVE "0" TO WS-NUMBER
 	PERFORM ARMSTRONG-NUMBERS
