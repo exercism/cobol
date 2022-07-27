@@ -1,0 +1,97 @@
+TESTSUITE 'Tests for Luhn'
+
+BEFORE-EACH
+	MOVE 0 TO WS-CHECKSUM
+	MOVE "0" TO WS-CARD-NUMBER
+	MOVE 0 TO WS-CARD-DIGITS
+END-BEFORE
+
+TestCase "Single digit strings can not be valid"
+	MOVE "1" TO WS-CARD-NUMBER
+	PERFORM LUHN
+	EXPECT WS-VALID = "FALSE"
+
+TestCase "Single digit strings can not be valid"
+	MOVE "0" TO WS-CARD-NUMBER
+	PERFORM LUHN
+	EXPECT WS-VALID = "FALSE"
+
+TestCase "A simple valid SIN that remains valid if reversed"
+	MOVE "059" TO WS-CARD-NUMBER
+	PERFORM LUHN
+	EXPECT WS-VALID = "VALID"
+
+TestCase "A simple valid SIN that becomes invalid if reversed"
+	MOVE "59" TO WS-CARD-NUMBER
+	PERFORM LUHN
+	EXPECT WS-VALID = "VALID"
+
+TestCase "A valid Canadian SIN"
+	MOVE "055 444 285" TO WS-CARD-NUMBER
+	PERFORM LUHN
+	EXPECT WS-VALID = "VALID"
+
+TestCase "Invalid Canadian SIN"
+	MOVE "055 444 286" TO WS-CARD-NUMBER
+	PERFORM LUHN
+	EXPECT WS-VALID = "FALSE"
+
+TestCase "Invalid credit card"
+	MOVE "8273 1232 7352 0569" TO WS-CARD-NUMBER
+	PERFORM LUHN
+	EXPECT WS-VALID = "FALSE"
+
+TestCase "invalid long number with an even remainder"
+	MOVE "1 2345 6789 1234 5678 9012" TO WS-CARD-NUMBER
+	PERFORM LUHN
+	EXPECT WS-VALID = "FALSE"
+
+TestCase "invalid long number with a remainder divisible by 5"
+	MOVE "1 2345 6789 1234 5678 9013" TO WS-CARD-NUMBER
+	PERFORM LUHN
+	EXPECT WS-VALID = "FALSE"
+
+TestCase "Valid number with an even number of digits"
+	MOVE "095 245 88" TO WS-CARD-NUMBER
+	PERFORM LUHN
+	EXPECT WS-VALID = "VALID"
+
+TestCase "Valid number with an odd number of spaces"
+	MOVE "234 567 891 234" TO WS-CARD-NUMBER
+	PERFORM LUHN
+	EXPECT WS-VALID = "VALID"
+
+TestCase "Valid strings with a non-digit added at the end become invalid"
+	MOVE "059a" TO WS-CARD-NUMBER
+	PERFORM LUHN
+	EXPECT WS-VALID = "FALSE"
+
+TestCase "Valid strings with punctuation included become invalid"
+	MOVE "055-444-285" TO WS-CARD-NUMBER
+	PERFORM LUHN
+	EXPECT WS-VALID = "FALSE"
+
+TestCase "Valid strings with symbols included become invalid"
+	MOVE "055# 444$ 285" TO WS-CARD-NUMBER
+	PERFORM LUHN
+	EXPECT WS-VALID = "FALSE"
+
+TestCase "Single zero with space is invalid"
+	MOVE " 0" TO WS-CARD-NUMBER
+	PERFORM LUHN
+	EXPECT WS-VALID = "FALSE"
+
+TestCase "More than a single zero is valid"
+	MOVE "0000 0" TO WS-CARD-NUMBER
+	PERFORM LUHN
+	EXPECT WS-VALID = "VALID"
+
+TestCase "Input digit 9 is correctly converted to output digit 9"
+	MOVE "091" TO WS-CARD-NUMBER
+	PERFORM LUHN
+	EXPECT WS-VALID = "VALID"
+
+TestCase "Designed to prevent converting input to a single number as this approach can risk an overflow"
+	MOVE "9999999999 9999999999 9999999999 9999999999" TO WS-CARD-NUMBER
+	PERFORM LUHN
+	EXPECT WS-VALID = "VALID"
