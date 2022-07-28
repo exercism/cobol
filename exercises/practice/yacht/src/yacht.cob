@@ -5,6 +5,5 @@
        01 WS-RESULT PIC 99 VALUE 0.
        01 WS-CATEGORY PIC X(15).
        01 WS-DICE PIC 9(5).
-	   PROCEDURE DIVISION.
-	   YACHT.
-	   
+          PROCEDURE DIVISION.
+          YACHT.
