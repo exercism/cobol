@@ -18,3 +18,4 @@ $COBOLCHECK -p $SLUG
 # compile and run
 echo "COMPILE AND RUN TEST"
 cobc -xj test.cob
+
