@@ -1,17 +1,11 @@
-# Resources
+# Useful Resources
 
-- [COBOL 2014 ISO Standard][ISO 2014]
+If you need some help you can visit these resources:
 
-[ISO 2014]: https://www.iso.org/standard/51416.html
+* [COBOL 2014 ISO Standard](https://www.iso.org/standard/51416.html)
+* [Stack Overflow Questions](https://stackoverflow.com/questions/tagged/cobol),
+* [The COBOL subreddit](https://www.reddit.com/r/cobol),
+* [gnuCOBOL documentation (recommended for this track)](https://gnucobol.sourceforge.io/faq/index.html),
+* [Enterprise COBOL documentation](https://www.ibm.com/support/pages/enterprise-cobol-zos-documentation-library),
+* [Visual COBOL documentation](https://www.microfocus.com/documentation/visual-cobol/vc80/).
 
-<!-- TODO: write document
-
-  This document should link to useful resources.
-
-  Feel free to link to any good resources you know, whether they
-  be websites, videos, mailing lists, etc.
-
-  The contents of this document are displayed on the track's documentation
-  page at `https://exercism.org/docs/tracks/<track>/resources`.
-
-  See https://exercism.org/docs/building/tracks/docs for more information. -->
