@@ -1,0 +1,20 @@
+{
+    "authors": [
+        "axtens"
+    ],
+    "files": {
+        "solution": [
+            "src/roman-numerals.cob"
+        ],
+        "test": [
+            "test.sh",
+            "test.ps1"
+        ],
+        "example": [
+            ".meta/proof.ci.cob"
+        ]
+    },
+    "blurb": "Write a function to convert from normal numbers to Roman Numerals.",
+    "source": "The Roman Numeral Kata",
+    "source_url": "http://codingdojo.org/cgi-bin/index.pl?KataRomanNumerals"
+}
