@@ -10,7 +10,7 @@
        01 WS-C PIC 9(4).
        01 WS-G PIC 9(4).
        01 WS-T PIC 9(4).
-       01 WS-ERROR PIC X(32).
+       01 WS-ERROR PIC X(36).
 
        PROCEDURE DIVISION.
        NUCLEOTIDE-COUNT.

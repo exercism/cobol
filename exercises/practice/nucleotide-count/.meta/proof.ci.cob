@@ -7,7 +7,7 @@
        WORKING-STORAGE SECTION.
        01 WS-DNA PIC X(128).
        01 WS-INDEX PIC 9(8).
-       01 WS-ERROR PIC X(32).
+       01 WS-ERROR PIC X(36).
        01 WS-A PIC 9(4).
        01 WS-C PIC 9(4).
        01 WS-G PIC 9(4).
