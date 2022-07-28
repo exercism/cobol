@@ -1,0 +1,45 @@
+TESTSUITE 'Tests for Nucleotide Count'
+
+BEFORE-EACH
+	MOVE 00 TO WS-A
+	MOVE 00 TO WS-C
+	MOVE 00 TO WS-G
+	MOVE 00 TO WS-T
+END-BEFORE
+
+TestCase "empty strand"
+	MOVE " " TO WS-DNA
+	PERFORM NUCLEOTIDE-COUNT
+	EXPECT WS-A = 00
+	EXPECT WS-C = 00
+	EXPECT WS-G = 00
+	EXPECT WS-T = 00
+
+TestCase "can count one nucleotide in single-character input"
+	MOVE "G" TO WS-DNA
+	PERFORM NUCLEOTIDE-COUNT
+	EXPECT WS-A = 00
+	EXPECT WS-C = 00
+	EXPECT WS-G = 01
+	EXPECT WS-T = 00
+
+TestCase "strand with repeated nucleotide"
+	MOVE "GGGGGGG" TO WS-DNA
+	PERFORM NUCLEOTIDE-COUNT
+	EXPECT WS-A = 00
+	EXPECT WS-C = 00
+	EXPECT WS-G = 07
+	EXPECT WS-T = 00
+
+TestCase "strand with multiple nucleotides"
+	MOVE "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC" TO WS-DNA
+	PERFORM NUCLEOTIDE-COUNT
+	EXPECT WS-A = 20
+	EXPECT WS-C = 12
+	EXPECT WS-G = 17
+	EXPECT WS-T = 21
+
+TestCase "strand with invalid nucleotides"
+	MOVE "AGXXACT" TO WS-DNA
+	PERFORM NUCLEOTIDE-COUNT
+	EXPECT WS-ERROR = "ERROR: Invalid nucleotide in strand"
