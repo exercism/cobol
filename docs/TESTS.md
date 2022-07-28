@@ -69,6 +69,8 @@ If you get stuck, at any point, don't forget to reach out for [help](https://git
     ```
     *(Don't worry if the tests fail when you first run them, this is how you begin each exercise.)*
 
+    Hint: If you get a message that `basename` is missing, you can use [brew](https://brew.sh/) to install coreutils. (`brew install coreutils`)
+
 5. Solve the exercise. 
 
     Read through the `instructions.md` and see how to solve the exercise ([view on GitHub](https://github.com/exercism/cobol/blob/main/exercises/practice/hello-world/.docs/instructions.md)).
