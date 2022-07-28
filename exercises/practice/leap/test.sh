@@ -15,6 +15,6 @@ fi
 cd $SCRIPT_DIR
 $COBOLCHECK -p $SLUG
 
-# compile and run
+# compile and run 
 echo "COMPILE AND RUN TEST"
 cobc -xj test.cob
