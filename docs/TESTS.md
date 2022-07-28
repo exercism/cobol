@@ -100,7 +100,7 @@ If you get stuck, at any point, don't forget to reach out for [help](https://git
 4. Run the tests:
 
     ```
-     $ ./test.sh
+     $ bash test.sh
     ```
     *(Don't worry if the tests fail when you first run them, this is how you begin each exercise.)*
 
