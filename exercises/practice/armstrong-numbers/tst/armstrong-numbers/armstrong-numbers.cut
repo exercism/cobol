@@ -1,30 +1,46 @@
 TESTSUITE 'Tests for Armstrong Numbers'
 
-BEFORE-EACH
-	MOVE 0 TO WS-ARMSTRONG
-END-BEFORE
-
 TestCase "Zero is an Armstrong number"
 	MOVE "0" TO WS-NUMBER
 	PERFORM ARMSTRONG-NUMBERS
-	EXPECT WS-ARMSTRONG = 0
+	EXPECT WS-RESULT = 1
 
 TestCase "Single-digit numbers are Armstrong numbers"
 	MOVE "5" TO WS-NUMBER
 	PERFORM ARMSTRONG-NUMBERS
-	EXPECT WS-ARMSTRONG = 5
+	EXPECT WS-RESULT = 1
+
+TestCase "There are no two-digit Armstrong numbers"
+	MOVE "10" TO WS-NUMBER
+	PERFORM ARMSTRONG-NUMBERS
+	EXPECT WS-RESULT = 0
 
 TestCase "Three-digit number that is an Armstrong number"
 	MOVE "153" TO WS-NUMBER
 	PERFORM ARMSTRONG-NUMBERS
-	EXPECT WS-ARMSTRONG = 153
+	EXPECT WS-RESULT = 1
+
+TestCase "Three-digit number that is not an Armstrong number"
+	MOVE "100" TO WS-NUMBER
+	PERFORM ARMSTRONG-NUMBERS
+	EXPECT WS-RESULT = 0
 
 TestCase "Four-digit number that is an Armstrong number"
 	MOVE "9474" TO WS-NUMBER
 	PERFORM ARMSTRONG-NUMBERS
-	EXPECT WS-ARMSTRONG = 9474
+	EXPECT WS-RESULT = 1
+
+TestCase "Four-digit number that is not an Armstrong number"
+	MOVE "9475" TO WS-NUMBER
+	PERFORM ARMSTRONG-NUMBERS
+	EXPECT WS-RESULT = 0
 
 TestCase "Seven-digit number that is an Armstrong number"
 	MOVE "9926315" TO WS-NUMBER
 	PERFORM ARMSTRONG-NUMBERS
-	EXPECT WS-ARMSTRONG = 9926315
+	EXPECT WS-RESULT = 1
+
+TestCase "Seven-digit number that is not an Armstrong number"
+	MOVE "9926314" TO WS-NUMBER
+	PERFORM ARMSTRONG-NUMBERS
+	EXPECT WS-RESULT = 0
