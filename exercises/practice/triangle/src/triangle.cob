@@ -1,0 +1,13 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. TRIANGLE.
+       ENVIRONMENT DIVISION.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+      *Incoming
+       01 WS-SIDES PIC X(20).
+       01 WS-PROPERTY PIC X(11).
+      *Outgoing
+       01 WS-RESULT PIC 9.
+       PROCEDURE DIVISION.
+       TRIANGLE.
+       
