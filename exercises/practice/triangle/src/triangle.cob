@@ -10,3 +10,4 @@
        01 WS-RESULT PIC 9.
        PROCEDURE DIVISION.
        TRIANGLE.
+       
