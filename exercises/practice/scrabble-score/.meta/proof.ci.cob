@@ -5,6 +5,16 @@
        WORKING-STORAGE SECTION.
       *Inputs
        01 WS-WORD   PIC X(60).
+       01 WS-LETTERS REDEFINES WS-WORD.
+        02 WS-LETTER PIC X OCCURS 60 TIMES
+         INDEXED BY LETTER-INDEX.
+        88 TEN-POINTER VALUES 'Q','Z'.
+        88 EIGHT-POINTER VALUES 'J','X'.
+        88 FIVE-POINTER VALUES 'K'.
+        88 FOUR-POINTER VALUES 'F','H','V','W','Y'.
+        88 THREE-POINTER VALUES 'B','C','M','P'.
+        88 TWO-POINTER VALUES 'D','G'.
+        88 ONE-POINTER VALUES 'A','E','I','O','U','L','N','R','S','T'.
       *Outputs
        01 WS-RESULT PIC 99.
       *Working
@@ -15,18 +25,6 @@
        01 THREE-POINTS CONSTANT 3.
        01 TWO-POINTS   CONSTANT 2.
        01 ONE-POINTS   CONSTANT 1.
-
-       01 WS-LETTERS REDEFINES WS-WORD.
-        02 WS-LETTER PIC X OCCURS 60 TIMES
-         INDEXED BY LETTER-INDEX.
-        88 TEN-POINTER VALUES 'Q', 'Z'.
-        88 EIGHT-POINTER VALUES 'J','X'.
-        88 FIVE-POINTER VALUES 'K'.
-        88 FOUR-POINTER VALUES 'F','H','V','W','Y'.
-        88 THREE-POINTER VALUES 'B','C','M','P'.
-        88 TWO-POINTER VALUES 'D','G'.
-        88 ONE-POINTER VALUES 'A','E','I','O','U','L','N','R','S','T'.
-
        01 WS-UPPER-CASE PIC X(26) VALUE 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.
        01 WS-LOWER-CASE PIC X(26) VALUE 'abcdefghijklmnopqrstuvwxyz'.
 
