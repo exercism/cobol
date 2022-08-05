@@ -1,0 +1,9 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. SCRABBLE-SCORE.
+       ENVIRONMENT DIVISION.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+      *Inputs
+       01 WS-WORD   PIC X(60).
+      *Outputs
+       01 WS-RESULT PIC 99.
