@@ -205,6 +205,14 @@
         "difficulty": 3
       },
       {
+        "slug": "scrabble-score",
+        "name": "Scrabble Score",
+        "uuid": "5684d37f-9456-4aab-911f-a540894212c8",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "queen-attack",
         "name": "Queen Attack",
         "uuid": "4fa15f7c-2eef-4e2d-b1c6-1cf5f35732da",
