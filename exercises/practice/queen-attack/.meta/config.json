@@ -7,8 +7,7 @@
             "src/queen-attack.cob"
         ],
         "test": [
-            "test.sh",
-            "test.ps1"
+            "tst/queen-attack/queen-attack.cut"
         ],
         "example": [
             ".meta/proof.ci.cob"

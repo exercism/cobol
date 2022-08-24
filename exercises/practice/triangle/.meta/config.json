@@ -2,7 +2,7 @@
     "authors": ["axtens"],
     "files": {
         "solution": ["src/triangle.cob"],
-        "test": ["test.sh", "test.ps1"],
+        "test": ["tst/triangle/triangle.cut"],
         "example": [".meta/proof.ci.cob"]
     },
     "blurb": "Determine if a triangle is equilateral, isosceles, or scalene.",
