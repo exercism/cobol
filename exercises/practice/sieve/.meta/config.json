@@ -7,8 +7,7 @@
             "src/sieve.cob"
         ],
         "test": [
-            "test.sh",
-            "test.ps1"
+            "tst/sieve/sieve.cut"
         ],
         "example": [
             ".meta/proof.ci.cob"

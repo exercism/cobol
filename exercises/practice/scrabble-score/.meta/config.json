@@ -7,8 +7,7 @@
             "src/scrabble-score.cob"
         ],
         "test": [
-            "test.sh",
-            "test.ps1"
+            "tst/scrabble-score/scrabble-score.cut"
         ],
         "example": [
             ".meta/proof.ci.cob"
