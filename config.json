@@ -29,7 +29,7 @@
     "practice": [
       {
         "slug": "hello-world",
-        "name": "Hello, World!",
+        "name": "Hello World",
         "uuid": "0b38919c-b959-459c-89b8-c02b2012493e",
         "practices": [],
         "prerequisites": [],
@@ -118,7 +118,7 @@
       },
       {
         "slug": "hamming",
-        "name": "Hamming Distance",
+        "name": "Hamming",
         "uuid": "24415bd5-fbb7-485f-a879-09dc344e022d",
         "practices": [],
         "prerequisites": [],
@@ -126,7 +126,7 @@
       },
       {
         "slug": "two-fer",
-        "name": "Two-Fer",
+        "name": "Two Fer",
         "uuid": "974c27be-135a-4ed3-854b-a5ef5c8aec91",
         "practices": [],
         "prerequisites": [],
@@ -142,7 +142,7 @@
       },
       {
         "slug": "luhn",
-        "name": "Luhn Algorithm",
+        "name": "Luhn",
         "uuid": "98a24420-3424-4d66-9090-d31e8a5a7c7d",
         "practices": [],
         "prerequisites": [],
