@@ -42,8 +42,6 @@ Choose your current OS:
 
 Good luck, have fun and welcome to the COBOL track!
 
-If you get stuck, at any point, don't forget to reach out for [help](https://gitter.im/exercism/support).
-
 ----
 
 ## macOS
@@ -78,9 +76,6 @@ If you get stuck, at any point, don't forget to reach out for [help](https://git
 
 Good luck, have fun and welcome to the COBOL track!
 
-If you get stuck, at any point, don't forget to reach out for [help](https://gitter.im/exercism/support).
-
-
 ----
 
 ## Linux
@@ -112,5 +107,3 @@ If you get stuck, at any point, don't forget to reach out for [help](https://git
 
 
 Good luck, have fun and welcome to the COBOL track!
-
-If you get stuck, at any point, don't forget to reach out for [help](https://gitter.im/exercism/support).
