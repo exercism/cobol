@@ -1,23 +1,23 @@
 {
-    "authors": [
-        "axtens"
+  "authors": [
+    "axtens"
+  ],
+  "files": {
+    "solution": [
+      "src/roman-numerals.cob"
     ],
-    "files": {
-        "solution": [
-            "src/roman-numerals.cob"
-        ],
-        "test": [
-            "tst/roman-numerals/roman-numerals.cut"
-         ],
-        "example": [
-            ".meta/proof.ci.cob"
-        ],
-        "invalidator": [
-            "test.sh",
-            "test.ps1"
-         ]
-    },
-    "blurb": "Write a function to convert from normal numbers to Roman Numerals.",
-    "source": "The Roman Numeral Kata",
-    "source_url": "http://codingdojo.org/cgi-bin/index.pl?KataRomanNumerals"
+    "test": [
+      "tst/roman-numerals/roman-numerals.cut"
+    ],
+    "example": [
+      ".meta/proof.ci.cob"
+    ],
+    "invalidator": [
+      "test.sh",
+      "test.ps1"
+    ]
+  },
+  "blurb": "Write a function to convert from normal numbers to Roman Numerals.",
+  "source": "The Roman Numeral Kata",
+  "source_url": "https://codingdojo.org/kata/RomanNumerals/"
 }
