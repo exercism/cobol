@@ -41,8 +41,8 @@ function verify_exercise() {
     fi
 }
 
-# test one practice exercise
 if [[ $# -gt 0 && -d ./exercises/practice/$1 ]]; then
+    # test one practice exercise
     verify_exercise "./exercises/practice/$1"
 else
     # Verify the Concept Exercises

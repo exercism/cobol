@@ -1,0 +1,291 @@
+TESTSUITE 'Tests for Allergies'
+
+TestCase "eggs: not allergic to anything",
+    MOVE "eggs" TO WS-ITEM
+    MOVE 0 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "N"
+
+TestCase "eggs: allergic only to eggs",
+    MOVE "eggs" TO WS-ITEM
+    MOVE 1 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "Y"
+
+TestCase "eggs: allergic to eggs and something else",
+    MOVE "eggs" TO WS-ITEM
+    MOVE 3 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "Y"
+
+TestCase "eggs: allergic to something, but not eggs",
+    MOVE "eggs" TO WS-ITEM
+    MOVE 2 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "N"
+
+TestCase "eggs: allergic to everything",
+    MOVE "eggs" TO WS-ITEM
+    MOVE 255 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "Y"
+
+TestCase "peanuts: not allergic to anything",
+    MOVE "peanuts" TO WS-ITEM
+    MOVE 0 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "N"
+
+TestCase "peanuts: allergic only to peanuts",
+    MOVE "peanuts" TO WS-ITEM
+    MOVE 2 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "Y"
+
+TestCase "peanuts: allergic to peanuts and something else",
+    MOVE "peanuts" TO WS-ITEM
+    MOVE 7 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "Y"
+
+TestCase "peanuts: allergic to something, but not peanuts",
+    MOVE "peanuts" TO WS-ITEM
+    MOVE 5 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "N"
+
+TestCase "peanuts: allergic to everything",
+    MOVE "peanuts" TO WS-ITEM
+    MOVE 255 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "Y"
+
+TestCase "shellfish: not allergic to anything",
+    MOVE "shellfish" TO WS-ITEM
+    MOVE 0 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "N"
+
+TestCase "shellfish: allergic only to shellfish",
+    MOVE "shellfish" TO WS-ITEM
+    MOVE 4 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "Y"
+
+TestCase "shellfish: allergic to shellfish and something else",
+    MOVE "shellfish" TO WS-ITEM
+    MOVE 14 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "Y"
+
+TestCase "shellfish: allergic to something, but not shellfish",
+    MOVE "shellfish" TO WS-ITEM
+    MOVE 10 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "N"
+
+TestCase "shellfish: allergic to everything",
+    MOVE "shellfish" TO WS-ITEM
+    MOVE 255 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "Y"
+
+TestCase "strawberries: not allergic to anything",
+    MOVE "strawberries" TO WS-ITEM
+    MOVE 0 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "N"
+
+TestCase "strawberries: allergic only to strawberries",
+    MOVE "strawberries" TO WS-ITEM
+    MOVE 8 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "Y"
+
+TestCase "strawberries: allergic to strawberries and something else",
+    MOVE "strawberries" TO WS-ITEM
+    MOVE 28 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "Y"
+
+TestCase "strawberries: allergic to something, but not strawberries",
+    MOVE "strawberries" TO WS-ITEM
+    MOVE 20 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "N"
+
+TestCase "strawberries: allergic to everything",
+    MOVE "strawberries" TO WS-ITEM
+    MOVE 255 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "Y"
+
+TestCase "tomatoes: not allergic to anything",
+    MOVE "tomatoes" TO WS-ITEM
+    MOVE 0 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "N"
+
+TestCase "tomatoes: allergic only to tomatoes",
+    MOVE "tomatoes" TO WS-ITEM
+    MOVE 16 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "Y"
+
+TestCase "tomatoes: allergic to tomatoes and something else",
+    MOVE "tomatoes" TO WS-ITEM
+    MOVE 56 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "Y"
+
+TestCase "tomatoes: allergic to something, but not tomatoes",
+    MOVE "tomatoes" TO WS-ITEM
+    MOVE 40 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "N"
+
+TestCase "tomatoes: allergic to everything",
+    MOVE "tomatoes" TO WS-ITEM
+    MOVE 255 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "Y"
+
+TestCase "chocolate: not allergic to anything",
+    MOVE "chocolate" TO WS-ITEM
+    MOVE 0 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "N"
+
+TestCase "chocolate: allergic only to chocolate",
+    MOVE "chocolate" TO WS-ITEM
+    MOVE 32 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "Y"
+
+TestCase "chocolate: allergic to chocolate and something else",
+    MOVE "chocolate" TO WS-ITEM
+    MOVE 112 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "Y"
+
+TestCase "chocolate: allergic to something, but not chocolate",
+    MOVE "chocolate" TO WS-ITEM
+    MOVE 80 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "N"
+
+TestCase "chocolate: allergic to everything",
+    MOVE "chocolate" TO WS-ITEM
+    MOVE 255 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "Y"
+
+TestCase "pollen: not allergic to anything",
+    MOVE "pollen" TO WS-ITEM
+    MOVE 0 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "N"
+
+TestCase "pollen: allergic only to pollen",
+    MOVE "pollen" TO WS-ITEM
+    MOVE 64 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "Y"
+
+TestCase "pollen: allergic to pollen and something else",
+    MOVE "pollen" TO WS-ITEM
+    MOVE 224 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "Y"
+
+TestCase "pollen: allergic to something, but not pollen",
+    MOVE "pollen" TO WS-ITEM
+    MOVE 160 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "N"
+
+TestCase "pollen: allergic to everything",
+    MOVE "pollen" TO WS-ITEM
+    MOVE 255 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "Y"
+
+TestCase "cats: not allergic to anything",
+    MOVE "cats" TO WS-ITEM
+    MOVE 0 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "N"
+
+TestCase "cats: allergic only to cats",
+    MOVE "cats" TO WS-ITEM
+    MOVE 128 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "Y"
+
+TestCase "cats: allergic to cats and something else",
+    MOVE "cats" TO WS-ITEM
+    MOVE 192 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "Y"
+
+TestCase "cats: allergic to something, but not cats",
+    MOVE "cats" TO WS-ITEM
+    MOVE 64 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "N"
+
+TestCase "cats: allergic to everything",
+    MOVE "cats" TO WS-ITEM
+    MOVE 255 TO WS-SCORE
+    PERFORM ALLERGIC-TO
+    EXPECT WS-RESULT = "Y"
+
+TestCase "list when: no allergies"
+    MOVE 0 TO WS-SCORE
+    PERFORM LIST-ALLERGENS
+    EXPECT WS-RESULT-LIST = ""
+
+TestCase "list when: just eggs"
+    MOVE 1 TO WS-SCORE
+    PERFORM LIST-ALLERGENS
+    EXPECT WS-RESULT-LIST = "eggs"
+
+TestCase "list when: just peanuts"
+    MOVE 2 TO WS-SCORE
+    PERFORM LIST-ALLERGENS
+    EXPECT WS-RESULT-LIST = "peanuts"
+
+TestCase "list when: just strawberries"
+    MOVE 8 TO WS-SCORE
+    PERFORM LIST-ALLERGENS
+    EXPECT WS-RESULT-LIST = "strawberries"
+
+TestCase "list when: eggs and peanuts"
+    MOVE 3 TO WS-SCORE
+    PERFORM LIST-ALLERGENS
+    EXPECT WS-RESULT-LIST = "eggs,peanuts"
+
+TestCase "list when: more than eggs but not peanuts"
+    MOVE 5 TO WS-SCORE
+    PERFORM LIST-ALLERGENS
+    EXPECT WS-RESULT-LIST = "eggs,shellfish"
+
+TestCase "list when: lots of stuff"
+    MOVE 248 TO WS-SCORE
+    PERFORM LIST-ALLERGENS
+    EXPECT WS-RESULT-LIST = "strawberries,tomatoes,chocolate,pollen,cats"
+
+TestCase "list when: everything"
+    MOVE 255 TO WS-SCORE
+    PERFORM LIST-ALLERGENS
+    EXPECT WS-RESULT-LIST = "eggs,peanuts,shellfish,strawberries,tomatoes,chocolate,pollen,cats"
+
+TestCase "list when: no allergen score parts"
+    MOVE 509 TO WS-SCORE
+    PERFORM LIST-ALLERGENS
+    EXPECT WS-RESULT-LIST = "eggs,shellfish,strawberries,tomatoes,chocolate,pollen,cats"
+
+TestCase "list when: no allergen score parts without highest value"
+    MOVE 257 TO WS-SCORE
+    PERFORM LIST-ALLERGENS
+    EXPECT WS-RESULT-LIST = "eggs"
