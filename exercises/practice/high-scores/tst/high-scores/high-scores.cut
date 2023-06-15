@@ -1,0 +1,79 @@
+TestCase "List of scores"
+    MOVE " 30 50 20 70" TO WS-SCORES
+    MOVE "scores" TO WS-PROPERTY
+    PERFORM HIGH-SCORES
+    EXPECT WS-RESULT-STRING = " 30 50 20 70"
+
+TestCase "Latest score"
+    MOVE "100  0 90 30" TO WS-SCORES
+    MOVE "latest" TO WS-PROPERTY
+    PERFORM HIGH-SCORES
+    EXPECT WS-RESULT-VALUE =  30
+
+TestCase "Personal best"
+    MOVE " 40100 70" TO WS-SCORES
+    MOVE "personalBest" TO WS-PROPERTY
+    PERFORM HIGH-SCORES
+    EXPECT WS-RESULT-VALUE = 100
+
+TestCase "Personal top three from a list of scores"
+    MOVE " 10 30 90 30100 20 10  0 30 40 40 70 70" TO WS-SCORES
+    MOVE "personalTopThree" TO WS-PROPERTY
+    PERFORM HIGH-SCORES
+    EXPECT WS-RESULT-STRING = "100 90 70"
+
+TestCase "Personal top highest to lowest"
+    MOVE " 20 10 30" TO WS-SCORES
+    MOVE "personalTopThree" TO WS-PROPERTY
+    PERFORM HIGH-SCORES
+    EXPECT WS-RESULT-STRING = " 30 20 10"
+
+TestCase "Personal top when there is a tie"
+    MOVE " 40 20 40 30" TO WS-SCORES
+    MOVE "personalTopThree" TO WS-PROPERTY
+    PERFORM HIGH-SCORES
+    EXPECT WS-RESULT-STRING = " 40 40 30"
+
+TestCase "Personal top when there are less than 3"
+    MOVE " 30 70" TO WS-SCORES
+    MOVE "personalTopThree" TO WS-PROPERTY
+    PERFORM HIGH-SCORES
+    EXPECT WS-RESULT-STRING = " 70 30"
+
+TestCase "Personal top when there is only one"
+    MOVE " 40" TO WS-SCORES
+    MOVE "personalTopThree" TO WS-PROPERTY
+    PERFORM HIGH-SCORES
+    EXPECT WS-RESULT-STRING = " 40"
+
+TestCase "Latest score after personal top scores"
+    MOVE " 70 50 20 30" TO WS-SCORES
+    MOVE "personalTopThree" TO WS-PROPERTY
+    PERFORM HIGH-SCORES
+    MOVE "latest" TO WS-PROPERTY
+    PERFORM HIGH-SCORES
+    EXPECT WS-RESULT-VALUE =  30
+
+TestCase "Scores after personal top scores"
+    MOVE " 30 50 20 70" TO WS-SCORES
+    MOVE "personalTopThree" TO WS-PROPERTY
+    PERFORM HIGH-SCORES
+    MOVE "scores" TO WS-PROPERTY
+    PERFORM HIGH-SCORES
+    EXPECT WS-RESULT-STRING = " 30 50 20 70"
+
+TestCase "Latest score after personal best"
+    MOVE " 20 70 15 25 30" TO WS-SCORES
+    MOVE "personalBest" TO WS-PROPERTY
+    PERFORM HIGH-SCORES
+    MOVE "latest" TO WS-PROPERTY
+    PERFORM HIGH-SCORES
+    EXPECT WS-RESULT-VALUE =  30
+
+TestCase "Scores after personal best"
+    MOVE " 20 70 15 25 30" TO WS-SCORES
+    MOVE "personalBest" TO WS-PROPERTY
+    PERFORM HIGH-SCORES
+    MOVE "scores" TO WS-PROPERTY
+    PERFORM HIGH-SCORES
+    EXPECT WS-RESULT-STRING = " 20 70 15 25 30"
