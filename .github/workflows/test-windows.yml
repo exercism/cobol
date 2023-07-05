@@ -29,13 +29,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      
       - name: Cache GnuCOBOL
         id: cache-gnu-cobol
         uses: actions/cache@v3
         with:
-          path: ~\gnucobol-3.2-dev.zip
-          key: ${{ runner.os }}-gnu-cobol-3.2
+          path: ~\gnu-cobol-3.1.2.7z
+          key: ${{ runner.os }}-gnu-cobol-3.1.2
 
       - name: Download GnuCOBOL
         if: steps.cache-gnu-cobol.outputs.cache-hit != 'true'
@@ -46,11 +45,11 @@ jobs:
             MaximumRetryCount = 3
             RetryIntervalSec  = 1
           }
-          Invoke-WebRequest -Uri 'https://ci.appveyor.com/api/projects/GitMensch/gnucobol-3-x-win32-posix/artifacts/gnucobol-3.2-dev-MinGW-binaries%20(debug).zip?job=Environment:%20BUILD_TYPE=MSYS,%20BUILD_BIN=C:\MinGW\msys\1.0\bin' -OutFile ~\gnucobol-3.2-dev.zip @requestOpts
+          Invoke-WebRequest -Uri 'https://arnoldtrembley.com/GC312-BDB-M64-rename-7z-to-exe.7z' -OutFile ~\gnu-cobol-3.1.2.7z @requestOpts
 
       - name: Extract GnuCOBOL
         shell: pwsh
-        run: Expand-Archive ~\gnucobol-3.2-dev.zip -DestinationPath gnucobol -Force
+        run: 7z x ~\gnu-cobol-3.1.2.7z -ognucobol
 
       - name: Run tests for all exercises
         shell: pwsh
