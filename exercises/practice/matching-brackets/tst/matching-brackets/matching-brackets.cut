@@ -1,0 +1,97 @@
+TestCase "paired square brackets"
+	MOVE '[]' TO WS-INPUT
+	PERFORM ISPAIRED
+	EXPECT WS-RESULT = 1
+
+TestCase "empty string"
+	MOVE "" TO WS-INPUT
+	PERFORM ISPAIRED
+	EXPECT WS-RESULT = 1
+
+TestCase "unpaired brackets"
+	MOVE '[[' TO WS-INPUT
+	PERFORM ISPAIRED
+	EXPECT WS-RESULT = 0
+
+TestCase "wrong ordered brackets"
+	MOVE '}{' TO WS-INPUT
+	PERFORM ISPAIRED
+	EXPECT WS-RESULT = 0
+
+TestCase "wrong closing bracket"
+	MOVE '{]' TO WS-INPUT
+	PERFORM ISPAIRED
+	EXPECT WS-RESULT = 0
+
+TestCase "paired with whitespace"
+	MOVE '{ }' TO WS-INPUT
+	PERFORM ISPAIRED
+	EXPECT WS-RESULT = 1
+
+TestCase "partially paired brackets"
+	MOVE '{[])' TO WS-INPUT
+	PERFORM ISPAIRED
+	EXPECT WS-RESULT = 0
+
+TestCase "simple nested brackets"
+	MOVE '{[]}' TO WS-INPUT
+	PERFORM ISPAIRED
+	EXPECT WS-RESULT = 1
+
+TestCase "several paired brackets"
+	MOVE '{}[]' TO WS-INPUT
+	PERFORM ISPAIRED
+	EXPECT WS-RESULT = 1
+
+TestCase "paired and nested brackets"
+	MOVE '([{}({}[])])' TO WS-INPUT
+	PERFORM ISPAIRED
+	EXPECT WS-RESULT = 1
+
+TestCase "unopened closing brackets"
+	MOVE '{[)][]}' TO WS-INPUT
+	PERFORM ISPAIRED
+	EXPECT WS-RESULT = 0
+
+TestCase "unpaired and nested brackets"
+	MOVE '([{])' TO WS-INPUT
+	PERFORM ISPAIRED
+	EXPECT WS-RESULT = 0
+
+TestCase "paired and wrong nested brackets"
+	MOVE '[({]})' TO WS-INPUT
+	PERFORM ISPAIRED
+	EXPECT WS-RESULT = 0
+
+TestCase "paired and incomplete brackets"
+	MOVE '{}[' TO WS-INPUT
+	PERFORM ISPAIRED
+	EXPECT WS-RESULT = 0
+
+TestCase "too many closing brackets"
+	MOVE '[]]' TO WS-INPUT
+	PERFORM ISPAIRED
+	EXPECT WS-RESULT = 0
+
+TestCase "early unexpected brackets"
+	MOVE ')()' TO WS-INPUT
+	PERFORM ISPAIRED
+	EXPECT WS-RESULT = 0
+
+TestCase "early mismatched brackets"
+	MOVE '{)()' TO WS-INPUT
+	PERFORM ISPAIRED
+	EXPECT WS-RESULT = 0
+
+TestCase "math expression"
+	MOVE '(((185 + 223.85) * 15) - 543)/2' TO WS-INPUT
+	PERFORM ISPAIRED
+	EXPECT WS-RESULT = 1
+
+TestCase "complex latex expression"
+	STRING '\\left(\\begin{array}{cc} \\frac{1}{3} & x\\\\ ' DELIMITED BY SIZE
+           '\\mathrm{e}^{x} &... x^2 \\end{array}\\right)'   DELIMITED BY SIZE
+           INTO WS-INPUT
+	PERFORM ISPAIRED
+	EXPECT WS-RESULT = 1
+ 

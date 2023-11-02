@@ -1,0 +1,75 @@
+TestCase "binary 0 is decimal 0"
+	MOVE "0" TO WS-BINARY
+	PERFORM DECIMAL
+	EXPECT WS-RESULT = 0
+
+TestCase "binary 1 is decimal 1"
+	MOVE "1" TO WS-BINARY
+	PERFORM DECIMAL
+	EXPECT WS-RESULT = 1
+
+TestCase "binary 10 is decimal 2"
+	MOVE "10" TO WS-BINARY
+	PERFORM DECIMAL
+	EXPECT WS-RESULT = 2
+
+TestCase "binary 11 is decimal 3"
+	MOVE "11" TO WS-BINARY
+	PERFORM DECIMAL
+	EXPECT WS-RESULT = 3
+
+TestCase "binary 100 is decimal 4"
+	MOVE "100" TO WS-BINARY
+	PERFORM DECIMAL
+	EXPECT WS-RESULT = 4
+
+TestCase "binary 1001 is decimal 9"
+	MOVE "1001" TO WS-BINARY
+	PERFORM DECIMAL
+	EXPECT WS-RESULT = 9
+
+TestCase "binary 11010 is decimal 26"
+	MOVE "11010" TO WS-BINARY
+	PERFORM DECIMAL
+	EXPECT WS-RESULT = 26
+
+TestCase "binary 10001101000 is decimal 1128"
+	MOVE "10001101000" TO WS-BINARY
+	PERFORM DECIMAL
+	EXPECT WS-RESULT = 1128
+
+TestCase "binary ignores leading zeros"
+	MOVE "000011111" TO WS-BINARY
+	PERFORM DECIMAL
+	EXPECT WS-RESULT = 31
+
+TestCase "2 is not a valid binary digit"
+	MOVE "2" TO WS-BINARY
+	PERFORM DECIMAL
+	EXPECT WS-ERROR = "error: a number containing non-binary digits is invalid"
+
+TestCase "a number containing a non-binary digit is invalid"
+	MOVE "01201" TO WS-BINARY
+	PERFORM DECIMAL
+	EXPECT WS-ERROR = "error: a number containing non-binary digits is invalid"
+
+TestCase "a number with trailing non-binary characters is invalid"
+	MOVE "10nope" TO WS-BINARY
+	PERFORM DECIMAL
+	EXPECT WS-ERROR = "error: a number containing non-binary characters is invalid"
+
+TestCase "a number with leading non-binary characters is invalid"
+	MOVE "nope10" TO WS-BINARY
+	PERFORM DECIMAL
+	EXPECT WS-ERROR = "error: a number containing non-binary characters is invalid"
+
+TestCase "a number with internal non-binary characters is invalid"
+	MOVE "10nope10" TO WS-BINARY
+	PERFORM DECIMAL
+	EXPECT WS-ERROR = "error: a number containing non-binary characters is invalid"
+
+TestCase "a number and a word whitespace separated is invalid"
+	MOVE "001 nope" TO WS-BINARY
+	PERFORM DECIMAL
+	EXPECT WS-ERROR = "error: a number containing non-binary characters is invalid"
+

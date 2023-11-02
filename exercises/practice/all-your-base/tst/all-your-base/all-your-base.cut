@@ -1,0 +1,160 @@
+TestCase "single bit one to decimal"
+       MOVE 2 TO WS-INPUTBASE
+       MOVE 10 TO WS-OUTPUTBASE
+       MOVE "1" TO WS-DIGITS
+       PERFORM REBASE
+       EXPECT WS-RESULT = "1"
+
+
+TestCase "binary to single decimal"
+       MOVE 2 TO WS-INPUTBASE
+       MOVE 10 TO WS-OUTPUTBASE
+       MOVE "1,0,1" TO WS-DIGITS
+       PERFORM REBASE
+       EXPECT WS-RESULT = "5"
+
+
+TestCase "binary to multiple decimal"
+       MOVE 2 TO WS-INPUTBASE
+       MOVE 10 TO WS-OUTPUTBASE
+       MOVE "1,0,1,0,1,0" TO WS-DIGITS
+       PERFORM REBASE
+       EXPECT WS-RESULT = "4,2"
+
+
+TestCase "decimal to binary"
+       MOVE 10 TO WS-INPUTBASE
+       MOVE 2 TO WS-OUTPUTBASE
+       MOVE "4,2" TO WS-DIGITS
+       PERFORM REBASE
+       EXPECT WS-RESULT = "1,0,1,0,1,0"
+      
+
+TestCase "trinary to hexadecimal"
+       MOVE 3 TO WS-INPUTBASE
+       MOVE 16 TO WS-OUTPUTBASE
+       MOVE "1,1,2,0" TO WS-DIGITS
+       PERFORM REBASE
+       EXPECT WS-RESULT = "2,10"
+       
+
+TestCase "hexadecimal to trinary"
+       MOVE 16 TO WS-INPUTBASE
+       MOVE 3 TO WS-OUTPUTBASE
+       MOVE "2,10" TO WS-DIGITS
+       PERFORM REBASE
+       EXPECT WS-RESULT = "1,1,2,0"
+       
+
+TestCase "15-bit integer"
+       MOVE 97 TO WS-INPUTBASE
+       MOVE 73 TO WS-OUTPUTBASE
+       MOVE "3,46,60" TO WS-DIGITS
+       PERFORM REBASE
+       EXPECT WS-RESULT = "6,10,45"
+       
+
+TestCase "empty list"
+       MOVE 2 TO WS-INPUTBASE
+       MOVE 10 TO WS-OUTPUTBASE
+       MOVE "" TO WS-DIGITS
+       PERFORM REBASE
+       EXPECT WS-RESULT = "0"
+       
+
+TestCase "single zero"
+	MOVE 10 TO WS-INPUTBASE
+	MOVE 2 TO WS-OUTPUTBASE
+	MOVE "0" TO WS-DIGITS
+	PERFORM REBASE
+	EXPECT WS-RESULT = "0"
+
+
+TestCase "multiple zeros"
+	MOVE 10 TO WS-INPUTBASE
+	MOVE 2 TO WS-OUTPUTBASE
+	MOVE "0,0,0" TO WS-DIGITS
+	PERFORM REBASE
+	EXPECT WS-RESULT = "0"
+
+
+TestCase "leading zeros"
+	MOVE 7 TO WS-INPUTBASE
+	MOVE 10 TO WS-OUTPUTBASE
+	MOVE "0,6,0" TO WS-DIGITS
+	PERFORM REBASE
+	EXPECT WS-RESULT = "4,2"
+
+
+TestCase "input base is one"
+	MOVE 1 TO WS-INPUTBASE
+	MOVE 10 TO WS-OUTPUTBASE
+	MOVE "0" TO WS-DIGITS
+	PERFORM REBASE
+	EXPECT WS-ERROR = "input base must be >= 2"
+
+
+TestCase "input base is zero"
+	MOVE 0 TO WS-INPUTBASE
+	MOVE 10 TO WS-OUTPUTBASE
+	MOVE "" TO WS-DIGITS
+	PERFORM REBASE
+	EXPECT WS-ERROR = "input base must be >= 2"
+
+
+TestCase "input base is negative"
+	MOVE -2 TO WS-INPUTBASE
+	MOVE 10 TO WS-OUTPUTBASE
+	MOVE "1" TO WS-DIGITS
+	PERFORM REBASE
+	EXPECT WS-ERROR = "input base must be >= 2"
+
+
+TestCase "negative digit"
+	MOVE 2 TO WS-INPUTBASE
+	MOVE 10 TO WS-OUTPUTBASE
+	MOVE "1,-1,1,0,1,0" TO WS-DIGITS
+	PERFORM REBASE
+	EXPECT WS-ERROR = "all digits must satisfy 0 <= d < input base"
+
+
+TestCase "invalid positive digit"
+	MOVE 2 TO WS-INPUTBASE
+	MOVE 10 TO WS-OUTPUTBASE
+	MOVE "1,2,1,0,1,0" TO WS-DIGITS
+	PERFORM REBASE
+	EXPECT WS-ERROR = "all digits must satisfy 0 <= d < input base"
+
+
+TestCase "output base is one"
+	MOVE 2 TO WS-INPUTBASE
+	MOVE 1 TO WS-OUTPUTBASE
+	MOVE "1,0,1,0,1,0" TO WS-DIGITS
+	PERFORM REBASE
+	EXPECT WS-ERROR = "output base must be >= 2"
+
+
+TestCase "output base is zero"
+	MOVE 10 TO WS-INPUTBASE
+	MOVE 0 TO WS-OUTPUTBASE
+	MOVE "7" TO WS-DIGITS
+	PERFORM REBASE
+	EXPECT WS-ERROR = "output base must be >= 2"
+
+
+TestCase "output base is negative"
+	MOVE 2 TO WS-INPUTBASE
+	MOVE -7 TO WS-OUTPUTBASE
+	MOVE "1" TO WS-DIGITS
+	PERFORM REBASE
+	EXPECT WS-ERROR = "output base must be >= 2"
+
+
+TestCase "both bases are negative"
+	MOVE -2 TO WS-INPUTBASE
+	MOVE -7 TO WS-OUTPUTBASE
+	MOVE "1" TO WS-DIGITS
+	PERFORM REBASE
+	EXPECT WS-ERROR = "input base must be >= 2"
+
+

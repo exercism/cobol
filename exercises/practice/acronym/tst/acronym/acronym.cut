@@ -1,0 +1,47 @@
+TestCase "basic"
+	MOVE "Portable Network Graphics" TO WS-ACRONYM
+	PERFORM ABBREVIATE
+	EXPECT WS-RESULT = "PNG"
+
+TestCase "lowercase words"
+	MOVE "Ruby on Rails" TO WS-ACRONYM
+	PERFORM ABBREVIATE
+	EXPECT WS-RESULT = "ROR"
+
+TestCase "punctuation"
+	MOVE "First In, First Out" TO WS-ACRONYM
+	PERFORM ABBREVIATE
+	EXPECT WS-RESULT = "FIFO"
+
+TestCase "all caps word"
+	MOVE "GNU Image Manipulation Program" TO WS-ACRONYM
+	PERFORM ABBREVIATE
+	EXPECT WS-RESULT = "GIMP"
+
+TestCase "punctuation without whitespace"
+	MOVE "Complementary metal-oxide semiconductor" TO WS-ACRONYM
+	PERFORM ABBREVIATE
+	EXPECT WS-RESULT = "CMOS"
+
+TestCase "very long abbreviation"
+	STRING "Rolling On The Floor Laughing So " DELIMITED BY SIZE
+			"Hard That My Dogs Came Over And Licked Me" DELIMITED BY SIZE 
+	   		INTO WS-ACRONYM
+	END-STRING
+	PERFORM ABBREVIATE
+	EXPECT WS-RESULT = "ROTFLSHTMDCOALM"
+
+TestCase "consecutive delimiters"
+	MOVE "Something - I made up from thin air" TO WS-ACRONYM
+	PERFORM ABBREVIATE
+	EXPECT WS-RESULT = "SIMUFTA"
+
+TestCase "apostrophes"
+	MOVE "Halley's Comet" TO WS-ACRONYM
+	PERFORM ABBREVIATE
+	EXPECT WS-RESULT = "HC"
+
+TestCase "underscore emphasis"
+	MOVE "The Road _Not_ Taken" TO WS-ACRONYM
+	PERFORM ABBREVIATE
+	EXPECT WS-RESULT = "TRNT"

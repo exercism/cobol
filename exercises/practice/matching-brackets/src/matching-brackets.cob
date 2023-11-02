@@ -1,0 +1,11 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. MATCHING-BRACKETS.
+       ENVIRONMENT DIVISION.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-INPUT                 PIC X(100).
+       01 WS-RESULT                PIC 9.
+       
+       PROCEDURE DIVISION.
+
+       ISPAIRED.

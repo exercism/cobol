@@ -1,0 +1,23 @@
+{
+    "authors": [
+        "kapitaali"
+    ],
+    "files": {
+        "solution": [
+            "src/circular-buffer.cob"
+        ],
+        "test": [
+            "tst/circular-buffer/circular-buffer.cut"
+        ],
+        "example": [
+            ".meta/proof.ci.cob"
+        ],
+        "invalidator": [
+          "test.sh",
+          "test.ps1"
+        ]
+    },
+    "blurb": "A circular buffer, cyclic buffer or ring buffer is a data structure that uses a single, fixed-size buffer as if it were connected end-to-end.",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Circular_buffer"
+}
