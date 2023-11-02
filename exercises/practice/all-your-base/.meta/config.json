@@ -1,0 +1,23 @@
+{
+    "authors": [
+        "kapitaali"
+    ],
+    "files": {
+        "solution": [
+            "src/all-your-base.cob"
+        ],
+        "test": [
+            "tst/all-your-base/all-your-base.cut"
+        ],
+        "example": [
+            ".meta/proof.ci.cob"
+        ],
+        "invalidator": [
+          "test.sh",
+          "test.ps1"
+        ]
+    },
+    "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base.",
+    "source": "",
+    "source_url": ""
+}

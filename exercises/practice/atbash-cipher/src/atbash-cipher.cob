@@ -1,0 +1,14 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. ATBASH-CIPHER.
+       ENVIRONMENT DIVISION.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-PHRASE                PIC X(60).
+       01 WS-RESULT                PIC X(60).
+       
+       PROCEDURE DIVISION.
+
+       ENCODE.
+
+
+       DECODE.

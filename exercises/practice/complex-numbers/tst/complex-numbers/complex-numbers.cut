@@ -1,0 +1,330 @@
+TestCase "Real part of a purely real number"
+	MOVE 1 TO Z1-RE
+	MOVE 0 TO Z1-IM
+	PERFORM C-REAL
+	EXPECT RESULT-RE = 1
+	EXPECT RESULT-IM = 0
+
+
+TestCase "Real part of a purely imaginary number"
+	MOVE 0 TO Z1-RE
+	MOVE 1 TO Z1-IM
+	PERFORM C-REAL
+	EXPECT RESULT-RE = 0
+	EXPECT RESULT-IM = 0
+
+
+TestCase "Real part of a number with real and imaginary part"
+	MOVE 1 TO Z1-RE
+	MOVE 2 TO Z1-IM
+	PERFORM C-REAL
+	EXPECT RESULT-RE = 1
+	EXPECT RESULT-IM = 0
+
+
+TestCase "Imaginary part of a purely real number"
+	MOVE 1 TO Z1-RE
+	MOVE 0 TO Z1-IM
+	PERFORM C-IMAGINARY
+	EXPECT RESULT-RE = 0
+	EXPECT RESULT-IM = 0
+
+
+TestCase "Imaginary part of a purely imaginary number"
+	MOVE 0 TO Z1-RE
+	MOVE 1 TO Z1-IM
+	PERFORM C-IMAGINARY
+	EXPECT RESULT-RE = 0
+	EXPECT RESULT-IM = 1
+
+
+TestCase "Imaginary part of a number with real and imaginary part"
+	MOVE 1 TO Z1-RE
+	MOVE 2 TO Z1-IM
+	PERFORM C-IMAGINARY
+	EXPECT RESULT-RE = 0
+	EXPECT RESULT-IM = 2
+
+
+TestCase "Imaginary unit"
+	MOVE 0 TO Z1-RE
+	MOVE 1 TO Z1-IM
+	MOVE 0 TO Z2-RE
+	MOVE 1 TO Z2-IM
+	PERFORM C-MUL
+	EXPECT RESULT-RE = -1
+	EXPECT RESULT-IM = 0
+
+
+TestCase "Add purely real numbers"
+       MOVE 1 TO Z1-RE
+       MOVE 0 TO Z1-IM
+       MOVE 2 TO Z2-RE
+       MOVE 0 TO Z2-IM
+       PERFORM C-ADD
+       EXPECT RESULT-RE = 3
+       EXPECT RESULT-IM = 0
+
+
+TestCase "Add purely imaginary numbers"
+       MOVE 0 TO Z1-RE
+       MOVE 1 TO Z1-IM
+       MOVE 0 TO Z2-RE
+       MOVE 2 TO Z2-IM
+       PERFORM C-ADD
+       EXPECT RESULT-RE = 0
+       EXPECT RESULT-IM = 3
+
+
+TestCase "Add numbers with real and imaginary part"
+	MOVE 1 TO Z1-RE
+	MOVE 2 TO Z1-IM
+	MOVE 3 TO Z2-RE
+	MOVE 4 TO Z2-IM
+	PERFORM C-ADD
+	EXPECT RESULT-RE = 4
+	EXPECT RESULT-IM = 6
+
+
+TestCase "Subtract purely real numbers"
+	MOVE 1 TO Z1-RE
+	MOVE 0 TO Z1-IM
+	MOVE 2 TO Z2-RE
+	MOVE 0 TO Z2-IM
+	PERFORM C-SUB
+	EXPECT RESULT-RE = -1
+	EXPECT RESULT-IM = 0
+
+
+TestCase "Subtract purely imaginary numbers"
+	MOVE 0 TO Z1-RE
+	MOVE 1 TO Z1-IM
+	MOVE 0 TO Z2-RE
+	MOVE 2 TO Z2-IM
+	     PERFORM C-SUB
+	EXPECT RESULT-RE = 0
+	EXPECT RESULT-IM = -1
+
+
+TestCase "Subtract numbers with real and imaginary part"
+	MOVE 1 TO Z1-RE
+	MOVE 2 TO Z1-IM
+	MOVE 3 TO Z2-RE
+	MOVE 4 TO Z2-IM
+	PERFORM C-SUB
+	EXPECT RESULT-RE = -2
+	EXPECT RESULT-IM = -2
+
+
+TestCase "Multiply purely real numbers"
+	MOVE 1 TO Z1-RE
+	MOVE 0 TO Z1-IM
+	MOVE 2 TO Z2-RE
+	MOVE 0 TO Z2-IM
+	     PERFORM C-MUL
+	EXPECT RESULT-RE = 2
+	EXPECT RESULT-IM = 0
+
+
+TestCase "Multiply purely imaginary numbers"
+	MOVE 0 TO Z1-RE
+	MOVE 1 TO Z1-IM
+	MOVE 0 TO Z2-RE
+	MOVE 2 TO Z2-IM
+	PERFORM C-MUL
+	EXPECT RESULT-RE = -2
+	EXPECT RESULT-IM = 0
+
+
+TestCase "Multiply numbers with real and imaginary part"
+	MOVE 1 TO Z1-RE
+	MOVE 2 TO Z1-IM
+	MOVE 3 TO Z2-RE
+	MOVE 4 TO Z2-IM
+	PERFORM C-MUL
+	EXPECT RESULT-RE = -5
+	EXPECT RESULT-IM = 10
+
+
+TestCase "Divide purely real numbers"
+	MOVE 1 TO Z1-RE
+	MOVE 0 TO Z1-IM
+	MOVE 2 TO Z2-RE
+	MOVE 0 TO Z2-IM
+	     PERFORM C-DIV
+	EXPECT RESULT-RE = 0.5
+	EXPECT RESULT-IM = 0
+
+
+TestCase "Divide purely imaginary numbers"
+	MOVE 0 TO Z1-RE
+	MOVE 1 TO Z1-IM
+	MOVE 0 TO Z2-RE
+	MOVE 2 TO Z2-IM
+	PERFORM C-DIV
+	EXPECT RESULT-RE = 0.5
+	EXPECT RESULT-IM = 0
+
+
+TestCase "Divide numbers with real and imaginary part"
+	MOVE 1 TO Z1-RE
+	MOVE 2 TO Z1-IM
+	MOVE 3 TO Z2-RE
+	MOVE 4 TO Z2-IM
+	PERFORM C-DIV
+	EXPECT RESULT-RE = 0.44
+	EXPECT RESULT-IM = 0.08
+
+
+TestCase "Absolute value of a positive purely real number"
+       MOVE 5 TO Z1-RE
+       MOVE 0 TO Z1-IM
+       PERFORM C-ABS
+       EXPECT RESULT-RE = 5
+       EXPECT RESULT-IM = 0
+      
+
+TestCase "Absolute value of a negative purely real number"
+       MOVE -5 TO Z1-RE
+       MOVE 0 TO Z1-IM
+       PERFORM C-ABS
+       EXPECT RESULT-RE = 5
+       EXPECT RESULT-IM = 0
+       
+
+TestCase "Abs val of purely imaginary with positive imaginary part"
+       MOVE 0 TO Z1-RE
+       MOVE 5 TO Z1-IM
+       PERFORM C-ABS
+       EXPECT RESULT-RE = 5
+       EXPECT RESULT-IM = 0
+
+
+TestCase "Abs val of purely imaginary with negative imaginary part"
+       MOVE 0 TO Z1-RE
+       MOVE -5 TO Z1-IM
+       PERFORM C-ABS
+       EXPECT RESULT-RE = 5
+       EXPECT RESULT-IM = 0
+
+
+TestCase "Absolute value of a number with real and imaginary part"
+       MOVE 3 TO Z1-RE
+       MOVE 4 TO Z1-IM
+       PERFORM C-ABS
+       EXPECT RESULT-RE = 5
+       EXPECT RESULT-IM = 0
+       
+
+TestCase "Conjugate a purely real number"
+       MOVE 5 TO Z1-RE
+       MOVE 0 TO Z1-IM
+       PERFORM C-CONJUGATE
+       EXPECT RESULT-RE = 5
+       EXPECT RESULT-IM = 0
+       
+
+TestCase "Conjugate a purely imaginary number"
+       MOVE 0 TO Z1-RE
+       MOVE 5 TO Z1-IM
+       PERFORM C-CONJUGATE
+       EXPECT RESULT-RE = 0
+       EXPECT RESULT-IM = -5
+
+
+TestCase "Conjugate a number with real and imaginary part"
+	MOVE 1 TO Z1-RE
+	MOVE 1 TO Z1-IM
+	PERFORM C-CONJUGATE
+	EXPECT RESULT-RE = 1
+	EXPECT RESULT-IM = -1
+
+
+TestCase "Add real number to complex number"
+	MOVE 1 TO Z1-RE
+	MOVE 2 TO Z1-IM
+	MOVE 5 TO Z2-RE
+	MOVE 0 TO Z2-IM
+	PERFORM C-ADD
+	EXPECT RESULT-RE = 6
+	EXPECT RESULT-IM = 2
+
+
+TestCase "Add real number to complex number"
+	MOVE 1 TO Z1-RE
+	MOVE 2 TO Z1-IM
+	MOVE 5 TO Z2-RE
+	MOVE 0 TO Z2-IM
+	PERFORM C-ADD
+	EXPECT RESULT-RE = 6
+	EXPECT RESULT-IM = 2
+
+
+TestCase "Add complex number to real number"
+	MOVE 5 TO Z1-RE
+	MOVE 0 TO Z1-IM
+	MOVE 1 TO Z2-RE
+	MOVE 2 TO Z2-IM
+	PERFORM C-ADD
+	EXPECT RESULT-RE = 6
+	EXPECT RESULT-IM = 2
+
+
+TestCase "Subtract real number from complex number"
+	MOVE 5 TO Z1-RE
+	MOVE 7 TO Z1-IM
+	MOVE 4 TO Z2-RE
+	MOVE 0 TO Z2-IM
+	PERFORM C-SUB
+	EXPECT RESULT-RE = 1
+	EXPECT RESULT-IM = 7
+
+
+TestCase "Subtract complex number from real number"
+	MOVE 4 TO Z1-RE
+	MOVE 0 TO Z1-IM
+	MOVE 5 TO Z2-RE
+	MOVE 7 TO Z2-IM
+	PERFORM C-SUB
+	EXPECT RESULT-RE = -1
+	EXPECT RESULT-IM = -7
+
+
+TestCase "Multiply complex number by real number"
+	MOVE 2 TO Z1-RE
+	MOVE 5 TO Z1-IM
+	MOVE 5 TO Z2-RE
+	MOVE 0 TO Z2-IM
+	PERFORM C-MUL
+	EXPECT RESULT-RE = 10
+	EXPECT RESULT-IM = 25
+
+
+TestCase "Multiply real number by complex number"
+	MOVE 5 TO Z1-RE
+	MOVE 0 TO Z1-IM
+	MOVE 2 TO Z2-RE
+	MOVE 5 TO Z2-IM
+	PERFORM C-MUL
+	EXPECT RESULT-RE = 10
+	EXPECT RESULT-IM = 25
+
+
+TestCase "Divide complex number by real number"
+	MOVE 10 TO Z1-RE
+	MOVE 100 TO Z1-IM
+	MOVE 10 TO Z2-RE
+	MOVE 0 TO Z2-IM
+	PERFORM C-DIV
+	EXPECT RESULT-RE = 1
+	EXPECT RESULT-IM = 10
+
+
+TestCase "Divide real number by complex number"
+	MOVE 5 TO Z1-RE
+	MOVE 0 TO Z1-IM
+	MOVE 1 TO Z2-RE
+	MOVE 1 TO Z2-IM
+	PERFORM C-DIV
+	EXPECT RESULT-RE = 2.5
+	EXPECT RESULT-IM = -2.5

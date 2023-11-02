@@ -1,0 +1,69 @@
+TestCase "encode yes"
+	MOVE "yes" TO WS-PHRASE
+	PERFORM ENCODE
+	EXPECT WS-RESULT = "bvh"
+
+TestCase "encode no"
+	MOVE "no" TO WS-PHRASE
+	PERFORM ENCODE
+	EXPECT WS-RESULT = "ml"
+
+TestCase "encode OMG"
+	MOVE "OMG" TO WS-PHRASE
+	PERFORM ENCODE
+	EXPECT WS-RESULT = "lnt"
+
+TestCase "encode spaces"
+	MOVE "O M G" TO WS-PHRASE
+	PERFORM ENCODE
+	EXPECT WS-RESULT = "lnt"
+
+TestCase "encode mindblowingly"
+	MOVE "mindblowingly" TO WS-PHRASE
+	PERFORM ENCODE
+	EXPECT WS-RESULT = "nrmwy oldrm tob"
+
+TestCase "encode numbers"
+	MOVE "Testing,1 2 3, testing." TO WS-PHRASE
+	PERFORM ENCODE
+	EXPECT WS-RESULT = "gvhgr mt123 gvhgr mt"
+
+TestCase "encode deep thought"
+	MOVE "Truth is fiction." TO WS-PHRASE
+	PERFORM ENCODE
+	EXPECT WS-RESULT = "gifgs rhurx grlm"
+
+TestCase "encode all the letters"
+	MOVE "The quick brown fox jumps over the lazy dog." TO WS-PHRASE
+	PERFORM ENCODE
+	EXPECT WS-RESULT = "gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt"
+
+TestCase "decode exercism"
+	MOVE "vcvix rhn" TO WS-PHRASE
+	PERFORM ENCODE
+	EXPECT WS-RESULT = "exercism"
+
+TestCase "decode a sentence"
+	MOVE "zmlyh gzxov rhlug vmzhg vkkrm thglm v" TO WS-PHRASE
+	PERFORM DECODE
+	EXPECT WS-RESULT = "anobstacleisoftenasteppingstone"
+
+TestCase "decode numbers"
+	MOVE "gvhgr mt123 gvhgr mt" TO WS-PHRASE
+	PERFORM DECODE
+	EXPECT WS-RESULT = "testing123testing"
+
+TestCase "decode all the letters"
+	MOVE "gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt" TO WS-PHRASE
+	PERFORM DECODE
+	EXPECT WS-RESULT = "thequickbrownfoxjumpsoverthelazydog"
+
+TestCase "decode with too many spaces"
+	MOVE "vc vix    r hn" TO WS-PHRASE
+	PERFORM DECODE
+	EXPECT WS-RESULT = "exercism"
+
+TestCase "decode with no spaces"
+	MOVE "zmlyhgzxovrhlugvmzhgvkkrmthglmv" TO WS-PHRASE
+	PERFORM DECODE
+	EXPECT WS-RESULT = "anobstacleisoftenasteppingstone"

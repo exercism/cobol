@@ -1,0 +1,23 @@
+{
+    "authors": [
+        "kapitaali"
+    ],
+    "files": {
+        "solution": [
+            "src/atbash-cipher.cob"
+        ],
+        "test": [
+            "tst/atbash-cipher/atbash-cipher.cut"
+        ],
+        "example": [
+            ".meta/proof.ci.cob"
+        ],
+        "invalidator": [
+          "test.sh",
+          "test.ps1"
+        ]
+    },
+    "blurb": "Create an implementation of the atbash cipher, an ancient encryption system created in the Middle East.",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Atbash"
+}
