@@ -147,7 +147,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 6
-      },
+      }, 
       {
         "slug": "darts",
         "name": "Darts",
@@ -235,6 +235,78 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
+      },
+      {
+        "slug": "acronym",
+        "name": "Acronym",
+        "uuid": "628083ab-c882-4cf8-a800-5985ba7c8769",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },     
+      {
+        "slug": "all-your-base",
+        "name": "All Your Base",
+        "uuid": "af67e38a-90e4-4016-8a02-1ad26121d50a",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "atbash-cipher",
+        "name": "Atbash Cipher",
+        "uuid": "00377c73-8113-4251-8445-526393f86194",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "binary",
+        "name": "Binary",
+        "uuid": "970462fb-898f-457f-ace1-34da0849035b",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "circular-buffer",
+        "name": "Circular Buffer",
+        "uuid": "cad7a7b5-4159-4cae-8459-c68b0732eee1",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "complex-numbers",
+        "name": "Complex Numbers",
+        "uuid": "2f4b350f-fcec-400a-a804-671a9e8cef91",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "complex-numbers",
+        "name": "Complex Numbers",
+        "uuid": "2f4b350f-fcec-400a-a804-671a9e8cef91",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "matching-brackets",
+        "name": "Matching Brackets",
+        "uuid": "15d35143-4ddc-4a8a-9e5e-136f831d2a6d",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "pascals-triangle",
+        "name": "Pascal's Triangle",
+        "uuid": "bcfd99e2-3749-4cc9-9708-88de69e474ac",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
       }
     ]
   },

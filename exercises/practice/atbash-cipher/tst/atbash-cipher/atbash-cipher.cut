@@ -40,7 +40,7 @@ TestCase "encode all the letters"
 
 TestCase "decode exercism"
 	MOVE "vcvix rhn" TO WS-PHRASE
-	PERFORM ENCODE
+	PERFORM DECODE
 	EXPECT WS-RESULT = "exercism"
 
 TestCase "decode a sentence"
