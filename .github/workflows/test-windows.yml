@@ -27,12 +27,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5
 
       
       - name: Cache GnuCOBOL
         id: cache-gnu-cobol
-        uses: actions/cache@v3
+        uses: actions/cache@704facf57e6136b1bc63b828d79edcd491f0ee84
         with:
           path: ~\gnucobol-3.2-dev.zip
           key: ${{ runner.os }}-gnu-cobol-3.2
