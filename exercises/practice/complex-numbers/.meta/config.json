@@ -1,23 +1,23 @@
 {
-    "authors": [
-        "kapitaali"
+  "authors": [
+    "kapitaali"
+  ],
+  "files": {
+    "solution": [
+      "src/complex-numbers.cob"
     ],
-    "files": {
-        "solution": [
-            "src/complex-numbers.cob"
-        ],
-        "test": [
-            "tst/complex-numbers/complex-numbers.cut"
-        ],
-        "example": [
-            ".meta/proof.ci.cob"
-        ],
-        "invalidator": [
-          "test.sh",
-          "test.ps1"
-        ]
-    },
-    "blurb": "A complex number is a number in the form a + b * i where a and b are real and i satisfies i^2 = -1.",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Complex_number"
+    "test": [
+      "tst/complex-numbers/complex-numbers.cut"
+    ],
+    "example": [
+      ".meta/proof.ci.cob"
+    ],
+    "invalidator": [
+      "test.sh",
+      "test.ps1"
+    ]
+  },
+  "blurb": "Implement complex numbers.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Complex_number"
 }
