@@ -243,7 +243,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
-      },     
+      },
       {
         "slug": "all-your-base",
         "name": "All Your Base",
@@ -288,6 +288,38 @@
         "slug": "matching-brackets",
         "name": "Matching Brackets",
         "uuid": "15d35143-4ddc-4a8a-9e5e-136f831d2a6d",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "binary-search",
+        "name": "Binary Search",
+        "uuid": "d06489d1-be64-4a50-bc8e-e243b67d1be8",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "space-age",
+        "name": "Space Age",
+        "uuid": "cb947d74-1465-46c2-8448-26e4fb962556",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "secret-handshake",
+        "name": "Secret Handshake",
+        "uuid": "f6d0b827-2009-49e8-a05e-d15fd237a922",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+    {
+        "slug": "protein-translation",
+        "name": "Protein Translation",
+        "uuid": "9f30d551-658b-41ea-9e45-b11a291b88c6",
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
