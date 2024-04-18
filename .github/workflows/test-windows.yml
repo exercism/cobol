@@ -46,11 +46,11 @@ jobs:
             MaximumRetryCount = 3
             RetryIntervalSec  = 1
           }
-          Invoke-WebRequest -Uri 'https://www.arnoldtrembley.com/GC32-BDB-SP1-rename-7z-to-exe.7z' -OutFile ~\gnucobol-3.2.7z @requestOpts
+          Invoke-WebRequest -Uri 'https://www.arnoldtrembley.com/GC32-BDB-SP1-rename-7z-to-exe.7z' -OutFile ~/gnucobol-3.2.7z @requestOpts
 
       - name: Extract GnuCOBOL
         shell: pwsh
-        run: 7z x ~\gnucobol-3.2.7z -ognucobol
+        run: 7z x ~/gnucobol-3.2.7z -ognucobol
 
       - name: Run tests for all exercises
         shell: pwsh
