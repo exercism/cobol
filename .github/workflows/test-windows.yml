@@ -49,8 +49,8 @@ jobs:
           Invoke-WebRequest -Uri 'https://www.arnoldtrembley.com/GC32-BDB-SP1-rename-7z-to-exe.7z' -OutFile ~\gnucobol-3.2.7z @requestOpts
 
       - name: Extract GnuCOBOL
-        shell: 7z
-        run: x ~\gnucobol-3.2.7z -ognucobol
+        shell: pwsh
+        run: 7z x ~\gnucobol-3.2.7z -ognucobol
 
       - name: Run tests for all exercises
         shell: pwsh
