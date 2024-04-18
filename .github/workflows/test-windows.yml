@@ -46,7 +46,7 @@ jobs:
             MaximumRetryCount = 3
             RetryIntervalSec  = 1
           }
-          Invoke-WebRequest -Uri 'https://sourceforge.net/projects/gnucobol/files/gnucobol/3.2/gnucobol-3.2_win.zip/download' -OutFile ~\gnucobol-3.2.zip @requestOpts
+          Invoke-WebRequest -Uri 'https://cobolworx.com/pages/downloads/gnucobol-3.2-cblgdb-5.1.2-x86_64.zip' -OutFile ~\gnucobol-3.2.zip @requestOpts
 
       - name: Extract GnuCOBOL
         shell: pwsh
