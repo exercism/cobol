@@ -50,7 +50,7 @@ jobs:
 
       - name: Extract GnuCOBOL
         shell: 7z
-        run: x ~\gnucobol-3.2.zip -ognucobol
+        run: x ~\gnucobol-3.2.7z -ognucobol
 
       - name: Run tests for all exercises
         shell: pwsh
