@@ -1,11 +1,7 @@
-AFTER-EACH
-	MOVE SPACES TO WS-PROTEIN
-END-AFTER
-
 TestCase "Empty RNA sequence results in no proteins" 
 	MOVE " " TO WS-INPUT
 	PERFORM TRANSLATE-CODON
-	EXPECT WS-PROTEIN = " "
+	EXPECT WS-PROTEIN = SPACES
   
 TestCase "Methionine RNA sequence"
 	MOVE "AUG" TO WS-INPUT
@@ -80,17 +76,17 @@ TestCase "Tryptophan RNA sequence"
 TestCase "STOP codon RNA sequence 1"
 	MOVE "UAA" TO WS-INPUT
 	PERFORM TRANSLATE-CODON
-	EXPECT WS-PROTEIN = " "
+	EXPECT WS-PROTEIN = SPACES
 
 TestCase "STOP codon RNA sequence 2"
 	MOVE "UAG" TO WS-INPUT
 	PERFORM TRANSLATE-CODON
-	EXPECT WS-PROTEIN = " "
+	EXPECT WS-PROTEIN = SPACES
 
 TestCase "STOP codon RNA sequence 3"
 	MOVE "UGA" TO WS-INPUT
 	PERFORM TRANSLATE-CODON
-	EXPECT WS-PROTEIN = " "
+	EXPECT WS-PROTEIN = SPACES
 
 TestCase "Sequence of two protein codons translates into proteins"
 	MOVE "UUUUUU" TO WS-INPUT
@@ -110,7 +106,7 @@ TestCase "Translate RNA strand into correct protein list"
 TestCase "Translation stops if STOP codon at beginning of sequence"
 	MOVE "UAGUGG" TO WS-INPUT
 	PERFORM TRANSLATE-RNA
-	EXPECT WS-PROTEIN = " "
+	EXPECT WS-PROTEIN = SPACES
 
 TestCase "Translation stops if STOP codon at end of two-codon sequence"
 	MOVE "UGGUAG" TO WS-INPUT

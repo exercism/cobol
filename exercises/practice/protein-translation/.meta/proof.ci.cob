@@ -28,6 +28,7 @@
 
 
        CHECK-CODON.
+           MOVE SPACES TO WS-PROTEIN. 
            MOVE SPACES TO CHECKED.
            EVALUATE PROT 
               WHEN " " MOVE " " TO CHECKED
@@ -60,7 +61,7 @@
            END-PERFORM.
            COMPUTE LEN = FUNCTION LENGTH(CHECKED) - LEN.
 
-
+ 
        TRANSLATE-RNA.           
            PERFORM UNTIL WS-INPUT = " "
               MOVE WS-INPUT(1:3) TO PROT
@@ -71,15 +72,15 @@
                     MOVE "Invalid codon" TO WS-ERROR
                     MOVE SPACES TO TEMP
                     MOVE SPACES TO WS-PROTEIN 
-                    EXIT PARAGRAPH
+                    GOBACK
                  WHEN " "
                     MOVE TEMP TO WS-PROTEIN  
                     MOVE SPACES TO TEMP
-                    EXIT PARAGRAPH
+                    GOBACK
                  WHEN "STOP"
                     MOVE TEMP TO WS-PROTEIN 
                     MOVE SPACES TO TEMP
-                    EXIT PARAGRAPH
+                    GOBACK
                  WHEN OTHER 
                     IF INDX > 1
                        MOVE "," TO TEMP(INDX:1)

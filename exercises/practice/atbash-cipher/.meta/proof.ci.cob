@@ -6,8 +6,8 @@
        WORKING-STORAGE SECTION.
        01 WS-PHRASE                PIC X(60).
        01 WS-RESULT                PIC X(60).
-       01 ABC PIC X(36) VALUES "abcdefghijklmnopqrstuvwxyz0123456789".
-       01 ZYX PIC X(36) VALUES "zyxwvutsrqponmlkjihgfedcba0123456789".
+       01 ABC PIC X(36) VALUE "abcdefghijklmnopqrstuvwxyz0123456789".
+       01 ZYX PIC X(36) VALUE "zyxwvutsrqponmlkjihgfedcba0123456789".
        01 COUNTER                  PIC 999.
        01 LEN                      PIC 999.
        01 IDX                      PIC 999.
