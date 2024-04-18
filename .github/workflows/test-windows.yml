@@ -46,11 +46,11 @@ jobs:
             MaximumRetryCount = 3
             RetryIntervalSec  = 1
           }
-          Invoke-WebRequest -Uri 'https://cobolworx.com/pages/downloads/gnucobol-3.2-cblgdb-5.1.2-x86_64.zip' -OutFile ~\gnucobol-3.2.zip @requestOpts
+          Invoke-WebRequest -Uri 'https://www.arnoldtrembley.com/GC32-BDB-SP1-rename-7z-to-exe.7z' -OutFile ~\gnucobol-3.2.7z @requestOpts
 
       - name: Extract GnuCOBOL
-        shell: pwsh
-        run: Expand-Archive ~\gnucobol-3.2.zip -DestinationPath gnucobol -Force
+        shell: 7z
+        run: x ~\gnucobol-3.2.zip -ognucobol
 
       - name: Run tests for all exercises
         shell: pwsh
