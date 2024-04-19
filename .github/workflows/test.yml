@@ -30,13 +30,7 @@ jobs:
         uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5
 
       - name: Setup COBOL
-        run: |
-          sudo apt-get update
-          sudo apt-get -y install curl tar libncurses5-dev libgmp-dev libdb-dev iproute2 ranger autoconf build-essential
-          sudo apt-get -y --purge autoremove
-
-          curl -sLk https://sourceforge.net/projects/open-cobol/files/gnu-cobol/3.1/gnucobol-3.1.2.tar.gz | tar xz
-          cd gnucobol-3.1.2 && ./configure --prefix=/usr && sudo make && sudo make install && sudo ldconfig
+        run: sudo apt update && sudo apt install -y gnucobol
 
       - name: Fetch CobolCheck
         run: bin/fetch-cobolcheck
