@@ -57,7 +57,7 @@ TestCase "15-bit integer"
 TestCase "empty list"
        MOVE 2 TO WS-INPUTBASE
        MOVE 10 TO WS-OUTPUTBASE
-       MOVE "" TO WS-DIGITS
+       MOVE SPACE TO WS-DIGITS
        PERFORM REBASE
        EXPECT WS-RESULT = "0"
        
@@ -97,7 +97,7 @@ TestCase "input base is one"
 TestCase "input base is zero"
 	MOVE 0 TO WS-INPUTBASE
 	MOVE 10 TO WS-OUTPUTBASE
-	MOVE "" TO WS-DIGITS
+	MOVE SPACE TO WS-DIGITS
 	PERFORM REBASE
 	EXPECT WS-ERROR = "input base must be >= 2"
 

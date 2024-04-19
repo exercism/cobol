@@ -44,7 +44,7 @@ TestCase "english-like word"
 	EXPECT WS-RESULT = 8
 
 TestCase "empty input"
-	MOVE "" TO WS-WORD
+	MOVE SPACE TO WS-WORD
 	PERFORM SCRABBLE-SCORE
 	EXPECT WS-RESULT = 0
 
