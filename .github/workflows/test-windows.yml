@@ -58,8 +58,11 @@ jobs:
       - name: Setup environment
         shell: pwsh
         run: |
+          Get-Command "cobc" -ErrorAction SilentlyContinue
           ls ${env:GITHUB_WORKSPACE}
           ls ${env:GITHUB_WORKSPACE}\bin
+          ls ${env:GITHUB_WORKSPACE}\gnucobol
+          ls ${env:GITHUB_WORKSPACE}\gnucobol\bin
           $gnucobolDir = Join-Path $env:GITHUB_WORKSPACE -ChildPath "gnucobol"
           $env:Path = "${gnucobolDir}\bin;${env:GITHUB_WORKSPACE}\bin;${env:Path}"
           printenv
