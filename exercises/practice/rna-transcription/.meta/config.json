@@ -13,8 +13,11 @@
       ".meta/proof.ci.cob"
     ],
     "invalidator": [
+      "test.ps1",
       "test.sh",
-      "test.ps1"
+      "bin/fetch-cobolcheck",
+      "bin/fetch-cobolcheck.ps1",
+      "config.properties"
     ]
   },
   "blurb": "Given a DNA strand, return its RNA Complement Transcription.",

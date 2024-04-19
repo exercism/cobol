@@ -13,8 +13,11 @@
       ".meta/proof.ci.cob"
     ],
     "invalidator": [
+      "test.ps1",
       "test.sh",
-      "test.ps1"
+      "bin/fetch-cobolcheck",
+      "bin/fetch-cobolcheck.ps1",
+      "config.properties"
     ]
   },
   "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base."
