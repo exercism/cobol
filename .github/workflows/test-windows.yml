@@ -58,6 +58,7 @@ jobs:
       - name: Setup environment
         shell: pwsh
         run: |
+          Write-Output $HOME
           $env:Path = "D:\a\cobol\cobol\gnucobol\bin;$HOME\bin;" + $env:Path
           [System.Environment]::SetEnvironmentVariable('COB_CONFIG_DIR', 'D:\a\cobol\cobol\gnucobol\config')
           [System.Environment]::SetEnvironmentVariable('COB_COPY_DIR', 'D:\a\cobol\cobol\gnucobol\copy')
