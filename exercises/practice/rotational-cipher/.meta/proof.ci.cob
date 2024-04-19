@@ -33,5 +33,5 @@
            TO WS-CIPHER (WS-CHAR-INDEX:1)
        END-PERFORM.
 
-       DISPLAY "Plain: " WS-TEXT.
-       DISPLAY "Cipher: " WS-CIPHER.
+      *DISPLAY "Plain: " WS-TEXT.
+      *DISPLAY "Cipher: " WS-CIPHER.

@@ -39,17 +39,17 @@
            COMPUTE RESULT-IM = Z1-IM * Z2-RE + Z1-RE * Z2-IM.
 
        C-DIV.
-           DISPLAY "Z1 (" Z1-RE "," Z1-IM ") Z2 (" Z2-RE "," Z2-IM ")".
+      *    DISPLAY "Z1 (" Z1-RE "," Z1-IM ") Z2 (" Z2-RE "," Z2-IM ")".
            COMPUTE TEMP = Z2-RE * Z2-RE + Z2-IM * Z2-IM. 
-           DISPLAY "TEMP " TEMP.
+      *    DISPLAY "TEMP " TEMP.
            COMPUTE RESULT-RE = Z1-RE * Z2-RE + Z1-IM * Z2-IM. 
            COMPUTE RESULT-RE = RESULT-RE / TEMP. 
-           DISPLAY "RESULT-RE " RESULT-RE.
+      *    DISPLAY "RESULT-RE " RESULT-RE.
            COMPUTE RESULT-IM = Z1-IM * Z2-RE - Z1-RE * Z2-IM.
-           DISPLAY Z1-IM "*" Z2-RE "-" Z1-RE "*" Z2-IM.
-           DISPLAY "= " RESULT-IM " / TEMP=" TEMP.
+      *    DISPLAY Z1-IM "*" Z2-RE "-" Z1-RE "*" Z2-IM.
+      *    DISPLAY "= " RESULT-IM " / TEMP=" TEMP.
            COMPUTE RESULT-IM = RESULT-IM / TEMP.
-           DISPLAY "RESULT-IM " RESULT-IM.
+      *    DISPLAY "RESULT-IM " RESULT-IM.
 
        C-ABS.
            MOVE 0 TO RESULT-IM.

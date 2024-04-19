@@ -227,4 +227,3 @@
          END-PERFORM.
        BUBBLE-SORT-EXIT.
         EXIT.
-        
