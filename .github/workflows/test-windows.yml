@@ -58,18 +58,17 @@ jobs:
       - name: Setup environment
         shell: pwsh
         run: |
-          ls $HOME
-          ls $HOME\cobol
-          ls $HOME\cobol\gnucobol
-          ls $HOME\cobol\gnucobol\bin
-          ls $HOME\gnucobol
-          $env:Path = "$HOME\cobol\gnucobol\bin;$HOME\bin;" + $env:Path
-          [System.Environment]::SetEnvironmentVariable('COB_CONFIG_DIR', "$HOME\cobol\gnucobol\config")
-          [System.Environment]::SetEnvironmentVariable('COB_COPY_DIR', "$HOME\cobol\gnucobol\copy")
-          [System.Environment]::SetEnvironmentVariable('COB_CFLAGS', "-I $HOME\cobol\gnucobol\include")
-          [System.Environment]::SetEnvironmentVariable('COB_LDFLAGS', "-L $HOME\cobol\gnucobol\lib")
-          [System.Environment]::SetEnvironmentVariable('COB_LIBRARY_PATH', "$HOME\cobol\gnucobol\lib")
-          [System.Environment]::SetEnvironmentVariable('COB_LIBS', "$HOME\cobol\gnucobol\bin\libcob-4.dll")
+          ls ${env:GITHUB_WORKSPACE}
+          ls ${env:GITHUB_WORKSPACE}\bin
+          $gnucobolDir = Join-Path $env:GITHUB_WORKSPACE -ChildPath "gnucobol"
+          $env:Path = "${gnucobolDir}\bin;${env:GITHUB_WORKSPACE}\bin;${env:Path}"
+          printenv
+          [System.Environment]::SetEnvironmentVariable('COB_CONFIG_DIR', "${gnucobolDir}\config")
+          [System.Environment]::SetEnvironmentVariable('COB_COPY_DIR', "${gnucobolDir}\copy")
+          [System.Environment]::SetEnvironmentVariable('COB_CFLAGS', "-I ${gnucobolDir}\include")
+          [System.Environment]::SetEnvironmentVariable('COB_LDFLAGS', "-L ${gnucobolDir}\lib")
+          [System.Environment]::SetEnvironmentVariable('COB_LIBRARY_PATH', "${gnucobolDir}\lib")
+          [System.Environment]::SetEnvironmentVariable('COB_LIBS', "${gnucobolDir}\bin\libcob-4.dll")
 
       - name: Run tests for all exercises
         shell: pwsh

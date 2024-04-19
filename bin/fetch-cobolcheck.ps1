@@ -23,7 +23,7 @@ Function Get-DownloadUrl {
 }
 
 $downloadUrl = Get-DownloadUrl
-$outputDir = Join-Path -Path $HOME -ChildPath "bin"
+$outputDir = Join-Path -Path $PSScriptRoot -ChildPath "bin"
 $outputFile = Join-Path -Path $outputDir -ChildPath "cobolcheck.exe"
 New-Item -ItemType Directory -Force -Path $outputDir | Out-Null
 Invoke-WebRequest -Uri $downloadUrl -OutFile $outputFile @requestOpts
