@@ -58,4 +58,4 @@
            MOVE "FALSE" TO WS-VALID
        END-IF.
 
-       DISPLAY WS-VALID.
+      *DISPLAY WS-VALID.

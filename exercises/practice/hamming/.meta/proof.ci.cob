@@ -35,5 +35,5 @@
 
        END-PERFORM.
 
-       DISPLAY "Hamming Distance is: " WS-HAMMING.
-       DISPLAY WS-ERROR.
+      *DISPLAY "Hamming Distance is: " WS-HAMMING.
+      *DISPLAY WS-ERROR.

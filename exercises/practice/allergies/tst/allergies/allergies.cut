@@ -243,7 +243,7 @@ TestCase "cats: allergic to everything",
 TestCase "list when: no allergies"
     MOVE 0 TO WS-SCORE
     PERFORM LIST-ALLERGENS
-    EXPECT WS-RESULT-LIST = ""
+    EXPECT WS-RESULT-LIST = SPACE
 
 TestCase "list when: just eggs"
     MOVE 1 TO WS-SCORE

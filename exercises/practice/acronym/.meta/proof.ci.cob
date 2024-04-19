@@ -25,7 +25,7 @@
                EVALUATE CHAR
                WHEN "_"
                    CONTINUE
-               WHEN " "
+               WHEN SPACE
                    MOVE 1 TO PICKNEXT
                    CONTINUE
                WHEN "-"
@@ -48,5 +48,3 @@
                ADD 1 TO LEN
            END-PERFORM.
            COMPUTE LEN = 80 - LEN.
-
-           
