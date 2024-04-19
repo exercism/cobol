@@ -9,4 +9,4 @@
        SQUARE-ROOT.
        COMPUTE WS-SQRT = WS-NUMBER ** .5 
        
-       DISPLAY WS-SQRT.
+      *DISPLAY WS-SQRT.

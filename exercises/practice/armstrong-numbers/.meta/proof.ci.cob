@@ -30,5 +30,5 @@
            MOVE 0 TO WS-RESULT
          END-IF.
 
-         DISPLAY WS-ARMSTRONG.
-         DISPLAY WS-NUMBER.
+      *  DISPLAY WS-ARMSTRONG.
+      *  DISPLAY WS-NUMBER.

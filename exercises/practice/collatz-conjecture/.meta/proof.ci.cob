@@ -26,5 +26,5 @@
            ADD 1 TO WS-STEPS
        END-PERFORM.
        
-       DISPLAY WS-STEPS.
-       DISPLAY WS-ERROR.
+      *DISPLAY WS-STEPS.
+      *DISPLAY WS-ERROR.
