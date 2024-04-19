@@ -26,7 +26,8 @@
                MOVE 0 TO WS-CARD-NUMBER
                EXIT PERFORM
            ELSE
-               MOVE CONCAT(WS-CARD-DIGITS, WS-CARD-NUMBER(WS-INDEX:1)) 
+               MOVE CONCATENATE(WS-CARD-DIGITS, 
+                  WS-CARD-NUMBER(WS-INDEX:1)) 
                TO WS-CARD-DIGITS
            END-IF
        END-PERFORM.
