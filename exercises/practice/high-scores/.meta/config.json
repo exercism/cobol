@@ -1,5 +1,7 @@
 {
-  "authors": ["glennj"],
+  "authors": [
+    "glennj"
+  ],
   "files": {
     "solution": [
       "src/high-scores.cob"
