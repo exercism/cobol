@@ -1,5 +1,5 @@
-$gnucobolDir = "${env:GITHUB_WORKSPACE}\gnucobol"
-$cobolcheckDir = "${env:GITHUB_WORKSPACE}\cobolcheck"
+$gnucobolDir = "${HOME}\gnucobol"
+$cobolcheckDir = "${HOME}\cobolcheck"
 $env:Path = "${gnucobolDir}\bin;${cobolcheckDir};${env:Path}"
 [System.Environment]::SetEnvironmentVariable('COB_CONFIG_DIR', "${gnucobolDir}\config")
 [System.Environment]::SetEnvironmentVariable('COB_COPY_DIR', "${gnucobolDir}\copy")
