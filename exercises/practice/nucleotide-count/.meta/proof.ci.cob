@@ -34,8 +34,8 @@
            END-EVALUATE
        END-PERFORM.
 
-       DISPLAY "A: " WS-A.
-       DISPLAY "C: " WS-C.
-       DISPLAY "G: " WS-G.
-       DISPLAY "T: " WS-T.
-       DISPLAY WS-ERROR.
+      *DISPLAY "A: " WS-A.
+      *DISPLAY "C: " WS-C.
+      *DISPLAY "G: " WS-G.
+      *DISPLAY "T: " WS-T.
+      *DISPLAY WS-ERROR.
