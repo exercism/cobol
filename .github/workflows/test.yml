@@ -38,5 +38,8 @@ jobs:
           curl -sLk https://sourceforge.net/projects/open-cobol/files/gnu-cobol/3.1/gnucobol-3.1.2.tar.gz | tar xz
           cd gnucobol-3.1.2 && ./configure --prefix=/usr && sudo make && sudo make install && sudo ldconfig
 
+      - name: Fetch CobolCheck
+        run: bin/fetch-cobolcheck
+
       - name: Run tests for all exercises
         run: bin/test
