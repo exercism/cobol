@@ -29,7 +29,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5
 
-      
       - name: Cache GnuCOBOL
         id: cache-gnu-cobol
         uses: actions/cache@704facf57e6136b1bc63b828d79edcd491f0ee84
@@ -52,14 +51,21 @@ jobs:
         shell: pwsh
         run: 7z x $HOME\gnucobol-3.2.7z -ognucobol -y
 
-      - name: Run tests for all exercises
+      - name: Fetch CobolCheck
+        shell: pwsh
+        run: bin/fetch-cobolcheck.ps1
+
+      - name: Setup environment
         shell: pwsh
         run: |
-          $env:Path = "D:\a\cobol\cobol\gnucobol\bin;" + $env:Path
+          $env:Path = "D:\a\cobol\cobol\gnucobol\bin;$HOME\bin;" + $env:Path
           [System.Environment]::SetEnvironmentVariable('COB_CONFIG_DIR', 'D:\a\cobol\cobol\gnucobol\config')
           [System.Environment]::SetEnvironmentVariable('COB_COPY_DIR', 'D:\a\cobol\cobol\gnucobol\copy')
           [System.Environment]::SetEnvironmentVariable('COB_CFLAGS', '-I D:\a\cobol\cobol\gnucobol\include')
           [System.Environment]::SetEnvironmentVariable('COB_LDFLAGS', '-L D:\a\cobol\cobol\gnucobol\lib')
           [System.Environment]::SetEnvironmentVariable('COB_LIBRARY_PATH', 'D:\a\cobol\cobol\gnucobol\lib')
           [System.Environment]::SetEnvironmentVariable('COB_LIBS', 'D:\a\cobol\cobol\gnucobol\bin\libcob-4.dll')
-          bin/test.ps1
+
+      - name: Run tests for all exercises
+        shell: pwsh
+        run: bin/test.ps1

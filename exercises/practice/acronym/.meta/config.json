@@ -1,23 +1,26 @@
 {
-    "authors": [
-        "kapitaali"
+  "authors": [
+    "kapitaali"
+  ],
+  "files": {
+    "solution": [
+      "src/acronym.cob"
     ],
-    "files": {
-        "solution": [
-            "src/acronym.cob"
-        ],
-        "test": [
-            "tst/acronym/acronym.cut"
-        ],
-        "example": [
-            ".meta/proof.ci.cob"
-        ],
-        "invalidator": [
-          "test.sh",
-          "test.ps1"
-        ]
-    },
-    "blurb": "Convert a phrase to its acronym.",
-    "source": "Julien Vanier",
-    "source_url": "https://github.com/monkbroc"
+    "test": [
+      "tst/acronym/acronym.cut"
+    ],
+    "example": [
+      ".meta/proof.ci.cob"
+    ],
+    "invalidator": [
+      "test.ps1",
+      "test.sh",
+      "bin/fetch-cobolcheck",
+      "bin/fetch-cobolcheck.ps1",
+      "config.properties"
+    ]
+  },
+  "blurb": "Convert a phrase to its acronym.",
+  "source": "Julien Vanier",
+  "source_url": "https://github.com/monkbroc"
 }

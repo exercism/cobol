@@ -1,23 +1,26 @@
 {
-    "authors": [
-        "kapitaali"
+  "authors": [
+    "kapitaali"
+  ],
+  "files": {
+    "solution": [
+      "src/matching-brackets.cob"
     ],
-    "files": {
-        "solution": [
-            "src/matching-brackets.cob"
-        ],
-        "test": [
-            "tst/matching-brackets/matching-brackets.cut"
-        ],
-        "example": [
-            ".meta/proof.ci.cob"
-        ],
-        "invalidator": [
-          "test.sh",
-          "test.ps1"
-        ]
-    },
-    "blurb": "Bob is a lackadaisical teenager. In conversation, his responses are very limited.",
-    "source": "Inspired by the 'Deaf Grandma' exercise in Chris Pine's Learn to Program tutorial.",
-    "source_url": "http://pine.fm/LearnToProgram/?Chapter=06"
+    "test": [
+      "tst/matching-brackets/matching-brackets.cut"
+    ],
+    "example": [
+      ".meta/proof.ci.cob"
+    ],
+    "invalidator": [
+      "test.ps1",
+      "test.sh",
+      "bin/fetch-cobolcheck",
+      "bin/fetch-cobolcheck.ps1",
+      "config.properties"
+    ]
+  },
+  "blurb": "Bob is a lackadaisical teenager. In conversation, his responses are very limited.",
+  "source": "Inspired by the 'Deaf Grandma' exercise in Chris Pine's Learn to Program tutorial.",
+  "source_url": "http://pine.fm/LearnToProgram/?Chapter=06"
 }

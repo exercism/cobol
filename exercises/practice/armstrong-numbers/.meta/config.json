@@ -1,22 +1,25 @@
 {
-    "authors": [
-      "KTSnowy"
+  "authors": [
+    "KTSnowy"
+  ],
+  "files": {
+    "solution": [
+      "src/armstrong-numbers.cob"
     ],
-    "files": {
-      "solution": [
-        "src/armstrong-numbers.cob"
-      ],
-      "test": [
-        "tst/armstrong-numbers/armstrong-numbers.cut"
-      ],
-      "example": [
-        ".meta/proof.ci.cob"
-      ],
-      "invalidator": [
-        "test.sh",
-        "test.ps1"
-      ]
-    },
+    "test": [
+      "tst/armstrong-numbers/armstrong-numbers.cut"
+    ],
+    "example": [
+      ".meta/proof.ci.cob"
+    ],
+    "invalidator": [
+      "test.ps1",
+      "test.sh",
+      "bin/fetch-cobolcheck",
+      "bin/fetch-cobolcheck.ps1",
+      "config.properties"
+    ]
+  },
   "blurb": "Determine if a number is an Armstrong number.",
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Narcissistic_number"

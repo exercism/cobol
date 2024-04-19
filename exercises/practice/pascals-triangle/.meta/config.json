@@ -1,23 +1,26 @@
 {
-    "authors": [
-        "kapitaali"
+  "authors": [
+    "kapitaali"
+  ],
+  "files": {
+    "solution": [
+      "src/pascals-triangle.cob"
     ],
-    "files": {
-        "solution": [
-            "src/pascals-triangle.cob"
-        ],
-        "test": [
-            "tst/pascals-triangle/pascals-triangle.cut"
-        ],
-        "example": [
-            ".meta/proof.ci.cob"
-        ],
-        "invalidator": [
-          "test.sh",
-          "test.ps1"
-        ]
-    },
-    "blurb": "Compute Pascal's triangle up to a given number of rows.",
-    "source": "Pascal's Triangle at Wolfram Math World",
-    "source_url": "http://mathworld.wolfram.com/PascalsTriangle.html"
+    "test": [
+      "tst/pascals-triangle/pascals-triangle.cut"
+    ],
+    "example": [
+      ".meta/proof.ci.cob"
+    ],
+    "invalidator": [
+      "test.ps1",
+      "test.sh",
+      "bin/fetch-cobolcheck",
+      "bin/fetch-cobolcheck.ps1",
+      "config.properties"
+    ]
+  },
+  "blurb": "Compute Pascal's triangle up to a given number of rows.",
+  "source": "Pascal's Triangle at Wolfram Math World",
+  "source_url": "http://mathworld.wolfram.com/PascalsTriangle.html"
 }
