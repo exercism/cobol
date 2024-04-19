@@ -48,5 +48,3 @@
                ADD 1 TO LEN
            END-PERFORM.
            COMPUTE LEN = 80 - LEN.
-
-           

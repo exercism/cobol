@@ -142,4 +142,3 @@
            MOVE WS-RESULT TO WS-DIGITS.
            PERFORM STR-LENGTH.
            MOVE SPACES TO WS-RESULT(LEN:1).           
-
