@@ -15,17 +15,10 @@
     "indent_size": 3,
     "highlightjs_language": "cobol"
   },
-    "test_runner": {
+  "test_runner": {
     "average_run_time": 2
   },
-  "files": {
-    "solution": [],
-    "test": [],
-    "example": [],
-    "exemplar": []
-  },
   "exercises": {
-    "concept": [],
     "practice": [
       {
         "slug": "hello-world",
@@ -39,8 +32,7 @@
         "slug": "leap",
         "name": "Leap",
         "uuid": "eab41ebb-64a9-4015-92b8-3899d58b8e5f",
-        "practices": [
-        ],
+        "practices": [],
         "prerequisites": [],
         "difficulty": 2
       },
@@ -243,7 +235,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
-      },     
+      },
       {
         "slug": "all-your-base",
         "name": "All Your Base",
@@ -302,7 +294,6 @@
       }
     ]
   },
-  "concepts": [],
   "key_features": [
     {
       "title": "Statically Typed",
@@ -336,12 +327,12 @@
     }
   ],
   "tags": [
-    "paradigm/procedural",
+    "execution_mode/compiled",
     "paradigm/imperative",
     "paradigm/object_oriented",
+    "paradigm/procedural",
     "typing/static",
     "typing/strong",
-    "execution_mode/compiled",
     "used_for/backends",
     "used_for/financial_systems"
   ]
