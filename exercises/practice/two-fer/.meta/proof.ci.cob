@@ -11,7 +11,7 @@
        IF WS-NAME EQUAL SPACE THEN
            MOVE "One for you, one for me." TO WS-RESULT
        ELSE
-           MOVE FUNCTION CONCAT("One for ", 
+           MOVE FUNCTION CONCATENATE("One for ", 
            FUNCTION TRIM(WS-NAME TRAILING),", one for me.") 
            TO WS-RESULT
        END-IF.
