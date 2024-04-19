@@ -7,6 +7,6 @@
 
        PROCEDURE DIVISION.
        SQUARE-ROOT.
-       COMPUTE WS-SQRT = WS-NUMBER ** .5 
+         COMPUTE WS-SQRT = WS-NUMBER ** 0.5 
        
       *DISPLAY WS-SQRT.
