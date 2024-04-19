@@ -25,7 +25,7 @@
                EVALUATE CHAR
                WHEN "_"
                    CONTINUE
-               WHEN " "
+               WHEN SPACE
                    MOVE 1 TO PICKNEXT
                    CONTINUE
                WHEN "-"
