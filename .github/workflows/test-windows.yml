@@ -31,10 +31,12 @@ jobs:
 
       - name: Cache GnuCOBOL
         id: cache-gnu-cobol
-        uses: actions/cache@704facf57e6136b1bc63b828d79edcd491f0ee84
+        uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
         with:
-          path: $HOME\gnucobol-3.2.7z
-          key: ${{ runner.os }}-gnu-cobol-3.2
+          path: |
+            ~/gnucobol
+            ~/cobolcheck
+          key: gnucobol-3.2.7-cobolcheck-v1
 
       - name: Download GnuCOBOL
         if: steps.cache-gnu-cobol.outputs.cache-hit != 'true'
@@ -46,12 +48,10 @@ jobs:
             RetryIntervalSec  = 1
           }
           Invoke-WebRequest -Uri 'https://www.arnoldtrembley.com/GC32-BDB-SP1-rename-7z-to-exe.7z' -OutFile $HOME\gnucobol-3.2.7z @requestOpts
+          7z x $HOME\gnucobol-3.2.7z -o"${HOME}\gnucobol" -y
 
-      - name: Extract GnuCOBOL
-        shell: pwsh
-        run: 7z x $HOME\gnucobol-3.2.7z -ognucobol -y
-
-      - name: Fetch CobolCheck
+      - name: Download CobolCheck
+        if: steps.cache-gnu-cobol.outputs.cache-hit != 'true'
         shell: pwsh
         run: bin/fetch-cobolcheck.ps1
 
