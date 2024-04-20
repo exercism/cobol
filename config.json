@@ -306,6 +306,14 @@
         "difficulty": 3
       },
       {
+        "slug": "protein-translation",
+        "name": "Protein Translation",
+        "uuid": "95e2d8d7-31a6-4734-a353-c4688ef8494f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "pascals-triangle",
         "name": "Pascal's Triangle",
         "uuid": "bcfd99e2-3749-4cc9-9708-88de69e474ac",

@@ -1,0 +1,149 @@
+TestCase "Empty RNA sequence results in no proteins" 
+	MOVE " " TO WS-INPUT
+	PERFORM TRANSLATE-CODON
+	EXPECT WS-PROTEIN = SPACES
+  
+TestCase "Methionine RNA sequence"
+	MOVE "AUG" TO WS-INPUT
+	PERFORM TRANSLATE-CODON
+	EXPECT WS-PROTEIN = "Methionine"
+
+TestCase "Phenylalanine RNA sequence 1"
+	MOVE "UUU" TO WS-INPUT
+	PERFORM TRANSLATE-CODON
+	EXPECT WS-PROTEIN = "Phenylalanine"
+
+TestCase "Phenylalanine RNA sequence 2"
+	MOVE "UUC" TO WS-INPUT
+	PERFORM TRANSLATE-CODON
+	EXPECT WS-PROTEIN = "Phenylalanine"
+
+TestCase "Leucine RNA sequence 1"
+	MOVE "UUA" TO WS-INPUT
+	PERFORM TRANSLATE-CODON
+	EXPECT WS-PROTEIN = "Leucine"
+
+TestCase "Leucine RNA sequence 2"
+	MOVE "UUG" TO WS-INPUT
+	PERFORM TRANSLATE-CODON
+	EXPECT WS-PROTEIN = "Leucine"
+
+TestCase "Serine RNA sequence 1"
+	MOVE "UCU" TO WS-INPUT
+	PERFORM TRANSLATE-CODON
+	EXPECT WS-PROTEIN = "Serine"
+
+TestCase "Serine RNA sequence 2"
+	MOVE "UCC" TO WS-INPUT
+	PERFORM TRANSLATE-CODON
+	EXPECT WS-PROTEIN = "Serine"
+
+TestCase "Serine RNA sequence 3"
+	MOVE "UCA" TO WS-INPUT
+	PERFORM TRANSLATE-CODON
+	EXPECT WS-PROTEIN = "Serine"
+
+TestCase "Serine RNA sequence 4"
+	MOVE "UCG" TO WS-INPUT
+	PERFORM TRANSLATE-CODON
+	EXPECT WS-PROTEIN = "Serine"
+
+TestCase "Tyrosine RNA sequence 1"
+	MOVE "UAU" TO WS-INPUT
+	PERFORM TRANSLATE-CODON
+	EXPECT WS-PROTEIN = "Tyrosine"
+
+TestCase "Tyrosine RNA sequence 2"
+	MOVE "UAC" TO WS-INPUT
+	PERFORM TRANSLATE-CODON
+	EXPECT WS-PROTEIN = "Tyrosine"
+
+TestCase "Cysteine RNA sequence 1"
+	MOVE "UGU" TO WS-INPUT
+	PERFORM TRANSLATE-CODON
+	EXPECT WS-PROTEIN = "Cysteine"
+
+TestCase "Cysteine RNA sequence 2"
+	MOVE "UGC" TO WS-INPUT
+	PERFORM TRANSLATE-CODON
+	EXPECT WS-PROTEIN = "Cysteine"
+
+TestCase "Tryptophan RNA sequence"
+	MOVE "UGG" TO WS-INPUT
+	PERFORM TRANSLATE-CODON
+	EXPECT WS-PROTEIN = "Tryptophan"
+
+TestCase "STOP codon RNA sequence 1"
+	MOVE "UAA" TO WS-INPUT
+	PERFORM TRANSLATE-CODON
+	EXPECT WS-PROTEIN = SPACES
+
+TestCase "STOP codon RNA sequence 2"
+	MOVE "UAG" TO WS-INPUT
+	PERFORM TRANSLATE-CODON
+	EXPECT WS-PROTEIN = SPACES
+
+TestCase "STOP codon RNA sequence 3"
+	MOVE "UGA" TO WS-INPUT
+	PERFORM TRANSLATE-CODON
+	EXPECT WS-PROTEIN = SPACES
+
+TestCase "Sequence of two protein codons translates into proteins"
+	MOVE "UUUUUU" TO WS-INPUT
+	PERFORM TRANSLATE-RNA
+	EXPECT WS-PROTEIN = "Phenylalanine,Phenylalanine"
+
+TestCase "Sequence of two different protein codons translates into proteins"
+	MOVE "UUAUUG" TO WS-INPUT
+	PERFORM TRANSLATE-RNA
+	EXPECT WS-PROTEIN = "Leucine,Leucine"
+
+TestCase "Translate RNA strand into correct protein list"
+	MOVE "AUGUUUUGG" TO WS-INPUT
+	PERFORM TRANSLATE-RNA
+	EXPECT WS-PROTEIN = "Methionine,Phenylalanine,Tryptophan"
+
+TestCase "Translation stops if STOP codon at beginning of sequence"
+	MOVE "UAGUGG" TO WS-INPUT
+	PERFORM TRANSLATE-RNA
+	EXPECT WS-PROTEIN = SPACES
+
+TestCase "Translation stops if STOP codon at end of two-codon sequence"
+	MOVE "UGGUAG" TO WS-INPUT
+	PERFORM TRANSLATE-RNA
+	EXPECT WS-PROTEIN = "Tryptophan"
+
+TestCase "Translation stops if STOP codon at end of three-codon sequence"
+	MOVE "AUGUUUUAA" TO WS-INPUT
+	PERFORM TRANSLATE-RNA
+	EXPECT WS-PROTEIN = "Methionine,Phenylalanine"
+
+TestCase "Translation stops if STOP codon in middle of three-codon sequence"
+	MOVE "UGGUAGUGG" TO WS-INPUT
+	PERFORM TRANSLATE-RNA
+	EXPECT WS-PROTEIN = "Tryptophan"
+
+TestCase "Translation stops if STOP codon in middle of six-codon sequence"
+	MOVE "UGGUGUUAUUAAUGGUUU" TO WS-INPUT
+	PERFORM TRANSLATE-RNA
+	EXPECT WS-PROTEIN = "Tryptophan,Cysteine,Tyrosine"
+
+TestCase "Non-existing codon can't translate"
+	MOVE "AAA" TO WS-INPUT
+	PERFORM TRANSLATE-CODON
+	EXPECT WS-ERROR = "Invalid codon"
+
+TestCase "Unknown amino acids, not part of a codon, can't translate"
+	MOVE "XYZ" TO WS-INPUT
+	PERFORM TRANSLATE-RNA
+	EXPECT WS-ERROR = "Invalid codon"
+
+TestCase "Incomplete RNA sequence can't translate"
+	MOVE "AUGU" TO WS-INPUT
+	PERFORM TRANSLATE-RNA
+	EXPECT WS-ERROR = "Invalid codon"
+
+TestCase "Incomplete RNA sequence can translate if valid until a STOP codon"
+	MOVE "UUCUUCUAAUGGU" TO WS-INPUT
+	PERFORM TRANSLATE-RNA
+	EXPECT WS-PROTEIN = "Phenylalanine,Phenylalanine"
