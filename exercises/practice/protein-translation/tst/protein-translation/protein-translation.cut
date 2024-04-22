@@ -1,5 +1,5 @@
 TestCase "Empty RNA sequence results in no proteins" 
-	MOVE " " TO WS-INPUT
+	MOVE SPACES TO WS-INPUT
 	PERFORM TRANSLATE-CODON
 	EXPECT WS-PROTEIN = SPACES
   

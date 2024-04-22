@@ -314,6 +314,14 @@
         "difficulty": 3
       },
       {
+        "slug": "binary-search",
+        "name": "Binary Search",
+        "uuid": "4a580b6d-a370-4526-a5ea-d7c856279676",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "pascals-triangle",
         "name": "Pascal's Triangle",
         "uuid": "bcfd99e2-3749-4cc9-9708-88de69e474ac",
