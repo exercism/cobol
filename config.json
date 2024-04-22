@@ -322,6 +322,14 @@
         "difficulty": 3
       },
       {
+        "slug": "secret-handshake",
+        "name": "Secret Handshake",
+        "uuid": "d643cdac-949f-430b-989e-bb0380627580",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "pascals-triangle",
         "name": "Pascal's Triangle",
         "uuid": "bcfd99e2-3749-4cc9-9708-88de69e474ac",
