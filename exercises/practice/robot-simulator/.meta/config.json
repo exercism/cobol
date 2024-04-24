@@ -1,0 +1,22 @@
+{
+  "authors": [
+    "kapitaali"
+  ],
+  "files": {
+    "solution": [
+      "src/robot-simulator.cob"
+    ],
+    "test": [
+      "tst/robot-simulator/robot-simulator.cut"
+    ],
+    "example": [
+      ".meta/proof.ci.cob"
+    ],
+    "invalidator": [
+      "test.sh",
+      "test.ps1"
+    ] 
+  },
+  "blurb": "Write a robot simulator.",
+  "source": "Inspired by an interview question at a famous company."
+}

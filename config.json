@@ -338,6 +338,14 @@
         "difficulty": 1
       },
       {
+        "slug": "robot-simulator",
+        "name": "Robot Simulator",
+        "uuid": "aa8d3ec5-da37-45e2-87c2-ec94eacf6cb4",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "pascals-triangle",
         "name": "Pascal's Triangle",
         "uuid": "bcfd99e2-3749-4cc9-9708-88de69e474ac",
