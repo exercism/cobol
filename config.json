@@ -330,6 +330,14 @@
         "difficulty": 2
       },
       {
+        "slug": "space-age",
+        "name": "Space Age",
+        "uuid": "29d90a1a-ef8a-4489-8d09-8dcb0b604abd",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
         "slug": "pascals-triangle",
         "name": "Pascal's Triangle",
         "uuid": "bcfd99e2-3749-4cc9-9708-88de69e474ac",
