@@ -346,6 +346,14 @@
         "difficulty": 2
       },
       {
+        "slug": "meetup",
+        "name": "Meetup",
+        "uuid": "5eec226b-c30b-405d-9b6d-12cdf8ef4072",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "pascals-triangle",
         "name": "Pascal's Triangle",
         "uuid": "bcfd99e2-3749-4cc9-9708-88de69e474ac",

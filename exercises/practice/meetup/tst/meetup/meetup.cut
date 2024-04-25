@@ -1,0 +1,845 @@
+TestCase "when teenth Monday is the 13th, the first day of the teenth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 5 TO WS-MONTH
+	MOVE "teenth" TO WS-WEEK
+	MOVE "Monday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-05-13"
+
+
+TestCase "when teenth Monday is the 19th, the last day of the teenth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 8 TO WS-MONTH
+	MOVE "teenth" TO WS-WEEK
+	MOVE "Monday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-08-19"
+
+
+TestCase "when teenth Monday is some day in the middle of the teenth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 9 TO WS-MONTH
+	MOVE "teenth" TO WS-WEEK
+	MOVE "Monday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-09-16"
+
+
+TestCase "when teenth Tuesday is the 19th, the last day of the teenth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 3 TO WS-MONTH
+	MOVE "teenth" TO WS-WEEK
+	MOVE "Tuesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-03-19"
+
+
+TestCase "when teenth Tuesday is some day in the middle of the teenth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 4 TO WS-MONTH
+	MOVE "teenth" TO WS-WEEK
+	MOVE "Tuesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-04-16"
+
+
+TestCase "when teenth Tuesday is the 13th, the first day of the teenth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 8 TO WS-MONTH
+	MOVE "teenth" TO WS-WEEK
+	MOVE "Tuesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-08-13"
+
+
+TestCase "when teenth Wednesday is some day in the middle of the teenth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 1 TO WS-MONTH
+	MOVE "teenth" TO WS-WEEK
+	MOVE "Wednesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-01-16"
+
+
+TestCase "when teenth Wednesday is the 13th, the first day of the teenth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 2 TO WS-MONTH
+	MOVE "teenth" TO WS-WEEK
+	MOVE "Wednesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-02-13"
+
+
+TestCase "when teenth Wednesday is the 19th, the last day of the teenth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 6 TO WS-MONTH
+	MOVE "teenth" TO WS-WEEK
+	MOVE "Wednesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-06-19"
+
+
+TestCase "when teenth Thursday is some day in the middle of the teenth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 5 TO WS-MONTH
+	MOVE "teenth" TO WS-WEEK
+	MOVE "Thursday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-05-16"
+
+
+TestCase "when teenth Thursday is the 13th, the first day of the teenth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 6 TO WS-MONTH
+	MOVE "teenth" TO WS-WEEK
+	MOVE "Thursday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-06-13"
+
+
+TestCase "when teenth Thursday is the 19th, the last day of the teenth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 9 TO WS-MONTH
+	MOVE "teenth" TO WS-WEEK
+	MOVE "Thursday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-09-19"
+
+
+TestCase "when teenth Friday is the 19th, the last day of the teenth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 4 TO WS-MONTH
+	MOVE "teenth" TO WS-WEEK
+	MOVE "Friday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-04-19"
+
+
+TestCase "when teenth Friday is some day in the middle of the teenth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 8 TO WS-MONTH
+	MOVE "teenth" TO WS-WEEK
+	MOVE "Friday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-08-16"
+
+
+TestCase "when teenth Friday is the 13th, the first day of the teenth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 9 TO WS-MONTH
+	MOVE "teenth" TO WS-WEEK
+	MOVE "Friday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-09-13"
+
+
+TestCase "when teenth Saturday is some day in the middle of the teenth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 2 TO WS-MONTH
+	MOVE "teenth" TO WS-WEEK
+	MOVE "Saturday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-02-16"
+
+
+TestCase "when teenth Saturday is the 13th, the first day of the teenth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 4 TO WS-MONTH
+	MOVE "teenth" TO WS-WEEK
+	MOVE "Saturday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-04-13"
+
+
+TestCase "when teenth Saturday is the 19th, the last day of the teenth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 10 TO WS-MONTH
+	MOVE "teenth" TO WS-WEEK
+	MOVE "Saturday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-10-19"
+
+
+TestCase "when teenth Sunday is the 19th, the last day of the teenth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 5 TO WS-MONTH
+	MOVE "teenth" TO WS-WEEK
+	MOVE "Sunday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-05-19"
+
+
+TestCase "when teenth Sunday is some day in the middle of the teenth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 6 TO WS-MONTH
+	MOVE "teenth" TO WS-WEEK
+	MOVE "Sunday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-06-16"
+
+
+TestCase "when teenth Sunday is the 13th, the first day of the teenth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 10 TO WS-MONTH
+	MOVE "teenth" TO WS-WEEK
+	MOVE "Sunday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-10-13"
+
+
+TestCase "when first Monday is some day in the middle of the first week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 3 TO WS-MONTH
+	MOVE "first" TO WS-WEEK
+	MOVE "Monday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-03-04"
+
+
+TestCase "when first Monday is the 1st, the first day of the first week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 4 TO WS-MONTH
+	MOVE "first" TO WS-WEEK
+	MOVE "Monday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-04-01"
+
+
+TestCase "when first Tuesday is the 7th, the last day of the first week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 5 TO WS-MONTH
+	MOVE "first" TO WS-WEEK
+	MOVE "Tuesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-05-07"
+
+
+TestCase "when first Tuesday is some day in the middle of the first week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 6 TO WS-MONTH
+	MOVE "first" TO WS-WEEK
+	MOVE "Tuesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-06-04"
+
+
+TestCase "when first Wednesday is some day in the middle of the first week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 7 TO WS-MONTH
+	MOVE "first" TO WS-WEEK
+	MOVE "Wednesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-07-03"
+
+
+TestCase "when first Thursday is some day in the middle of the first week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 9 TO WS-MONTH
+	MOVE "first" TO WS-WEEK
+	MOVE "Thursday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-09-05"
+
+
+TestCase "when first Thursday is another day in the middle of the first week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 10 TO WS-MONTH
+	MOVE "first" TO WS-WEEK
+	MOVE "Thursday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-10-03"
+
+
+TestCase "when first Friday is the 1st, the first day of the first week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 11 TO WS-MONTH
+	MOVE "first" TO WS-WEEK
+	MOVE "Friday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-11-01"
+
+
+TestCase "when first Friday is the 1st, the first day of the first week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 12 TO WS-MONTH
+	MOVE "first" TO WS-WEEK
+	MOVE "Friday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-12-06"
+
+
+TestCase "when first Saturday is some day in the middle of the first week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 1 TO WS-MONTH
+	MOVE "first" TO WS-WEEK
+	MOVE "Saturday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-01-05"
+
+
+TestCase "when first Saturday is another day in the middle of the first week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 2 TO WS-MONTH
+	MOVE "first" TO WS-WEEK
+	MOVE "Saturday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-02-02"
+
+
+TestCase "when first Sunday is some day in the middle of the first week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 3 TO WS-MONTH
+	MOVE "first" TO WS-WEEK
+	MOVE "Sunday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-03-03"
+
+
+TestCase "when first Sunday is some day in the middle of the first week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 4 TO WS-MONTH
+	MOVE "first" TO WS-WEEK
+	MOVE "Sunday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-04-07"
+
+
+TestCase "when second Monday is some day in the middle of the second week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 3 TO WS-MONTH
+	MOVE "second" TO WS-WEEK
+	MOVE "Monday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-03-11"
+
+
+TestCase "when second Monday is the 8th, the first day of the second week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 4 TO WS-MONTH
+	MOVE "second" TO WS-WEEK
+	MOVE "Monday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-04-08"
+
+
+TestCase "when second Tuesday is the 14th, the last day of the second week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 5 TO WS-MONTH
+	MOVE "second" TO WS-WEEK
+	MOVE "Tuesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-05-14"
+
+
+TestCase "when second Tuesday is some day in the middle of the second week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 7 TO WS-MONTH
+	MOVE "second" TO WS-WEEK
+	MOVE "Wednesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-07-10"
+
+
+TestCase "when second Wednesday is the 14th, the last day of the second week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 8 TO WS-MONTH
+	MOVE "second" TO WS-WEEK
+	MOVE "Wednesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-08-14"
+
+
+TestCase "when second Thursday is some day in the middle of the second week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 9 TO WS-MONTH
+	MOVE "second" TO WS-WEEK
+	MOVE "Thursday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-09-12"
+
+
+TestCase "when second Thursday is another day in the middle of the second week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 10 TO WS-MONTH
+	MOVE "second" TO WS-WEEK
+	MOVE "Thursday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-10-10"
+
+
+TestCase "when second Friday is the 8th, the first day of the second week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 11 TO WS-MONTH
+	MOVE "second" TO WS-WEEK
+	MOVE "Friday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-11-08"
+
+
+TestCase "when second Friday is the 8th, the first day of the second week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 12 TO WS-MONTH
+	MOVE "second" TO WS-WEEK
+	MOVE "Friday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-12-13"
+
+
+TestCase "when second Friday is the 8th, the first day of the second week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 12 TO WS-MONTH
+	MOVE "second" TO WS-WEEK
+	MOVE "Friday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-12-13"
+
+
+TestCase "when second Saturday is some day in the middle of the second week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 1 TO WS-MONTH
+	MOVE "second" TO WS-WEEK
+	MOVE "Saturday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-01-12"
+
+
+TestCase "when second Saturday is another day in the middle of the second week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 2 TO WS-MONTH
+	MOVE "second" TO WS-WEEK
+	MOVE "Saturday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-02-09"
+
+
+TestCase "when second Sunday is some day in the middle of the second week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 3 TO WS-MONTH
+	MOVE "second" TO WS-WEEK
+	MOVE "Sunday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-03-10"
+
+
+TestCase "when second Sunday is the 14th, the last day of the second week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 4 TO WS-MONTH
+	MOVE "second" TO WS-WEEK
+	MOVE "Sunday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-04-14"
+
+
+TestCase "when third Monday is some day in the middle of the third week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 3 TO WS-MONTH
+	MOVE "third" TO WS-WEEK
+	MOVE "Monday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-03-18"
+
+
+TestCase "when third Tuesday is the 21st, the last day of the third week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 5 TO WS-MONTH
+	MOVE "third" TO WS-WEEK
+	MOVE "Tuesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-05-21"
+
+
+TestCase "when third Tuesday is some day in the middle of the third week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 6 TO WS-MONTH
+	MOVE "third" TO WS-WEEK
+	MOVE "Tuesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-06-18"
+
+
+TestCase "when third Wednesday is some day in the middle of the third week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 7 TO WS-MONTH
+	MOVE "third" TO WS-WEEK
+	MOVE "Wednesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-07-17"
+
+
+TestCase "when third Wednesday is the 21st, the last day of the third week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 8 TO WS-MONTH
+	MOVE "third" TO WS-WEEK
+	MOVE "Wednesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-08-21"
+
+
+TestCase "when third Thursday is some day in the middle of the third week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 9 TO WS-MONTH
+	MOVE "third" TO WS-WEEK
+	MOVE "Thursday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-09-19"
+
+
+TestCase "when third Thursday is some day in the middle of the third week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 10 TO WS-MONTH
+	MOVE "third" TO WS-WEEK
+	MOVE "Thursday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-10-17"
+
+
+TestCase "when third Friday is the 15th, the first day of the third week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 11 TO WS-MONTH
+	MOVE "third" TO WS-WEEK
+	MOVE "Friday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-11-15"
+
+
+TestCase "when third Friday is some day in the middle of the third week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 12 TO WS-MONTH
+	MOVE "third" TO WS-WEEK
+	MOVE "Friday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-12-20"
+
+
+TestCase "when third Saturday is some day in the middle of the third week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 1 TO WS-MONTH
+	MOVE "third" TO WS-WEEK
+	MOVE "Saturday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-01-19"
+
+
+TestCase "when third Saturday is another day in the middle of the third week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 2 TO WS-MONTH
+	MOVE "third" TO WS-WEEK
+	MOVE "Saturday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-02-16"
+
+
+TestCase "when third Sunday is some day in the middle of the third week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 3 TO WS-MONTH
+	MOVE "third" TO WS-WEEK
+	MOVE "Sunday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-03-17"
+
+
+TestCase "when third Sunday is the 21st, the last day of the third week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 4 TO WS-MONTH
+	MOVE "third" TO WS-WEEK
+	MOVE "Sunday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-04-21"
+
+
+TestCase "when fourth Monday is some day in the middle of the fourth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 3 TO WS-MONTH
+	MOVE "fourth" TO WS-WEEK
+	MOVE "Monday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-03-25"
+
+
+TestCase "when fourth Monday is the 22nd, the first day of the fourth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 4 TO WS-MONTH
+	MOVE "fourth" TO WS-WEEK
+	MOVE "Monday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-04-22"
+
+
+TestCase "when fourth Tuesday is the 28th, the last day of the fourth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 5 TO WS-MONTH
+	MOVE "fourth" TO WS-WEEK
+	MOVE "Tuesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-05-28"
+
+
+TestCase "when fourth Tuesday is some day in the middle of the fourth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 6 TO WS-MONTH
+	MOVE "fourth" TO WS-WEEK
+	MOVE "Tuesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-06-25"
+
+
+TestCase "when fourth Wednesday is some day in the middle of the fourth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 7 TO WS-MONTH
+	MOVE "fourth" TO WS-WEEK
+	MOVE "Wednesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-07-24"
+
+
+TestCase "when fourth Wednesday is the 28th, the last day of the fourth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 8 TO WS-MONTH
+	MOVE "fourth" TO WS-WEEK
+	MOVE "Wednesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-08-28"
+
+
+TestCase "when fourth Thursday is some day in the middle of the fourth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 9 TO WS-MONTH
+	MOVE "fourth" TO WS-WEEK
+	MOVE "Thursday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-09-26"
+
+ 
+TestCase "when fourth Thursday is another day in the middle of the fourth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 10 TO WS-MONTH
+	MOVE "fourth" TO WS-WEEK
+	MOVE "Thursday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-10-24"
+
+ 
+TestCase "when fourth Friday is the 22nd, the first day of the fourth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 11 TO WS-MONTH
+	MOVE "fourth" TO WS-WEEK
+	MOVE "Friday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-11-22"
+
+
+TestCase "when fourth Friday is some day in the middle of the fourth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 12 TO WS-MONTH
+	MOVE "fourth" TO WS-WEEK
+	MOVE "Friday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-12-27"
+
+
+TestCase "when fourth Saturday is some day in the middle of the fourth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 1 TO WS-MONTH
+	MOVE "fourth" TO WS-WEEK
+	MOVE "Saturday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-01-26"
+
+
+TestCase "when fourth Saturday is another day in the middle of the fourth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 2 TO WS-MONTH
+	MOVE "fourth" TO WS-WEEK
+	MOVE "Saturday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-02-23"
+
+
+TestCase "when fourth Sunday is some day in the middle of the fourth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 3 TO WS-MONTH
+	MOVE "fourth" TO WS-WEEK
+	MOVE "Sunday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-03-24"
+
+
+TestCase "when fourth Sunday is the 28th, the last day of the fourth week"
+	MOVE 2013 TO WS-YEAR
+	MOVE 4 TO WS-MONTH
+	MOVE "fourth" TO WS-WEEK
+	MOVE "Sunday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-04-28"
+
+
+TestCase "last Monday in a month with four Mondays"
+	MOVE 2013 TO WS-YEAR
+	MOVE 3 TO WS-MONTH
+	MOVE "last" TO WS-WEEK
+	MOVE "Monday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-03-25"
+
+
+TestCase "last Monday in a month with five Mondays"
+	MOVE 2013 TO WS-YEAR
+	MOVE 4 TO WS-MONTH
+	MOVE "last" TO WS-WEEK
+	MOVE "Monday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-04-29"
+
+
+TestCase "last Monday in a month with five Mondays"
+	MOVE 2013 TO WS-YEAR
+	MOVE 4 TO WS-MONTH
+	MOVE "last" TO WS-WEEK
+	MOVE "Monday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-04-29"
+
+
+TestCase "last Tuesday in a month with four Tuesdays"
+	MOVE 2013 TO WS-YEAR
+	MOVE 5 TO WS-MONTH
+	MOVE "last" TO WS-WEEK
+	MOVE "Tuesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-05-28"
+
+
+TestCase "last Tuesday in another month with four Tuesdays"
+	MOVE 2013 TO WS-YEAR
+	MOVE 6 TO WS-MONTH
+	MOVE "last" TO WS-WEEK
+	MOVE "Tuesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-06-25"
+
+
+TestCase "last Wednesday in a month with five Wednesdays"
+	MOVE 2013 TO WS-YEAR
+	MOVE 7 TO WS-MONTH
+	MOVE "last" TO WS-WEEK
+	MOVE "Wednesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-07-31"
+
+
+TestCase "last Wednesday in a month with four Wednesdays"
+	MOVE 2013 TO WS-YEAR
+	MOVE 8 TO WS-MONTH
+	MOVE "last" TO WS-WEEK
+	MOVE "Wednesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-08-28"
+
+
+TestCase "last Thursday in a month with four Thursdays"
+	MOVE 2013 TO WS-YEAR
+	MOVE 9 TO WS-MONTH
+	MOVE "last" TO WS-WEEK
+	MOVE "Thursday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-09-26"
+
+
+TestCase "last Thursday in a month with five Thursdays"
+	MOVE 2013 TO WS-YEAR
+	MOVE 10 TO WS-MONTH
+	MOVE "last" TO WS-WEEK
+	MOVE "Thursday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-10-31"
+
+
+TestCase "last Friday in a month with five Fridays"
+	MOVE 2013 TO WS-YEAR
+	MOVE 11 TO WS-MONTH
+	MOVE "last" TO WS-WEEK
+	MOVE "Friday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-11-29"
+
+
+TestCase "last Friday in a month with four Fridays"
+	MOVE 2013 TO WS-YEAR
+	MOVE 12 TO WS-MONTH
+	MOVE "last" TO WS-WEEK
+	MOVE "Friday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-12-27"
+
+
+TestCase "last Saturday in a month with four Saturdays"
+	MOVE 2013 TO WS-YEAR
+	MOVE 1 TO WS-MONTH
+	MOVE "last" TO WS-WEEK
+	MOVE "Saturday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-01-26"
+
+
+TestCase "last Saturday in another month with four Saturdays"
+	MOVE 2013 TO WS-YEAR
+	MOVE 2 TO WS-MONTH
+	MOVE "last" TO WS-WEEK
+	MOVE "Saturday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-02-23"
+
+
+TestCase "last Sunday in a month with five Sundays"
+	MOVE 2013 TO WS-YEAR
+	MOVE 3 TO WS-MONTH
+	MOVE "last" TO WS-WEEK
+	MOVE "Sunday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-03-31"
+
+
+TestCase "last Sunday in a month with four Sundays"
+	MOVE 2013 TO WS-YEAR
+	MOVE 4 TO WS-MONTH
+	MOVE "last" TO WS-WEEK
+	MOVE "Sunday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2013-04-28"
+
+
+TestCase "when last Wednesday in February in a leap year is the 29th"
+	MOVE 2012 TO WS-YEAR
+	MOVE 2 TO WS-MONTH
+	MOVE "last" TO WS-WEEK
+	MOVE "Wednesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2012-02-29"
+
+
+TestCase "last Wednesday in December that is also the last day of the year"
+	MOVE 2014 TO WS-YEAR
+	MOVE 12 TO WS-MONTH
+	MOVE "last" TO WS-WEEK
+	MOVE "Wednesday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2014-12-31"
+ 
+
+TestCase "when last Sunday in February in a non-leap year is not the 29th"
+	MOVE 2015 TO WS-YEAR
+	MOVE 2 TO WS-MONTH
+	MOVE "last" TO WS-WEEK
+	MOVE "Sunday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2015-02-22"
+
+
+TestCase "when first Friday is the 7th, the last day of the first week"
+	MOVE 2012 TO WS-YEAR
+	MOVE 12 TO WS-MONTH
+	MOVE "first" TO WS-WEEK
+	MOVE "Friday" TO WS-DAYOFWEEK
+	PERFORM MEETUP
+	EXPECT WS-RESULT = "2012-12-07"
+

@@ -1,0 +1,23 @@
+{
+  "authors": [
+    "kapitaali"
+  ],
+  "files": {
+    "solution": [
+      "src/meetup.cob"
+    ],
+    "test": [
+      "tst/meetup/meetup.cut"
+    ],
+    "example": [
+      ".meta/proof.ci.cob"
+    ],
+    "invalidator": [
+      "test.sh",
+      "test.ps1"
+    ]
+  },
+  "blurb": "Calculate the date of meetups.",
+  "source": "Jeremy Hinegardner mentioned a Boulder meetup that happens on the Wednesteenth of every month",
+  "source_url": "https://twitter.com/copiousfreetime"
+}
