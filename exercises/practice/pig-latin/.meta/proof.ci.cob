@@ -4,7 +4,7 @@
        ENVIRONMENT DIVISION.
        DATA DIVISION.
        WORKING-STORAGE SECTION.
-       01 VOWELS                   PIC X(6) VALUE 'aeiouy'.
+       01 VOWELS                   PIC X(6) VALUES 'aeiouy'.
        01 WS-INPUT                 PIC X(60).
        01 WS-RESULT                PIC X(60).
        01 STR                      PIC X(60).
@@ -20,6 +20,9 @@
        01 LEN2                     PIC 99.
        01 INPUTLEN                 PIC 99.
        
+       01 STARTING-POINT           USAGE BINARY-LONG.       
+       01 ITEM-COUNT               USAGE BINARY-LONG.       
+
        01 Wordstable.
            02 WORDSLIST            PIC X(60) OCCURS 10 TIMES.
        
@@ -108,10 +111,21 @@
            INITIALIZE Wordstable.
            MOVE SPACES TO TEMP2.
            MOVE 1 TO INPUTLEN.
-           UNSTRING WS-INPUT DELIMITED BY ' ' 
-            INTO WORDSLIST(1), WORDSLIST(2), WORDSLIST(3), WORDSLIST(4),
-             WORDSLIST(5), WORDSLIST(6), WORDSLIST(7), WORDSLIST(8),
-             WORDSLIST(9), WORDSLIST(10).
+           INITIALIZE ITEM-COUNT.
+           MOVE 1 TO STARTING-POINT.
+           MOVE 1 TO ITEM-COUNT.
+      * unstring perform by bruce axtens, begin
+           PERFORM UNTIL EXIT
+               UNSTRING WS-INPUT DELIMITED BY SPACE
+                  INTO WORDSLIST(ITEM-COUNT)
+                  WITH POINTER STARTING-POINT
+               END-UNSTRING
+               IF WORDSLIST(ITEM-COUNT) = SPACE
+                 EXIT PERFORM
+               END-IF
+               ADD 1 TO ITEM-COUNT 
+           END-PERFORM.
+      * end
            PERFORM VARYING C FROM 1 BY 1 UNTIL C > 10
               MOVE WORDSLIST(C) TO STR
               PERFORM BEGINS-WITH-VOWEL 
@@ -240,3 +254,4 @@
            ADD B TO A.
            MOVE "ay" TO STR(A:2).
            MOVE STR TO WS-RESULT.
+
