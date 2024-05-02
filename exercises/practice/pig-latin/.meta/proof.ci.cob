@@ -4,7 +4,7 @@
        ENVIRONMENT DIVISION.
        DATA DIVISION.
        WORKING-STORAGE SECTION.
-       01 VOWELS                   PIC X(6) VALUES 'aeiouy'.
+       01 VOWELS                   PIC X(6) VALUE 'aeiouy'.
        01 WS-INPUT                 PIC X(60).
        01 WS-RESULT                PIC X(60).
        01 STR                      PIC X(60).
