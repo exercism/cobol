@@ -346,6 +346,14 @@
         "difficulty": 2
       },
       {
+        "slug": "grade-school",
+        "name": "Grade School",
+        "uuid": "80df0040-0568-4d71-9562-07d89d7d3841",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "meetup",
         "name": "Meetup",
         "uuid": "5eec226b-c30b-405d-9b6d-12cdf8ef4072",
