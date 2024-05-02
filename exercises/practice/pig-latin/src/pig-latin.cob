@@ -1,0 +1,11 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. PIG-LATIN.
+       ENVIRONMENT DIVISION.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-INPUT                 PIC X(60).
+       01 WS-RESULT                PIC X(60).
+
+       PROCEDURE DIVISION.
+
+       TRANSLATE.
