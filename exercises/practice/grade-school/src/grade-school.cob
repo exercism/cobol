@@ -5,6 +5,7 @@
        WORKING-STORAGE SECTION.
        01 WS-STUDENTNAME           PIC X(60).
        01 WS-STUDENTGRADE          PIC 9.
+       01 WS-DESIREDGRADE          PIC 9.
        01 WS-RESULT                PIC X(5).
        
        01 STUDENTROSTER.
