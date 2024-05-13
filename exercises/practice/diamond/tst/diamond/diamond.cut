@@ -1,0 +1,91 @@
+TestCase "Degenerate case with a single 'A' row"
+	MOVE "A" TO WS-LETTER
+	PERFORM DIAMOND
+	EXPECT WS-TABLEROW(1) = "A"
+
+
+TestCase "Degenerate case with no row containing 3 distinct groups of spaces"
+	MOVE "B" TO WS-LETTER
+	PERFORM DIAMOND
+	EXPECT WS-TABLEROW(1) = " A "
+	EXPECT WS-TABLEROW(2) = "B B"
+	EXPECT WS-TABLEROW(3) = " A "
+
+
+TestCase "Smallest non-degenerate case with odd diamond side length"
+	MOVE "C" TO WS-LETTER
+	PERFORM DIAMOND
+	EXPECT WS-RESULT = "Whoa, chill out!"
+	EXPECT WS-TABLEROW(1) = "  A  "
+	EXPECT WS-TABLEROW(2) = " B B "
+	EXPECT WS-TABLEROW(3) = "C   C"
+	EXPECT WS-TABLEROW(4) = " B B "
+	EXPECT WS-TABLEROW(5) = "  A  "
+
+
+TestCase "Smallest non-degenerate case with even diamond side length"
+	MOVE "D" TO WS-LETTER
+	PERFORM DIAMOND
+	EXPECT WS-TABLEROW(1) = "   A   "
+	EXPECT WS-TABLEROW(2) = "  B B  "
+	EXPECT WS-TABLEROW(3) = " C   C "
+	EXPECT WS-TABLEROW(4) = "D     D"
+	EXPECT WS-TABLEROW(5) = " C   C "
+	EXPECT WS-TABLEROW(6) = "  B B  "
+	EXPECT WS-TABLEROW(7) = "   A   "
+
+
+TestCase "Largest possible diamond"
+	MOVE "Z" TO WS-LETTER
+	PERFORM DIAMOND
+    EXPECT WS-TABLEROW(1) =  "                         A                         "
+    EXPECT WS-TABLEROW(2) =  "                        B B                        "
+	EXPECT WS-TABLEROW(3) =  "                       C   C                       "
+	EXPECT WS-TABLEROW(4) =  "                      D     D                      "
+	EXPECT WS-TABLEROW(5) =  "                     E       E                     "
+	EXPECT WS-TABLEROW(6) =  "                    F         F                    "
+	EXPECT WS-TABLEROW(7) =  "                   G           G                   "
+	EXPECT WS-TABLEROW(8) =  "                  H             H                  "
+	EXPECT WS-TABLEROW(9) =  "                 I               I                 "
+	EXPECT WS-TABLEROW(10) = "                J                 J                "
+	EXPECT WS-TABLEROW(11) = "               K                   K               "
+	EXPECT WS-TABLEROW(12) = "              L                     L              "
+	EXPECT WS-TABLEROW(13) = "             M                       M             "
+	EXPECT WS-TABLEROW(14) = "            N                         N            "
+	EXPECT WS-TABLEROW(15) = "           O                           O           "
+	EXPECT WS-TABLEROW(16) = "          P                             P          "
+	EXPECT WS-TABLEROW(17) = "         Q                               Q         "
+	EXPECT WS-TABLEROW(18) = "        R                                 R        "
+	EXPECT WS-TABLEROW(19) = "       S                                   S       "
+	EXPECT WS-TABLEROW(20) = "      T                                     T      "
+	EXPECT WS-TABLEROW(21) = "     U                                       U     "
+	EXPECT WS-TABLEROW(22) = "    V                                         V    "
+	EXPECT WS-TABLEROW(23) = "   W                                           W   "
+	EXPECT WS-TABLEROW(24) = "  X                                             X  "
+	EXPECT WS-TABLEROW(25) = " Y                                               Y "
+	EXPECT WS-TABLEROW(26) = "Z                                                 Z"
+	EXPECT WS-TABLEROW(27) = " Y                                               Y "
+	EXPECT WS-TABLEROW(28) = "  X                                             X  "
+	EXPECT WS-TABLEROW(29) = "   W                                           W   "
+	EXPECT WS-TABLEROW(30) = "    V                                         V    "
+	EXPECT WS-TABLEROW(31) = "     U                                       U     "
+	EXPECT WS-TABLEROW(32) = "      T                                     T      "
+	EXPECT WS-TABLEROW(33) = "       S                                   S       "
+	EXPECT WS-TABLEROW(34) = "        R                                 R        "
+	EXPECT WS-TABLEROW(35) = "         Q                               Q         "
+	EXPECT WS-TABLEROW(36) = "          P                             P          "
+	EXPECT WS-TABLEROW(37) = "           O                           O           "
+	EXPECT WS-TABLEROW(38) = "            N                         N            "
+	EXPECT WS-TABLEROW(39) = "             M                       M             "
+	EXPECT WS-TABLEROW(40) = "              L                     L              "
+	EXPECT WS-TABLEROW(41) = "               K                   K               "
+	EXPECT WS-TABLEROW(42) = "                J                 J                "
+	EXPECT WS-TABLEROW(43) = "                 I               I                 "
+	EXPECT WS-TABLEROW(44) = "                  H             H                  "
+	EXPECT WS-TABLEROW(45) = "                   G           G                   "
+	EXPECT WS-TABLEROW(46) = "                    F         F                    "
+	EXPECT WS-TABLEROW(47) = "                     E       E                     "
+	EXPECT WS-TABLEROW(48) = "                      D     D                      "
+	EXPECT WS-TABLEROW(49) = "                       C   C                       "
+	EXPECT WS-TABLEROW(50) = "                        B B                        "
+	EXPECT WS-TABLEROW(51) = "                         A                         "
