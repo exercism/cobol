@@ -15,7 +15,6 @@ TestCase "Degenerate case with no row containing 3 distinct groups of spaces"
 TestCase "Smallest non-degenerate case with odd diamond side length"
 	MOVE "C" TO WS-LETTER
 	PERFORM DIAMOND
-	EXPECT WS-RESULT = "Whoa, chill out!"
 	EXPECT WS-TABLEROW(1) = "  A  "
 	EXPECT WS-TABLEROW(2) = " B B "
 	EXPECT WS-TABLEROW(3) = "C   C"
