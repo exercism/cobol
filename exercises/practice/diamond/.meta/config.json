@@ -1,0 +1,26 @@
+{
+  "authors": [
+    "kapitaali"
+  ],
+  "files": {
+    "solution": [
+      "src/diamond.cob"
+    ],
+    "test": [
+      "tst/diamond/diamond.cut"
+    ],
+    "example": [
+      ".meta/proof.ci.cob"
+    ],
+    "invalidator": [
+      "test.ps1",
+      "test.sh",
+      "bin/fetch-cobolcheck",
+      "bin/fetch-cobolcheck.ps1",
+      "config.properties"
+    ]
+  }, 
+  "blurb": "Given a letter, print a diamond starting with 'A' with the supplied letter at the widest point.",
+  "source": "Seb Rose",
+  "source_url": "http://claysnow.co.uk/recycling-tests-in-tdd/"
+}

@@ -322,6 +322,14 @@
         "difficulty": 3
       },
       {
+        "slug": "diamond",
+        "name": "Diamond",
+        "uuid": "b8e1e5e1-6d46-4601-af80-c60c54401bf8",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "secret-handshake",
         "name": "Secret Handshake",
         "uuid": "d643cdac-949f-430b-989e-bb0380627580",
