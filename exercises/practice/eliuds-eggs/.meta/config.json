@@ -1,0 +1,26 @@
+{
+  "authors": [
+    "kapitaali"
+  ],
+  "files": {
+    "solution": [
+      "src/eliuds-eggs.cob"
+    ],
+    "test": [
+      "tst/eliuds-eggs/eliuds-eggs.cut"
+    ],
+    "example": [
+      ".meta/proof.ci.cob"
+    ],
+    "invalidator": [
+      "test.ps1",
+      "test.sh",
+      "bin/fetch-cobolcheck",
+      "bin/fetch-cobolcheck.ps1",
+      "config.properties"
+    ]
+  },
+  "blurb": "Help Eliud count the number of eggs in her chicken coop by counting the number of 1 bits in a binary representation.",
+  "source": "Christian Willner, Eric Willigers",
+  "source_url": "https://forum.exercism.org/t/new-exercise-suggestion-pop-count/7632/5"
+}
