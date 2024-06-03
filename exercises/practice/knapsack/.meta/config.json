@@ -1,0 +1,26 @@
+{
+  "authors": [
+    "kapitaali"
+  ],
+  "files": {
+    "solution": [
+      "src/knapsack.cob"
+    ],
+    "test": [
+      "tst/knapsack/knapsack.cut"
+    ],
+    "example": [
+      ".meta/proof.ci.cob"
+    ],
+    "invalidator": [
+      "test.ps1",
+      "test.sh",
+      "bin/fetch-cobolcheck",
+      "bin/fetch-cobolcheck.ps1",
+      "config.properties"
+    ]
+  },
+  "blurb": "Given a knapsack that can only carry a certain weight, determine which items to put in the knapsack in order to maximize their combined value.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Knapsack_problem"
+}
