@@ -2,6 +2,9 @@
   "authors": [
     "SimaDovakin"
   ],
+  "contributors": [
+    "ErikSchierboom"
+  ],
   "files": {
     "solution": [
       "src/anagram.cob"
