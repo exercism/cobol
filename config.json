@@ -370,6 +370,14 @@
         "difficulty": 3
       },
       {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "0408328a-3e04-4e2a-b5bf-fad131747a09",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "meetup",
         "name": "Meetup",
         "uuid": "5eec226b-c30b-405d-9b6d-12cdf8ef4072",
