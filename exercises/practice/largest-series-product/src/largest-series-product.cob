@@ -1,0 +1,15 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. LARGEST-SERIES-PRODUCT.
+       ENVIRONMENT DIVISION.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-INPUTVARS.
+           05 WS-SPAN              PIC S999.
+           05 WS-DIGITS            PIC X(60).
+       01 WS-OUTPUTVARS.
+           05 WS-RESULT            PIC 9(9).
+           05 WS-ERROR             PIC X(30).
+
+       PROCEDURE DIVISION.
+
+       LARGEST-PRODUCT.
