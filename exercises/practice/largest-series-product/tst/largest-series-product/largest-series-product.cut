@@ -1,0 +1,120 @@
+TestCase "finds the largest product if span equals length"
+	MOVE "29" TO WS-DIGITS
+	MOVE 2 TO WS-SPAN
+	MOVE SPACES TO WS-ERROR	
+	PERFORM LARGEST-PRODUCT
+	EXPECT WS-RESULT = 18
+ 
+
+TestCase "can find the largest product of 2 with numbers in order"
+	MOVE "0123456789" TO WS-DIGITS
+	MOVE 2 TO WS-SPAN
+	MOVE SPACES TO WS-ERROR	
+	PERFORM LARGEST-PRODUCT
+	EXPECT WS-RESULT = 72
+
+
+TestCase "can find the largest product of 2"
+	MOVE "576802143" TO WS-DIGITS
+	MOVE 2 TO WS-SPAN
+	MOVE SPACES TO WS-ERROR	
+	PERFORM LARGEST-PRODUCT
+	EXPECT WS-RESULT = 48
+
+
+TestCase "can find the largest product of 3 with numbers in order" 
+	MOVE "0123456789" TO WS-DIGITS
+	MOVE 3 TO WS-SPAN
+	MOVE SPACES TO WS-ERROR	
+	PERFORM LARGEST-PRODUCT
+	EXPECT WS-RESULT = 504
+
+
+TestCase "can find the largest product of 3" 
+	MOVE "1027839564" TO WS-DIGITS
+	MOVE 3 TO WS-SPAN
+	MOVE SPACES TO WS-ERROR	
+	PERFORM LARGEST-PRODUCT
+	EXPECT WS-RESULT = 270
+
+
+TestCase "can find the largest product of 5 with numbers in order"
+	MOVE "0123456789" TO WS-DIGITS
+	MOVE 5 TO WS-SPAN
+	MOVE SPACES TO WS-ERROR
+	PERFORM LARGEST-PRODUCT
+	EXPECT WS-RESULT = 15120
+
+
+TestCase "can get the largest product of a big number"
+	MOVE "73167176531330624919225119674426574742355349194934" TO WS-DIGITS
+	MOVE 6 TO WS-SPAN
+	MOVE SPACES TO WS-ERROR	
+	PERFORM LARGEST-PRODUCT
+	EXPECT WS-RESULT = 23520
+
+
+TestCase "reports zero if the only digits are zero"
+	MOVE "0000" TO WS-DIGITS
+	MOVE 2 TO WS-SPAN
+	MOVE SPACES TO WS-ERROR
+	PERFORM LARGEST-PRODUCT
+	EXPECT WS-RESULT = 0
+
+
+TestCase "reports zero if all spans include zero"
+	MOVE "99099" TO WS-DIGITS
+	MOVE 3 TO WS-SPAN
+	MOVE SPACES TO WS-ERROR
+	PERFORM LARGEST-PRODUCT
+	EXPECT WS-RESULT = 0
+
+
+TestCase "rejects span longer than string length"
+	MOVE "123" TO WS-DIGITS
+	MOVE 4 TO WS-SPAN
+	MOVE SPACES TO WS-ERROR
+	PERFORM LARGEST-PRODUCT
+	EXPECT WS-ERROR = "span must be smaller than string length"
+
+
+TestCase "reports 1 for empty string and empty product (0 span)"
+	MOVE SPACES TO WS-DIGITS
+	MOVE 0 TO WS-SPAN
+	MOVE SPACES TO WS-ERROR
+	PERFORM LARGEST-PRODUCT
+	EXPECT WS-RESULT = 1
+
+
+TestCase "reports 1 for nonempty string and empty product (0 span)"
+	MOVE "123" TO WS-DIGITS
+	MOVE 0 TO WS-SPAN
+	MOVE SPACES TO WS-ERROR
+	PERFORM LARGEST-PRODUCT
+	EXPECT WS-RESULT = 1
+
+
+TestCase "rejects empty string and nonzero span"
+	MOVE SPACES TO WS-DIGITS
+	MOVE 3 TO WS-SPAN
+	MOVE SPACES TO WS-ERROR
+	PERFORM LARGEST-PRODUCT
+	EXPECT WS-ERROR = "span must be smaller than string length"
+
+
+TestCase "rejects invalid character in digits"
+	MOVE "1234a5" TO WS-DIGITS
+	MOVE 2 TO WS-SPAN
+	MOVE SPACES TO WS-ERROR
+	PERFORM LARGEST-PRODUCT
+	EXPECT WS-ERROR = "digits input must only contain digits"
+
+
+TestCase "rejects negative span"
+	MOVE "12345" TO WS-DIGITS
+	MOVE -2 TO WS-SPAN
+	MOVE SPACES TO WS-ERROR
+	PERFORM LARGEST-PRODUCT
+	EXPECT WS-ERROR = "span must not be negative"
+
+
