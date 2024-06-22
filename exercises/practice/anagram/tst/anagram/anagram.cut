@@ -1,0 +1,137 @@
+TESTSUITE 'Tests for Anagram'
+
+TestCase "test_no_matches",
+    MOVE "diaper" TO WS-SUBJECT
+    MOVE 4 TO WS-CANDIDATES-COUNT
+    MOVE "hello" TO WS-CANDIDATES(1)
+    MOVE "world" TO WS-CANDIDATES(2)
+    MOVE "zombies" TO WS-CANDIDATES(3)
+    MOVE "pants" TO WS-CANDIDATES(4)
+    PERFORM FIND-ANAGRAMS
+    EXPECT WS-RESULT-LIST = ""
+
+TestCase "test_detect_two_anagrams",
+    MOVE "solemn" TO WS-SUBJECT
+    MOVE 3 TO WS-CANDIDATES-COUNT
+    MOVE "lemons" TO WS-CANDIDATES(1)
+    MOVE "cherry" TO WS-CANDIDATES(2)
+    MOVE "melons" TO WS-CANDIDATES(3)
+    PERFORM FIND-ANAGRAMS
+    EXPECT WS-RESULT-LIST = "lemons,melons"
+
+TestCase "test_does_not_detect_anagram_subsets",
+    MOVE "good" TO WS-SUBJECT
+    MOVE 2 TO WS-CANDIDATES-COUNT
+    MOVE "dog" TO WS-CANDIDATES(1)
+    MOVE "goody" TO WS-CANDIDATES(2)
+    PERFORM FIND-ANAGRAMS
+    EXPECT WS-RESULT-LIST = ""
+
+TestCase "test_detects_anagram",
+    MOVE "listen" TO WS-SUBJECT
+    MOVE 4 TO WS-CANDIDATES-COUNT
+    MOVE "enlists" TO WS-CANDIDATES(1)
+    MOVE "google" TO WS-CANDIDATES(2)
+    MOVE "inlets" TO WS-CANDIDATES(3)
+    MOVE "banana" TO WS-CANDIDATES(4)
+    PERFORM FIND-ANAGRAMS
+    EXPECT WS-RESULT-LIST = "inlets"
+
+TestCase "test_three_anagrams",
+    MOVE "allergy" TO WS-SUBJECT
+    MOVE 6 TO WS-CANDIDATES-COUNT
+    MOVE "gallery" TO WS-CANDIDATES(1)
+    MOVE "ballerina" TO WS-CANDIDATES(2)
+    MOVE "regally" TO WS-CANDIDATES(3)
+    MOVE "clergy" TO WS-CANDIDATES(4)
+    MOVE "largely" TO WS-CANDIDATES(5)
+    MOVE "leading" TO WS-CANDIDATES(6)
+    PERFORM FIND-ANAGRAMS
+    EXPECT WS-RESULT-LIST = "gallery,regally,largely"
+
+TestCase "test_detects_multiple_anagrams_with_different_case",
+    MOVE "nose" TO WS-SUBJECT
+    MOVE 2 TO WS-CANDIDATES-COUNT
+    MOVE "Eons" TO WS-CANDIDATES(1)
+    MOVE "ONES" TO WS-CANDIDATES(2)
+    PERFORM FIND-ANAGRAMS
+    EXPECT WS-RESULT-LIST = "Eons,ONES"
+
+TestCase "test_does_not_detect_non_anagrams_with_identical_checksum",
+    MOVE "mass" TO WS-SUBJECT
+    MOVE 1 TO WS-CANDIDATES-COUNT
+    MOVE "last" TO WS-CANDIDATES(1)
+    PERFORM FIND-ANAGRAMS
+    EXPECT WS-RESULT-LIST = ""
+
+TestCase "test_detects_anagrams_case_insensitively",
+    MOVE "Orchestra" TO WS-SUBJECT
+    MOVE 3 TO WS-CANDIDATES-COUNT
+    MOVE "cashregister" TO WS-CANDIDATES(1)
+    MOVE "Carthorse" TO WS-CANDIDATES(2)
+    MOVE "radishes" TO WS-CANDIDATES(3)
+    PERFORM FIND-ANAGRAMS
+    EXPECT WS-RESULT-LIST = "Carthorse"
+
+TestCase "test_detects_anagram_using_case_insensitive_subject",
+    MOVE "Orchestra" TO WS-SUBJECT
+    MOVE 3 TO WS-CANDIDATES-COUNT
+    MOVE "cashregister" TO WS-CANDIDATES(1)
+    MOVE "carthorse" TO WS-CANDIDATES(2)
+    MOVE "radishes" TO WS-CANDIDATES(3)
+    PERFORM FIND-ANAGRAMS
+    EXPECT WS-RESULT-LIST = "carthorse"
+
+TestCase "test_detects_anagrams_using_case_insensitive_possible_matches",
+    MOVE "orchestra" TO WS-SUBJECT
+    MOVE 3 TO WS-CANDIDATES-COUNT
+    MOVE "cashregister" TO WS-CANDIDATES(1)
+    MOVE "Carthorse" TO WS-CANDIDATES(2)
+    MOVE "radishes" TO WS-CANDIDATES(3)
+    PERFORM FIND-ANAGRAMS
+    EXPECT WS-RESULT-LIST = "Carthorse"
+
+TestCase "test_does_not_detect_an_anagram_if_the_original_word_is_repeated",
+    MOVE "orchestra" TO WS-SUBJECT
+    MOVE 3 TO WS-CANDIDATES-COUNT
+    MOVE "go" TO WS-CANDIDATES(1)
+    MOVE "Go" TO WS-CANDIDATES(2)
+    MOVE "GO" TO WS-CANDIDATES(3)
+    PERFORM FIND-ANAGRAMS
+    EXPECT WS-RESULT-LIST = ""
+
+TestCase "test_anagrams_must_use_all_letters_exactly_once",
+    MOVE "tapper" TO WS-SUBJECT
+    MOVE 1 TO WS-CANDIDATES-COUNT
+    MOVE "patter" TO WS-CANDIDATES(1)
+    PERFORM FIND-ANAGRAMS
+    EXPECT WS-RESULT-LIST = ""
+
+TestCase "test_words_are_not_anagrams_of_themselves",
+    MOVE "BANANA" TO WS-SUBJECT
+    MOVE 1 TO WS-CANDIDATES-COUNT
+    MOVE "BANANA" TO WS-CANDIDATES(1)
+    PERFORM FIND-ANAGRAMS
+    EXPECT WS-RESULT-LIST = ""
+
+TestCase "test_words_are_not_anagrams_of_themselves_even_if_letter_case_is_partially_different",
+    MOVE "BANANA" TO WS-SUBJECT
+    MOVE 1 TO WS-CANDIDATES-COUNT
+    MOVE "Banana" TO WS-CANDIDATES(1)
+    PERFORM FIND-ANAGRAMS
+    EXPECT WS-RESULT-LIST = ""
+
+TestCase "test_words_are_not_anagrams_of_themselves_even_if_letter_case_is_completely_different",
+    MOVE "BANANA" TO WS-SUBJECT
+    MOVE 1 TO WS-CANDIDATES-COUNT
+    MOVE "banana" TO WS-CANDIDATES(1)
+    PERFORM FIND-ANAGRAMS
+    EXPECT WS-RESULT-LIST = ""
+
+TestCase "test_words_other_than_themselves_can_be_anagrams",
+    MOVE "LISTEN" TO WS-SUBJECT
+    MOVE 2 TO WS-CANDIDATES-COUNT
+    MOVE "Listen" TO WS-CANDIDATES(1)
+    MOVE "Silent" TO WS-CANDIDATES(2)
+    PERFORM FIND-ANAGRAMS
+    EXPECT WS-RESULT-LIST = "Silent"
