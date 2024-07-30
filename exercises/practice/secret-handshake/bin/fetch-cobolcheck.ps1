@@ -1,7 +1,6 @@
-# This file is a copy of the
-# https://github.com/exercism/configlet/blob/main/scripts/fetch-configlet.ps1 file.
-# Please submit bugfixes/improvements to the above file to ensure that all tracks
-# benefit from the changes.
+# This file is inspired by https://github.com/exercism/configlet/blob/main/scripts/fetch-configlet.ps1.
+# It is only used in the cobol track, and a copy of it is placed in every exercise folder.
+# If you change something, make sure to upgrade all scripts in all exercises!
 
 $ErrorActionPreference = "Stop"
 $ProgressPreference = "SilentlyContinue"
@@ -24,5 +23,7 @@ Function Get-DownloadUrl {
 }
 
 $downloadUrl = Get-DownloadUrl
-$outputFile = Join-Path -Path $PSScriptRoot -ChildPath "cobolcheck.exe"
+$outputDir = Join-Path -Path $HOME -ChildPath "cobolcheck"
+$outputFile = Join-Path -Path $outputDir -ChildPath "cobolcheck.exe"
+New-Item -ItemType Directory -Path $outputDir -Force | Out-Null
 Invoke-WebRequest -Uri $downloadUrl -OutFile $outputFile @requestOpts
