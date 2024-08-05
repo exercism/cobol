@@ -45,7 +45,7 @@ get_download_url() {
 }
 
 main() {
-  output_path="/usr/local/bin/cobolcheck${ext}"
+  output_path="cobolcheck${ext}"
   download_url="$(get_download_url)"
   curl "${curlopts[@]}" --output "${output_path}" "${download_url}"
   chmod +x "${output_path}"
