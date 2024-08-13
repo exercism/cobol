@@ -242,6 +242,14 @@
         "difficulty": 4
       },
       {
+        "slug": "largest-series-product",
+        "name": "Largest Series Product",
+        "uuid": "bd8035be-13a9-43c6-a535-55a54176b08d",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "allergies",
         "name": "Allergies",
         "uuid": "374217e9-b170-4eac-946f-d0dd037adf2c",
