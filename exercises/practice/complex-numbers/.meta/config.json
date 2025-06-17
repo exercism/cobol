@@ -20,7 +20,7 @@
       "config.properties"
     ]
   },
-  "blurb": "A complex number is a number in the form a + b * i where a and b are real and i satisfies i^2 = -1.",
+  "blurb": "Implement complex numbers.",
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Complex_number"
 }
