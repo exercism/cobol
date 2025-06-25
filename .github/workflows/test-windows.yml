@@ -31,7 +31,7 @@ jobs:
 
       - name: Cache GnuCOBOL
         id: cache-gnu-cobol
-        uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9
+        uses: actions/cache@640a1c2554105b57832a23eea0b4672fc7a790d5
         with:
           path: |
             ~/gnucobol
