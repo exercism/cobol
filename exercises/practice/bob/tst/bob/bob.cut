@@ -84,7 +84,7 @@ TestCase "prattling on"
 	EXPECT WS-RESULT = "Sure."
 
 TestCase "silence"
-	MOVE "" TO WS-HEYBOB
+	MOVE SPACE TO WS-HEYBOB
 	PERFORM BOB
 	EXPECT WS-RESULT = "Fine. Be that way!"
 

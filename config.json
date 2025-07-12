@@ -15,17 +15,31 @@
     "indent_size": 3,
     "highlightjs_language": "cobol"
   },
-    "test_runner": {
+  "test_runner": {
     "average_run_time": 2
   },
   "files": {
-    "solution": [],
-    "test": [],
-    "example": [],
-    "exemplar": []
+    "solution": [
+      "src/%{kebab_slug}.cob"
+    ],
+    "test": [
+      "tst/%{kebab_slug}/%{kebab_slug}.cut"
+    ],
+    "example": [
+      ".meta/proof.ci.cob"
+    ],
+    "exemplar": [
+      ".meta/exemplar.ci.cob"
+    ],
+    "invalidator": [
+      "test.ps1",
+      "test.sh",
+      "bin/fetch-cobolcheck",
+      "bin/fetch-cobolcheck.ps1",
+      "config.properties"
+    ]
   },
   "exercises": {
-    "concept": [],
     "practice": [
       {
         "slug": "hello-world",
@@ -39,8 +53,7 @@
         "slug": "leap",
         "name": "Leap",
         "uuid": "eab41ebb-64a9-4015-92b8-3899d58b8e5f",
-        "practices": [
-        ],
+        "practices": [],
         "prerequisites": [],
         "difficulty": 2
       },
@@ -243,7 +256,7 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
-      },     
+      },
       {
         "slug": "all-your-base",
         "name": "All Your Base",
@@ -293,16 +306,111 @@
         "difficulty": 3
       },
       {
+        "slug": "protein-translation",
+        "name": "Protein Translation",
+        "uuid": "95e2d8d7-31a6-4734-a353-c4688ef8494f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "binary-search",
+        "name": "Binary Search",
+        "uuid": "4a580b6d-a370-4526-a5ea-d7c856279676",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "diamond",
+        "name": "Diamond",
+        "uuid": "b8e1e5e1-6d46-4601-af80-c60c54401bf8",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "secret-handshake",
+        "name": "Secret Handshake",
+        "uuid": "d643cdac-949f-430b-989e-bb0380627580",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "space-age",
+        "name": "Space Age",
+        "uuid": "29d90a1a-ef8a-4489-8d09-8dcb0b604abd",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "robot-simulator",
+        "name": "Robot Simulator",
+        "uuid": "aa8d3ec5-da37-45e2-87c2-ec94eacf6cb4",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "eliuds-eggs",
+        "name": "Eliud's Eggs",
+        "uuid": "dd8e41b7-bf29-4cfa-b306-11d07b11d1de",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
+        "slug": "grade-school",
+        "name": "Grade School",
+        "uuid": "80df0040-0568-4d71-9562-07d89d7d3841",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "0408328a-3e04-4e2a-b5bf-fad131747a09",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "meetup",
+        "name": "Meetup",
+        "uuid": "5eec226b-c30b-405d-9b6d-12cdf8ef4072",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "pig-latin",
+        "name": "Pig Latin",
+        "uuid": "3ed36cd0-8087-41b1-bf31-1625238344ce",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "pascals-triangle",
         "name": "Pascal's Triangle",
         "uuid": "bcfd99e2-3749-4cc9-9708-88de69e474ac",
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
+      },
+      {
+        "slug": "anagram",
+        "name": "Anagram",
+        "uuid": "031c8337-ee79-4487-bd23-5ee425515cbe",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
       }
     ]
   },
-  "concepts": [],
   "key_features": [
     {
       "title": "Statically Typed",
@@ -336,12 +444,12 @@
     }
   ],
   "tags": [
-    "paradigm/procedural",
+    "execution_mode/compiled",
     "paradigm/imperative",
     "paradigm/object_oriented",
+    "paradigm/procedural",
     "typing/static",
     "typing/strong",
-    "execution_mode/compiled",
     "used_for/backends",
     "used_for/financial_systems"
   ]

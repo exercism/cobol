@@ -4,7 +4,7 @@ TestCase "paired square brackets"
 	EXPECT WS-RESULT = 1
 
 TestCase "empty string"
-	MOVE "" TO WS-INPUT
+	MOVE SPACE TO WS-INPUT
 	PERFORM ISPAIRED
 	EXPECT WS-RESULT = 1
 

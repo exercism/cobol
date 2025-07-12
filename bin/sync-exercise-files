@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+shopt -s nullglob
+for test_dir in exercises/{concept,practice}/*; do
+    for file in fetch-cobolcheck fetch-cobolcheck.ps1; do
+        cp "bin/${file}" "${test_dir}/bin/${file}"
+    done
+    cp "bin/exercise_test.sh" "${test_dir}/test.sh"
+    cp "bin/exercise_test.ps1" "${test_dir}/test.ps1"
+done

@@ -2,7 +2,8 @@
        PROGRAM-ID. luhn.
        ENVIRONMENT DIVISION.
        CONFIGURATION SECTION.
-       REPOSITORY. FUNCTION ALL INTRINSIC.
+       REPOSITORY. 
+        FUNCTION ALL INTRINSIC.
        DATA DIVISION.
        WORKING-STORAGE SECTION.
        01 WS-CARD-NUMBER PIC X(32).
@@ -25,7 +26,8 @@
                MOVE 0 TO WS-CARD-NUMBER
                EXIT PERFORM
            ELSE
-               MOVE CONCAT(WS-CARD-DIGITS, WS-CARD-NUMBER(WS-INDEX:1)) 
+               MOVE CONCATENATE(WS-CARD-DIGITS, 
+                  WS-CARD-NUMBER(WS-INDEX:1)) 
                TO WS-CARD-DIGITS
            END-IF
        END-PERFORM.
@@ -58,4 +60,4 @@
            MOVE "FALSE" TO WS-VALID
        END-IF.
 
-       DISPLAY WS-VALID.
+      *DISPLAY WS-VALID.

@@ -1,5 +1,7 @@
 {
-  "authors": ["glennj"],
+  "authors": [
+    "glennj"
+  ],
   "files": {
     "solution": [
       "src/high-scores.cob"
@@ -11,8 +13,11 @@
       ".meta/proof.ci.cob"
     ],
     "invalidator": [
+      "test.ps1",
       "test.sh",
-      "test.ps1"
+      "bin/fetch-cobolcheck",
+      "bin/fetch-cobolcheck.ps1",
+      "config.properties"
     ]
   },
   "blurb": "Manage a player's High Score list.",

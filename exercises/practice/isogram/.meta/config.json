@@ -1,23 +1,26 @@
 {
-    "authors": [
-        "axtens"
+  "authors": [
+    "axtens"
+  ],
+  "files": {
+    "solution": [
+      "src/isogram.cob"
     ],
-    "files": {
-        "solution": [
-            "src/isogram.cob"
-        ],
-        "test": [
-            "tst/isogram/isogram.cut"
-        ],
-        "example": [
-            ".meta/proof.ci.cob"
-        ],
-        "invalidator": [
-          "test.sh",
-          "test.ps1"
-        ]
-    },
-    "blurb": "Determine if a word or phrase is an isogram.",
-    "source": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Isogram"
+    "test": [
+      "tst/isogram/isogram.cut"
+    ],
+    "example": [
+      ".meta/proof.ci.cob"
+    ],
+    "invalidator": [
+      "test.ps1",
+      "test.sh",
+      "bin/fetch-cobolcheck",
+      "bin/fetch-cobolcheck.ps1",
+      "config.properties"
+    ]
+  },
+  "blurb": "Determine if a word or phrase is an isogram.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Isogram"
 }

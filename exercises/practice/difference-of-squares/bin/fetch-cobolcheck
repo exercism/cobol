@@ -4,7 +4,7 @@
 # It is only used in the cobol track, and a copy of it is placed in every exercise folder.
 # If you change something, make sure to upgrade all scripts in all exercises!
 
-set -eo pipefail
+# set -eo pipefail
 
 readonly LATEST='https://api.github.com/repos/0xE282B0/cobol-check/releases/latest'
 
@@ -45,19 +45,13 @@ get_download_url() {
 }
 
 main() {
-  if [[ -d ./bin ]]; then
-    output_dir="./bin"
-  elif [[ $PWD == */bin ]]; then
-    output_dir="$PWD"
-  else
-    echo "Error: no ./bin directory found. This script should be ran from a repo root." >&2
-    return 1
-  fi
-
+  output_dir="${HOME}/cobolcheck"
+  mkdir -p "${output_dir}"
   output_path="${output_dir}/cobolcheck${ext}"
   download_url="$(get_download_url)"
   curl "${curlopts[@]}" --output "${output_path}" "${download_url}"
   chmod +x "${output_path}"
+  echo "Cobolcheck has been downloaded to ${output_path}"
 }
 
 main

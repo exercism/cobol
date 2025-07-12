@@ -1,19 +1,26 @@
 {
-    "authors": [
-        "axtens"
+  "authors": [
+    "axtens"
+  ],
+  "files": {
+    "solution": [
+      "src/scrabble-score.cob"
     ],
-    "files": {
-        "solution": [
-            "src/scrabble-score.cob"
-        ],
-        "test": [
-            "tst/scrabble-score/scrabble-score.cut"
-        ],
-        "example": [
-            ".meta/proof.ci.cob"
-        ]
-    },
-    "blurb": "Given a word, compute the Scrabble score for that word.",
-    "source": "Inspired by the Extreme Startup game",
-    "source_url": "https://github.com/rchatley/extreme_startup"
+    "test": [
+      "tst/scrabble-score/scrabble-score.cut"
+    ],
+    "example": [
+      ".meta/proof.ci.cob"
+    ],
+    "invalidator": [
+      "test.ps1",
+      "test.sh",
+      "bin/fetch-cobolcheck",
+      "bin/fetch-cobolcheck.ps1",
+      "config.properties"
+    ]
+  },
+  "blurb": "Given a word, compute the Scrabble score for that word.",
+  "source": "Inspired by the Extreme Startup game",
+  "source_url": "https://github.com/rchatley/extreme_startup"
 }

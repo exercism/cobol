@@ -27,4 +27,4 @@
            MOVE WS-NUMBER TO WS-RESULT
        END-IF.
 
-       DISPLAY WS-RESULT.
+      *DISPLAY WS-RESULT.

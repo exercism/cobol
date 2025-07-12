@@ -13,11 +13,14 @@
       ".meta/proof.ci.cob"
     ],
     "invalidator": [
+      "test.ps1",
       "test.sh",
-      "test.ps1"
+      "bin/fetch-cobolcheck",
+      "bin/fetch-cobolcheck.ps1",
+      "config.properties"
     ]
   },
-  "blurb": "Reverse a string.",
+  "blurb": "Reverse a given string.",
   "source": "Introductory challenge to reverse an input string",
   "source_url": "https://medium.freecodecamp.org/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb"
 }

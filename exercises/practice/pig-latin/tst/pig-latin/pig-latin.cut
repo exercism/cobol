@@ -1,0 +1,127 @@
+TESTSUITE "ay is added to words that start with vowels"
+
+TestCase "word beginning with a"
+	MOVE "apple" TO WS-INPUT
+	PERFORM TRANSLATE
+	EXPECT WS-RESULT = "appleay"
+
+TestCase "word beginning with e"
+	MOVE "ear" TO WS-INPUT
+	PERFORM TRANSLATE
+	EXPECT WS-RESULT = "earay"
+
+TestCase "word beginning with i"
+	MOVE "igloo" TO WS-INPUT
+	PERFORM TRANSLATE
+	EXPECT WS-RESULT = "iglooay"
+
+TestCase "word beginning with o"
+	MOVE "object" TO WS-INPUT
+	PERFORM TRANSLATE
+	EXPECT WS-RESULT = "objectay"
+
+TestCase "word beginning with u"
+	MOVE "under" TO WS-INPUT
+	PERFORM TRANSLATE
+	EXPECT WS-RESULT = "underay"
+
+TestCase "word beginning with a vowel and followed by a qu"
+	MOVE "equal" TO WS-INPUT
+	PERFORM TRANSLATE
+	EXPECT WS-RESULT = "equalay"
+
+
+TESTSUITE "first letter and ay are moved to the end of words that start with consonants"
+
+TestCase "word beginning with p"
+	MOVE "pig" TO WS-INPUT
+	PERFORM TRANSLATE
+	EXPECT WS-RESULT = "igpay"
+
+TestCase "word beginning with k"
+	MOVE "koala" TO WS-INPUT
+	PERFORM TRANSLATE
+	EXPECT WS-RESULT = "oalakay"
+
+TestCase "word beginning with x"
+	MOVE "xenon" TO WS-INPUT
+	PERFORM TRANSLATE
+	EXPECT WS-RESULT = "enonxay"
+
+TestCase "word beginning with q without a following u"
+	MOVE "qat" TO WS-INPUT
+	PERFORM TRANSLATE
+	EXPECT WS-RESULT = "atqay"
+
+
+TESTSUITE "some letter clusters are treated like a single consonant"
+
+TestCase "word beginning with ch"
+	MOVE "chair" TO WS-INPUT
+	PERFORM TRANSLATE
+	EXPECT WS-RESULT = "airchay"
+
+TestCase "word beginning with qu"
+	MOVE "queen" TO WS-INPUT
+	PERFORM TRANSLATE
+	EXPECT WS-RESULT = "eenquay"
+
+TestCase "word beginning with qu and a preceding consonant"
+	MOVE "square" TO WS-INPUT
+	PERFORM TRANSLATE
+	EXPECT WS-RESULT = "aresquay"
+
+TestCase "word beginning with th"
+	MOVE "therapy" TO WS-INPUT
+	PERFORM TRANSLATE
+	EXPECT WS-RESULT = "erapythay"
+
+TestCase "word beginning with sch"
+	MOVE "school" TO WS-INPUT
+	PERFORM TRANSLATE
+	EXPECT WS-RESULT = "oolschay"
+
+TestCase "word beginning with thr"
+	MOVE "thrush" TO WS-INPUT
+	PERFORM TRANSLATE
+	EXPECT WS-RESULT = "ushthray"
+
+
+TESTSUITE "some letter clusters are treated like a single vowel"
+
+TestCase "word beginning with yt"
+	MOVE "yttria" TO WS-INPUT
+	PERFORM TRANSLATE
+	EXPECT WS-RESULT = "yttriaay"
+
+TestCase "word beginning with xr"
+	MOVE "xray" TO WS-INPUT
+	PERFORM TRANSLATE
+	EXPECT WS-RESULT = "xrayay"
+
+
+TESTSUITE "position of y in a word determines if it is a consonant or a vowel"
+
+TestCase "y is treated like a consonant at the beginning of a word"
+	MOVE "yellow" TO WS-INPUT
+	PERFORM TRANSLATE
+	EXPECT WS-RESULT = "ellowyay"
+
+TestCase "y is treated like a vowel at the end of a consonant cluster"
+	MOVE "rhythm" TO WS-INPUT
+	PERFORM TRANSLATE
+	EXPECT WS-RESULT = "ythmrhay"
+
+TestCase "y as second letter in two letter word"
+	MOVE "my" TO WS-INPUT
+	PERFORM TRANSLATE
+	EXPECT WS-RESULT = "ymay"
+
+
+TESTSUITE "phrases are translated"
+
+TestCase "a whole phrase"
+	MOVE "quick fast run" TO WS-INPUT
+	PERFORM TRANSLATE
+	EXPECT WS-RESULT = "ickquay astfay unray"
+	

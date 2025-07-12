@@ -13,11 +13,14 @@
       ".meta/proof.ci.cob"
     ],
     "invalidator": [
+      "test.ps1",
       "test.sh",
-      "test.ps1"
+      "bin/fetch-cobolcheck",
+      "bin/fetch-cobolcheck.ps1",
+      "config.properties"
     ]
   },
   "blurb": "Score a single throw of dice in the game Yacht.",
-  "source": "James Kilfiger, using wikipedia",
+  "source": "James Kilfiger, using Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Yacht_(dice_game)"
 }

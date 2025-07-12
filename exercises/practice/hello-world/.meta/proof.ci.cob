@@ -8,4 +8,3 @@
         HELLO-WORLD.
             MOVE "Hello, World!" TO WS-RESULT.
 
-            

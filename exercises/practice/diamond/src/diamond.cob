@@ -1,0 +1,15 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. DIAMOND.
+       ENVIRONMENT DIVISION.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-INPUTVARS. 
+           05 WS-LETTER            PIC X.
+           05 WS-ROWS              PIC 99.
+       01 WS-OUTPUTTABLE.
+           05 WS-TABLEROW    OCCURS 1 TO 50 DEPENDING ON WS-ROWS.
+              10 WS-LINE           PIC X(60).
+
+       PROCEDURE DIVISION.
+       
+       DIAMOND. 

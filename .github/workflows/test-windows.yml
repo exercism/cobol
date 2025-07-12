@@ -29,13 +29,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5
 
-      
       - name: Cache GnuCOBOL
         id: cache-gnu-cobol
-        uses: actions/cache@704facf57e6136b1bc63b828d79edcd491f0ee84
+        uses: actions/cache@640a1c2554105b57832a23eea0b4672fc7a790d5
         with:
-          path: ~\gnucobol-3.2-dev.zip
-          key: ${{ runner.os }}-gnu-cobol-3.2
+          path: |
+            ~/gnucobol
+            ~/cobolcheck
+          key: gnucobol-3.2.7-cobolcheck-v1
 
       - name: Download GnuCOBOL
         if: steps.cache-gnu-cobol.outputs.cache-hit != 'true'
@@ -46,20 +47,16 @@ jobs:
             MaximumRetryCount = 3
             RetryIntervalSec  = 1
           }
-          Invoke-WebRequest -Uri 'https://ci.appveyor.com/api/projects/GitMensch/gnucobol-3-x-win32-posix/artifacts/gnucobol-3.2-dev-MinGW-binaries%20(debug).zip?job=Environment:%20BUILD_TYPE=MSYS,%20BUILD_BIN=C:\MinGW\msys\1.0\bin' -OutFile ~\gnucobol-3.2-dev.zip @requestOpts
+          Invoke-WebRequest -Uri 'https://www.arnoldtrembley.com/GC32-BDB-SP1-rename-7z-to-exe.7z' -OutFile $HOME\gnucobol-3.2.7z @requestOpts
+          7z x $HOME\gnucobol-3.2.7z -o"${HOME}\gnucobol" -y
 
-      - name: Extract GnuCOBOL
+      - name: Download CobolCheck
+        if: steps.cache-gnu-cobol.outputs.cache-hit != 'true'
         shell: pwsh
-        run: Expand-Archive ~\gnucobol-3.2-dev.zip -DestinationPath gnucobol -Force
+        run: bin/fetch-cobolcheck.ps1
 
       - name: Run tests for all exercises
         shell: pwsh
         run: |
-          $env:Path = "D:\a\cobol\cobol\gnucobol\bin;" + $env:Path
-          [System.Environment]::SetEnvironmentVariable('COB_CONFIG_DIR', 'D:\a\cobol\cobol\gnucobol\config')
-          [System.Environment]::SetEnvironmentVariable('COB_COPY_DIR', 'D:\a\cobol\cobol\gnucobol\copy')
-          [System.Environment]::SetEnvironmentVariable('COB_CFLAGS', '-I D:\a\cobol\cobol\gnucobol\include')
-          [System.Environment]::SetEnvironmentVariable('COB_LDFLAGS', '-L D:\a\cobol\cobol\gnucobol\lib')
-          [System.Environment]::SetEnvironmentVariable('COB_LIBRARY_PATH', 'D:\a\cobol\cobol\gnucobol\lib')
-          [System.Environment]::SetEnvironmentVariable('COB_LIBS', 'D:\a\cobol\cobol\gnucobol\bin\libcob-4.dll')
+          bin/setup-environment.ps1
           bin/test.ps1
