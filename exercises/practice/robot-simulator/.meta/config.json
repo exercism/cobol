@@ -15,7 +15,7 @@
     "invalidator": [
       "test.sh",
       "test.ps1"
-    ] 
+    ]
   },
   "blurb": "Write a robot simulator.",
   "source": "Inspired by an interview question at a famous company."

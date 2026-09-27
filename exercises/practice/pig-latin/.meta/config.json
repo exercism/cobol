@@ -12,7 +12,7 @@
     "example": [
       ".meta/proof.ci.cob"
     ],
-    "invalidator": [ 
+    "invalidator": [
       "test.sh",
       "test.ps1"
     ]
