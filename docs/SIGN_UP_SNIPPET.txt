@@ -1,0 +1,18 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. COUNT-WORD.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-TEXT     PIC X(40) VALUE "the cat and the hat".
+       01 WS-WORD     PIC X(10).
+       01 WS-POS      PIC 99 VALUE 1.
+       01 WS-COUNT    PIC 9 VALUE 0.
+       PROCEDURE DIVISION.
+           PERFORM UNTIL WS-POS > LENGTH OF WS-TEXT
+               UNSTRING WS-TEXT DELIMITED BY ALL SPACE
+                   INTO WS-WORD WITH POINTER WS-POS
+               IF WS-WORD = "the"
+                   ADD 1 TO WS-COUNT
+               END-IF
+           END-PERFORM
+           DISPLAY '"the" appears ' WS-COUNT ' times'
+           STOP RUN.
